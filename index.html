@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport"    content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Chess Tourney">
+	<meta name="author"      content="Sergey Pozhilov">
+
+	<title>Chess Tourney</title>
+
+	<!--
+	<link rel="shortcut icon" href="assets/images/icon.png">
+	-->
+
+	<link rel="stylesheet" media="screen" href="//fonts.googleapis.com/css?family=Open+Sans:300,400,700">
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="assets/css/font-awesome.min.css">
+
+	<!-- Custom styles for our template -->
+	<link rel="stylesheet" href="assets/css/bootstrap-theme.css" media="screen" >
+	<link rel="stylesheet" href="assets/css/main.css">
+
+	<!-- Icons for features -->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<!-- Icons for timeline -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body class="home">
+	<!-- Fixed navbar -->
+	<div class="navbar navbar-inverse navbar-fixed-top headroom" >
+		<div class="container">
+			<div class="navbar-header">
+			</div>
+			<div class="navbar-collapse collapse">
+				<ul class="nav navbar-nav pull-right">
+					<li><a href="index.html">Home</a></li> <!-- Client area -->
+					<li class="dropdown"> <!-- Specification area -->
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Specifications<b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="specifications-1.html">Features, system scenarios and use cases</a></li>
+							<li><a href="specifications-2.html">Requirements and tests</a></li>
+							<li><a href="specifications-3.html">Architecture</a></li>
+							<li class="active"><a href="specifications-4.html">Data model</a></li>
+							<li class="active"><a href="deliverables.html">Deliverables</a></li>
+						</ul>
+						<li><a href="about.html">About the project</a></li> <!-- Client area -->
+						<li><a href="manual.html">Integration with HTC Vive</a></li> <!-- Client area -->
+					</li>
+				</ul>
+			</div><!--/.nav-collapse -->
+		</div>
+	</div> 
+	<!-- /.navbar -->
+
+	<!-- Header -->
+	<header id="head">
+		<div class="container">
+			<div class="row">
+				<h1 class="lead">Chess Tourney</h1>
+				<h3>Where you can play and watch any chess game you want</h3>
+				<h5 class="tagline">Have an intuitive environment where it is not only possible to play a chess game and/or take part in a tournament, with several vertents (regarding the timing of each game), and against several players, but also to view general and detailed information about the tournament and each game in particular. For example, users will have the ability to see each game being played in real-time and get other general information about the other games.</h5>
+				<!-- <p><a class="btn btn-action btn-lg" role="button" href="#" target="_blank">Watch the demo</a></p> -->
+			</div>
+		</div>
+	</header>
+	<!-- /Header -->
+
+	<!-- Intro -->
+	<div class="container">
+		<br> <br>
+		<h2 class="thin", align="center">What is Chess Tourney?</h2>
+		<br>
+		<p class="text-muted">
+		<p class="context">
+		Online multiplayer chess games are very common on the web nowadays. What we aim to attain is a web application where it is possible to play chess against several (simulated or not) players, and also where one can monitor the games (which can happen simultaneously), and see detailed information about each game, like the time each player as spent thinking on his moves, how many moves had they made so far, etc. This type of information can be retrieved from not only the games taking place at the moment, but also the ones that have already terminated (game/tournament history). Each game is a 1 vs 1 game. The games happen in real time, and can happen simultaneously. Each game is timed, meaning, there is a cronometer for every game, to control the time spent and additional time gained by each player. In case of a tournament, as usual, the winner goes on to the next phase until a champion is found.
+		</p>
+	</div>
+	<!-- /Intro-->
+
+
+	<!-- container -->
+	<div class="container">
+
+		<!-- Features -->
+		<div class="jumbotron top-space">
+			<div class="container">
+				<div class="page-header">
+					<h2 class="text-center">Why a Chess Tourney?</h2>
+				</div>
+				<h3 align="center">For everyone</h3>
+				<br>
+				<div class="row">
+					<div class="col-sm-4 text-center">
+						<!-- Feature img -->
+						<i class="material-icons md-82">phone_android</i>
+						<h4><b></b></h4>
+						<h5>Simple and intuitive game that everyone can play.</h5>
+					</div>
+					<div class="col-sm-4 text-center">
+						<!-- Feature img -->
+						<i class="material-icons md-82">access_time</i>
+						<h4><b>Real-time and archived data</b></h4>
+						<h5>Display information about each game on public spaces both in real-time and the past history</h5>
+					</div>
+					<div class="col-sm-4 text-center">
+						<!-- Feature img -->
+						<i class="material-icons md-82">feedback</i>
+						<h4><b>User reporting</b></h4>
+						<h5>Report results about each game to a web-server, helping in its management</h5>
+					</div>
+				</div>
+				<br><br>
+			</div>
+		</div>
+
+		<!-- Modal for images -->
+		<div id="myModal" class="modal fade" role="dialog">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-body">
+						<img class="img-responsive" src="" />
+					</div>
+					<div class="modal-footer">
+						<h4 class="text-center title"></h4>
+						<h5 class="text-center desc"></h5>
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="myModal2" class="modal fade" role="dialog">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-body">
+						<img class="img-responsiveapp" src="" />
+					</div>
+					<div class="modal-footer">
+						<h4 class="text-center title"></h4>
+						<h5 class="text-center desc"></h5>
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="myModal3" class="modal fade" role="dialog">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-body">
+						<img class="img-responsiveapp2" src="" />
+					</div>
+					<div class="modal-footer">
+						<h4 class="text-center title"></h4>
+						<h5 class="text-center desc"></h5>
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Timeline -->
+		<div class="page-header">
+			<h2 class="text-center top-space">Timeline</h2>
+		</div>
+	    <ul class="timeline">
+	    	<li>
+	          <div class="timeline-badge"><i class="fa fa-calendar-check-o"></i></div>
+	          <div class="timeline-panel">
+				<div class="timeline-heading">
+					<h4 class="timeline-title">Milestone 1</h4>
+					<p><small class="text-muted">05/03/2018</small></p>
+	            </div>
+	            <div class="timeline-body">
+					<p>Definition of the scope, rationale, data processing, and user interface.</p>
+	            </div>
+	          </div>
+	        </li>
+
+	       <li class="timeline-inverted">
+	          <div class="timeline-badge warning"><i class="fa fa-calendar-check-o"></i></div>
+	          <div class="timeline-panel">
+	            <div class="timeline-heading">
+					<h4 class="timeline-title">Milestone 2</h4>
+					<p><small class="text-muted">19/03/2018</small></p>
+	            </div>
+	            <div class="timeline-body">
+					<p>Prove of concept of initial data flow, with a message broker to store plays generated by chess simulated players, and a consumer to process those same plays.</p>
+	            </div>
+	          </div>
+	        </li>
+		
+
+		<li>
+	          <div class="timeline-badge danger"><i class="fa fa-calendar-check-o"></i></div>
+	          <div class="timeline-panel">
+				<div class="timeline-heading">
+					<h4 class="timeline-title">Milestone 3</h4>
+					<p><small class="text-muted">16/04/2018</small></p>
+	            </div>
+	            <div class="timeline-body">
+					<p>Components and API draft using message passing. Define all scenarios.</p>
+	            </div>
+	          </div>
+	        </li>
+
+	       <li class="timeline-inverted">
+	          <div class="timeline-badge info"><i class="fa fa-calendar-check-o"></i></div>
+	          <div class="timeline-panel">
+	            <div class="timeline-heading">
+					<h4 class="timeline-title">Milestone 4</h4>
+					<p><small class="text-muted">30/05/2018</small></p>
+	            </div>
+	            <div class="timeline-body">
+					<p>First deployment. Simulated moves between 2 players and starting viewing on Web UI</p>
+	            </div>
+	          </div>
+	        </li>
+
+		<li>
+	          <div class="timeline-badge success"><i class="fa fa-calendar-check-o"></i></div>
+	          <div class="timeline-panel">
+				<div class="timeline-heading">
+					<h4 class="timeline-title">Milestone 5</h4>
+					<p><small class="text-muted">14/05/2018</small></p>
+	            </div>
+	            <div class="timeline-body">
+					<p>Moves between 2 real players in diferent devices. Final touches to WEB UI. Testing integration.</p>
+	            </div>
+	          </div>
+	        </li>
+
+	       <li class="timeline-inverted">
+	          <div class="timeline-badge"><i class="fa fa-calendar-check-o"></i></div>
+	          <div class="timeline-panel">
+	            <div class="timeline-heading">
+					<h4 class="timeline-title">Milestone 6</h4>
+					<p><small class="text-muted">28/05/2018</small></p>
+	            </div>
+	            <div class="timeline-body">
+					<p>Final presentation.</p>
+	            </div>
+	          </div>
+	        </li>
+		
+		<li>
+	          <div class="timeline-badge success"><i class="fa fa-calendar-check-o"></i></div>
+	          <div class="timeline-panel">
+				<div class="timeline-heading">
+					<h4 class="timeline-title">Milestone 7</h4>
+					<p><small class="text-muted">11/06/2018d</small></p>
+	            </div>
+	            <div class="timeline-body">
+					<p>Final delivery.</p>
+	            </div>
+	          </div>
+	        </li>
+	    </ul>
+
+	</div>
+
+
+	<footer id="footer" class="top-space">
+
+		<!-- Highlights - jumbotron -->
+		<div class="jumbotron top-space">
+			<div class="container">
+
+				<h3 class="text-center thin">The team</h3>
+
+				<div class="row">
+					<div class="col-md-6 col-sm-6 highlight">
+						<div class="h-caption"><img class="team-image" src="./assets/images/ps.jpg"><br><h4>Pedro Silva</h4></div>
+						<div class="h-body text-center">
+							<p><i>72645</i></p>
+							<p>pedro.mfsilva@ua.pt</p>
+						</div>
+					</div>
+					<div class="col-md-6 col-sm-6 highlight">
+						<div class="h-caption"><img class="team-image" src="./assets/images/ft.jpg"><br><h4>Francisco Teixeira</h4></div>
+						<div class="h-body text-center">
+							<p><i>67438</i></p>
+							<p>franciscoteixeira@ua.pt</p>
+						</div>
+					</div>
+					<div class="col-md-6 col-sm-6 highlight">
+						<div class="h-caption"><img class="team-image" src="./assets/images/ic.jpg"><br><h4>Inês Cruz</h4></div>
+						<div class="h-body text-center">
+							<p><i>72725</i></p>
+							<p>icruz@ua.pt</p>
+						</div>
+					</div>
+					<div class="col-md-6 col-sm-6 highlight">
+						<div class="h-caption"><img class="team-image" src="./assets/images/jc.jpg"><br><h4>José Castanheira</h4></div>
+						<div class="h-body text-center">
+							<p><i>76545</i></p>
+							<p>jp.castanheira@ua.pt</p>
+						</div>
+					</div>
+					<div class="col-md-12 col-sm-6 highlight">
+						<div class="h-caption"><img class="team-image" src="./assets/images/catalao.jpg"><br><h4>André Catalão</h4></div>
+						<div class="h-body text-center">
+							<p><i>60378</i></p>
+							<p>andrecatalao@ua.pt</p>
+						</div>
+					</div>
+				</div> <!-- /row  -->
+				<br>
+
+				<header class="page-header">
+					<h3 class="page-title">Team timesheet</h3>
+				</header>
+				<!-- Description -->
+				<div>
+					<p>&emsp;For more information about the work of each member, you can see our <a target="_blank" href="https://docs.google.com/spreadsheets/d/1XEhvIpzXbmcJOPbM-Gk2DuN9bVOW48gRmeyYwvlKrhw/">timesheet</a>. You can also see our <a target="_blank" href="https://code.ua.pt/projects/pei-2016-2017-g03/wiki">wiki</a> if you are from the University of Aveiro.</p>
+				</div>
+
+
+
+		<div class="footer2">
+			<div class="container">
+				<div class="row">
+
+					<div class="col-md-6 widget">
+						<div class="widget-body">
+							<p class="simplenav">Project in Software Engineering - Computer and Telematics Engineering</p>
+						</div>
+					</div>
+
+					<div class="col-md-6 widget">
+						<div class="widget-body">
+							<p class="text-right">
+								Copyright &copy; 2017, Chess Tourney. Designed by <a href="http://gettemplate.com/" rel="designer">gettemplate</a>
+							</p>
+						</div>
+					</div>
+
+				</div> <!-- /row of widgets -->
+			</div>
+		</div>
+	</footer>
+
+
+
+
+
+	<!-- JavaScript libs are placed at the end of the document so the pages load faster -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/bootstrap.min.js"></script>
+	<script src="assets/js/headroom.min.js"></script>
+	<script src="assets/js/jQuery.headroom.min.js"></script>
+	<script src="assets/js/template.js"></script>
+</body>
+</html>
