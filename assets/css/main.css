@@ -1,5 +1,5 @@
 /* Header */
-#head { background:#181015 url( ../images/saupload_autonomous_vehicles.png) no-repeat; background-size: cover; min-height:800px; text-align: center; padding-top:240px; color:white; font-family:"Open sans", Helvetica, Arial; font-weight:300; background-attachment: fixed; }
+#head { background:#181015 url( ../images/volvo-autonomous-driving.jpg) no-repeat; background-size: cover; min-height:800px; text-align: center; padding-top:240px; color:white; font-family:"Open sans", Helvetica, Arial; font-weight:300; background-attachment: fixed; }
 #head.secondary { height:100px; min-height: 100px; padding-top:0px; }
 	#head .lead { font-family:"Open sans", Helvetica, Arial; font-size:64px; margin-bottom:6px; color:white; line-height:1.15em; font-weight: bold; } 
 	#head .tagline { color:rgba(255,255,255,0.75); margin-bottom:25px; }
