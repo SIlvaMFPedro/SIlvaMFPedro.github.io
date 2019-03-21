@@ -125,11 +125,24 @@
 						<p>&emsp;The labelling has a semi-automatic and a manual mode. In this annotation application
 								 the objects of interest are suggested with a bounding box and a category (label). The size of
 								 the bounding box and the category can be edited if the system fails. The objects are detected
-								 using a previously trained object detection model. The data is stored in the following snipet:</p>
+								 using a previously trained object detection model. The data is stored in the following snipet presented in the JSON format:</p>
 						<p><img src="./assets/images/DeepDrive-Dataset.png"></p>
-						<br><h4><b>Game Tracker - CLI(Chess Layout Interface)</b></h4><br>
-						<p>&emsp;The purpose of this module is to display the chessboard with the chess-moves being made by the players in Unity. Basically in this module we have two consumers that are consuming data from the Kafka Broker and playing the game on the Game Tracker module according to the received data. This module will be used by the web interface in order to determine the game status as well as other additional information </p>
-						<p><img src="./assets/images/gametracker_CLI.png"> <img src="./assets/images/gametracker_CLI02.png"></p>
+						<p>&emsp;For each frame there is a timestamp and a set of objects. Each object is identified with a category, an ID, attributes that indicate if the object is occluded,
+							     truncated, and if the object is a traffic light which light color is on. The position is represented by the 2D bounding box position (x1, y1, x2, y2).</p>
+
+						<br><h4><b>HumanEva II Dataset</b></h4><br>
+						<p>&emsp; The HumanEva II Dataset from the Max Planck Institut Informatik (MPII) was also an interesting dataset, although it is used mainly for pedestrian detection.
+							      This dataset appears with the need to represent information about detection and tracking of humans and their poses captured by a single image camera. The HumanEva dataset
+								  development kit includes several MATLAB modules, each one implementing a feature. Some modules refer to the body pose, others to image stream processing, writing the dataset results,
+								  and so on. Each script implements a chunk of the system that gathers the data and shapes it into MATLAB structures to be processed and to create the dataset.
+								  The HumanEva dataset has information about the bounding boxes position used to track and detect pedestrian limb poses. This information is useful to know which direction the
+								  person is facing from the 3D skeleton derived from the pose. The data structure in the dataset is similar to a XML file. For each frame in the image sequences there are several
+								  bounding boxes with the respective coordinates (Sigal et al. 2009). From this we can generate a dataset snippet from a certain image </p>
+						<p><img src="./assets/images/HumanEvaHuman.png"><img src="./assets/images/HumanEvaDataset.png"></p>
+								  By looking at this dataset snippet it is easy to identify the interest points in the given frame. The files are a set of annotations called annotationList in which a path to
+								  the image corresponding to the frame is given. For each image there are several bounding boxes with coordinates (x1, y1, x2, y2), a score, silhouette, articulation and viewpoint id.
+						</p>
+					
 						
 						<br><h4><b>WEB User Interface - REST API</b></h4><br>
 						<p>&emsp;The Chess Tourney Web Portal is the web interface between the Chess Tourney platform and any person that wants to see a game or tournament. This API uses a REST-ful engine with a set of endpoints(described below) to manage all the information, by collecting data from the GlassFish Servlets and/or Database and displaying it in the WEB API. It can show a specific game beetween two players, chess-moves, frequencies and other devolpments.</p>
