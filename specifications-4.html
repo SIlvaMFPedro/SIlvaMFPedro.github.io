@@ -103,8 +103,19 @@
 								 read the sensor data and write dataset results. The data development kit used is provided
 								 on the KITTI Website (Karlsruhe Institute of Technology 2018). It contains a MATLAB
 								 demonstration code with C++ wrappers</p>
-	
-	
+						<p><img src="./assets/images/Volkswaggen-KITTI.png"> <img src="./assets/images/KITTI-Deployment.png"> <img src="./assets/images/KITTI-Dataset.png"></p>
+						<p><img src="./assets/images/KITTI-Tracking.png"></p>
+						<p>&emsp;The demonstration script of the KITTI development kit shows how 3D boxes can be read from the dataset files and projected into the image plane of the cameras.
+								 The data is processed and inserted into MATLAB structures and arrays. The KITTI database also uses the PCL to process and gather the pointclouds obtained from the LIDAR sensors.
+								 The data is stored in snippets like the example seen above, in which, each line starts with the frame ID and the ID of the object being tracked. Then it is added a label
+								 to classify this object. There are also flags to indicate if the object is either truncated or occluded in the image sequence.
+								 The following numbers consist in the alpha (observation angle of object), the left, top, right and bottom of the 2D bounding box, the height, width and length of the 3D bounding
+								 box and its XYZ coordinates. The last number consists in the 3D rotation angle in the Y axis (Boston Didi Team 2018).
+								 Analyzing the snippet, a cyclist and a pedestrian can be located in frame 3 and the same cyclist and pedestrian (because they have the same object id) in the next frame with also a
+								 van. The DontCare label is often shown representing an object detected that is not related to the scope of the KITTI dataset. Other information indicate where these objects are found
+								 relatively to the car.</p>
+						   
+						</p>
 						<br><h4><b>Kafka Broker</b></h4><br>
 						<p>&emsp;This broker is a component that comunicates through a Restful API with other services and its main function is to be a message middleware that handles real-time data (Chess  moves from players) from Unity. It reads and writes data of the chess moves and it sends the data to the Glassfish Servlets and Dumper.</p>
 	
