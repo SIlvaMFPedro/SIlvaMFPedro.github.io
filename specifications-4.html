@@ -144,38 +144,38 @@
 						</p>
 					
 						
-						<br><h4><b>WEB User Interface - REST API</b></h4><br>
-						<p>&emsp;The Chess Tourney Web Portal is the web interface between the Chess Tourney platform and any person that wants to see a game or tournament. This API uses a REST-ful engine with a set of endpoints(described below) to manage all the information, by collecting data from the GlassFish Servlets and/or Database and displaying it in the WEB API. It can show a specific game beetween two players, chess-moves, frequencies and other devolpments.</p>
-						<p><img src="./assets/images/chess-web-api.png"></p>
-						<p>As mentioned earlier the API uses a REST-ful engine with a set endpoints that collects data of the Game Tracker module from the Glassfish Servlets and displays it on the web Interface.</p><p>This REST-ful engine uses 7 endpoints, each with a specific purpose using the HTTP methods GET, POST and PUT:</p> 
-						<br><h5><b> - POST GAME</b></h5><br>
-						<p>If the user issues a POST to this endpoint by clicking in the "Click here to start new chess game" option it will create a brand new game, resetting the pieces back to their original starting positions resetting the board to its initial state</p>
-						<p><img src="./assets/images/postgame.png"></p>
-						<br><h5><b> - GET GAME</b></h5><br>
-						<p>If the user issues a GET to this endpoint by clicking in the "Click here to look at game status" option it will return the chessboard state according to the GameTracker module</p>
-						<p><img src="./assets/images/getgame.png"></p>
-						<br><h5><b> - GET MOVES</b></h5><br>
-						<p>If the user issues a GET to this endpoint by clicking in the "Click here to look at game moves" option it will return the current list of valid moves, given the placement of the pieces and whose turn it currently is</p>
-						<p><img src="./assets/images/getmoves.png"></p>
-						<br><h5><b> - POST MOVES</b></h5><br>
-						<p>If the user issues a POST to this endpoint by clicking in the "Click here to check on latest moves" option it will return the chessboard state according to the last move being made on the GameTracker module or it will return the chessboard state according to a specific move specified by the user on the URL</p>
-						<p><img src="./assets/images/postmoves.png"></p>
-						<br><h5><b> - PUT GAME</b></h5><br>
-						<p>If the user issues a PUT to this endpoint by clicking in the "Click here to check on latest game status" option it will return the chessboard state according to move id being set on the GameTracker module giving the chessboard status according to chess moves of each user</p>
-						<p><img src="./assets/images/putgame1.png"> <img src="./assets/images/putgame2.png"></p>
-						<br><h5><b> - GET PIECE FREQUENCY</b></h5><br>
-						<p>If the user issues a GET to this endpoint by clicking in the "Click here to look at game moves" option it will return the current list of the pieces given their placement on the board as well as their play frequency according to the game status</p>
-						<p><img src="./assets/images/piecesfreq.png"></p>
-						<br><h5><b> - GET MOVES FREQUENCY</b></h5><br>
-						<p>If the user issues a GET to this endpoint by clicking in the "Click here to check move frequency" option it will return the current list of valid moves as well as their frequency on the playlist, given the placement of the pieces and whose turn it currently is</p>
-						<p><img src="./assets/images/movesfreq.png"></p>
-	
+						<br><h4><b>ETHZ Dataset</b></h4><br>
+						<p>&emsp;ETHZ conducted studies for detection and tracking of people on the street (Ess et al.2009). 
+								 Just like the previous datasets, its creation is based in MATLAB scripts and the data is gathered and stored in MATLAB structures. 
+								 The dataset is simple: for each frame there are several bounding boxes in the image.
+								 This dataset is focused only in the detection and tracking of pedestrians in the image(ETHZ (Eidgenössische Technische Hochschule Zürich) 2018). 
+								 In the snippet, each line is composed with a string defining a path to the image representing the actual frame, followed bytuples of four elements (x1, y1, x2, y2) representing the bounding boxes where pedestrians are
+								 found in the respective frame.</p>
+						<p><img src="./assets/images/ETHZ-Human.png"><img src="./assets/images/ETHZ-Dataset.png"></p>
 											
-						<br><h4><b>Dumper</b></h4><br>
-						<p>&emsp;The Chess Tourney Dumper is a JPA persistance module that store information from Broker. It saves all the information gathered by the system, including all the Chess Moves from player's games. Within a defined interval, this component will fetch data from the current streams and save it on Database.</p>
-	
-						<br><h4><b>GlassFish Servlets</b></h4><br>
-						<p>&emsp;GlassFish Servlets have the function to add the interactive web front end to the Chess Tourney, ensuring the portability and scalability of the application between broker and restAPI</p>
+						<br><h4><b>EPFL Dataset</b></h4><br>
+						<p>&emsp;The EPFL designed a dataset for multiple people in a camera environment, independent of the scenario. This dataset used various synced video cameras filming the same area in
+								 different angles (Biliotti, Antonini and Thiran 2015). The data from the cameras is captured and processed with MATLAB scripts and some algorithms in C++.</p>
+						<p><img src="./assets/images/EPFL-Human.png"><img src="./assets/images/EPFL-Dataset.png"><img src="./assets/images/EPFL-Legend.png"></p>
+						<p>&emsp;The dataset includes, for each frame, various objects identified with a number, a label, bounding box coordinates, and flags to point out
+								 if the person is occluded, lost, or if the detection was automatically interpolated from the other camera’s information (EPFL (École polytechnique fédérale de Lausanne) 2018). The
+								 particularity of the structure of this dataset is that, for each object, it is tracked in the image sequences individually, and only then another object is tracked and labeled.</p>
+						
+						<br><h4><b>Resume</b></h4><br>
+						<p>&emsp;To summarize this section, after analyzing these datasets and how they are created, it is
+								important to look at what is stored in the data structures . Some datasets use well known
+								data structures such as XML (HumanEva) or JSON (DeepDrive), and some datasets use their
+								own set of data where each line corresponds to an entry.
+								To design a dataset for the ATLASCAR it is necessary to decide which construction to
+								use. To simplify the complexity of the files, an adapted approach used in the KITTI dataset
+								will be used, where each line is an entry for a different object.
+								Analyzing the datasets, the most common and relevant information in all files is the
+								position of the targets, their classification and identification. So it is fundamental for the
+								ATLASCAR dataset to contain, for each frame, 2D and 3D coordinates of the target, a label,
+								and an identification number.
+								Regarding the labelling system, it would be interesting to implement an interface that
+								suggests the user objects of interest similar to the DeepDrive annotation tool.
+						</p>
 	
 					</div>
 
@@ -193,7 +193,12 @@
 					<div class="col-xs-12">
 						<h4>Choose the topic you want to see</h4>
 						<ul class="list-unstyled list-spaces">
-							<li><a href="#spec-4-1">Data model</a><br><span class="small text-muted">This section describes the Chess Tourney data model, with an<br>explanation of the Message of plays.</span></li>
+							<li><a href="#spec-4-1">Datasets</a><br><span class="small text-muted">This section describes the datasets used in <br>ADAS projects.</span></li>
+							<li><a href="#spec-4-1">KITTI</a><br><span class="small text-muted">This section describes one of the datasets used in ADAS projects, the<br>KITTI dataset.</span></li>
+							<li><a href="#spec-4-1">DeepDrive</a><br><span class="small text-muted">This section describes one of the datasets used in ADAS projects, the<br>DeepDrive dataset.</span></li>
+							<li><a href="#spec-4-1">HumanEva II</a><br><span class="small text-muted">This section describes one of the datasets used in ADAS projects, the<br>HumanEva II dataset.</span></li>
+							<li><a href="#spec-4-1">ETHZ</a><br><span class="small text-muted">This section describes one of the datasets used in ADAS projects, the<br>ETHZ dataset.</span></li>
+							<li><a href="#spec-4-1">EPFL</a><br><span class="small text-muted">This section describes one of the datasets used in ADAS projects, the<br>EPFL dataset.</span></li>
 						</ul>
 					</div>
 				</div>
