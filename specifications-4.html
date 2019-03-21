@@ -116,9 +116,17 @@
 								 relatively to the car.</p>
 						   
 						</p>
-						<br><h4><b>Kafka Broker</b></h4><br>
-						<p>&emsp;This broker is a component that comunicates through a Restful API with other services and its main function is to be a message middleware that handles real-time data (Chess  moves from players) from Unity. It reads and writes data of the chess moves and it sends the data to the Glassfish Servlets and Dumper.</p>
-	
+						<br><h4><b>Berkeley DeepDrive Dataset</b></h4><br>
+						<p>&emsp;The DeepDrive Dataset is a recent ADAS labelled dataset from the University of California, Berkeley.
+								 The Dataset consists of box annotations, region annotations and detection of objects,
+								 lanes and drivable areas (Yu et al. 2018). The only source data for each dataset is a video
+								 captured with a camera on a vehicle. Their labelling system is a web-based tool</p>
+						<p><img src="./assets/images/DeepDrive-WebTool.png"></p>
+						<p>&emsp;The labelling has a semi-automatic and a manual mode. In this annotation application
+								 the objects of interest are suggested with a bounding box and a category (label). The size of
+								 the bounding box and the category can be edited if the system fails. The objects are detected
+								 using a previously trained object detection model. The data is stored in the following snipet:</p>
+						<p><img src="./assets/images/DeepDrive-Dataset.png"></p>
 						<br><h4><b>Game Tracker - CLI(Chess Layout Interface)</b></h4><br>
 						<p>&emsp;The purpose of this module is to display the chessboard with the chess-moves being made by the players in Unity. Basically in this module we have two consumers that are consuming data from the Kafka Broker and playing the game on the Game Tracker module according to the received data. This module will be used by the web interface in order to determine the game status as well as other additional information </p>
 						<p><img src="./assets/images/gametracker_CLI.png"> <img src="./assets/images/gametracker_CLI02.png"></p>
