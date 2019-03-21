@@ -79,41 +79,56 @@
 					<p>&emsp;ETHZ Dataset</p><br>
 					<p>&emsp;EPFL Dataset</p>
 
-					<div class="header-inside" id="spec-3-3">
-						<h3>Tests</h3>
-						<p><img src="./assets/images/chess-knight-and-pawn-attack.png" width="200" height="200"></p> On this section we will give an insight into the test part of each of the compenents, explaining its main functions and their purpose.
+					<div class="header-inside" id="spec-3-2">
+						<h3>Components</h3>
+						<hr class="half-rule"/>
+						<p><img src="./assets/images/Knight-Yellow-icon.png"></p> On this section we give an insight into each and every one of the components, explaining its main function and the external interface.</p>
+						 
+						<br><h4><b>Unity</b></h4><br>
+						<p>&emsp;The role of Unity is to make players able to play the Chess Game. It also allows passive viewers to see the game, and it communicates through confluent kafka in .NET with the kafka broker.</p>
+	
+	
+						<br><h4><b>Kafka Broker</b></h4><br>
+						<p>&emsp;This broker is a component that comunicates through a Restful API with other services and its main function is to be a message middleware that handles real-time data (Chess  moves from players) from Unity. It reads and writes data of the chess moves and it sends the data to the Glassfish Servlets and Dumper.</p>
+	
+						<br><h4><b>Game Tracker - CLI(Chess Layout Interface)</b></h4><br>
+						<p>&emsp;The purpose of this module is to display the chessboard with the chess-moves being made by the players in Unity. Basically in this module we have two consumers that are consuming data from the Kafka Broker and playing the game on the Game Tracker module according to the received data. This module will be used by the web interface in order to determine the game status as well as other additional information </p>
+						<p><img src="./assets/images/gametracker_CLI.png"> <img src="./assets/images/gametracker_CLI02.png"></p>
+						
 						<br><h4><b>WEB User Interface - REST API</b></h4><br>
-						<p>&emsp; The API provides a series of tests using MockitoJUnitRunner class to see if the api responds accordingly.</p>
-						<p> Theses tests were divided into 5 different parts</p>
-						<table style="width:100%">
-						  <tr>
-							<th>Test</th>
-							<th>Purpose</th> 
-						  </tr>
-						  <tr>
-							<td>Test Create New Game</td>
-							<td>Checks if we can create new chessboard according to the GameTracker information</td> 
-						  </tr>
-						  <tr>
-							<td>Test Get Fetches from Session</td>
-							<td>Checks if we can get chessboard game state from the GameTracker information</td> 
-						  </tr>
-						  <tr>
-							  <td>Test Put Makes with Transition</td>
-							  <td>Checks if we can get chessboard game state with the move id provided by the url</td>
-						  </tr>
-						  <tr>
-							  <td>Test Invalid Move Put</td>
-							  <td>Checks if the move is valid or not</td>
-						  </tr>
-						  <tr>
-							  <td>Test Post Game</td>
-							  <td>Checks if chessboard can be reset according to the information provided by the GameTracker</td>
-						  </tr>
-						</table>
+						<p>&emsp;The Chess Tourney Web Portal is the web interface between the Chess Tourney platform and any person that wants to see a game or tournament. This API uses a REST-ful engine with a set of endpoints(described below) to manage all the information, by collecting data from the GlassFish Servlets and/or Database and displaying it in the WEB API. It can show a specific game beetween two players, chess-moves, frequencies and other devolpments.</p>
+						<p><img src="./assets/images/chess-web-api.png"></p>
+						<p>As mentioned earlier the API uses a REST-ful engine with a set endpoints that collects data of the Game Tracker module from the Glassfish Servlets and displays it on the web Interface.</p><p>This REST-ful engine uses 7 endpoints, each with a specific purpose using the HTTP methods GET, POST and PUT:</p> 
+						<br><h5><b> - POST GAME</b></h5><br>
+						<p>If the user issues a POST to this endpoint by clicking in the "Click here to start new chess game" option it will create a brand new game, resetting the pieces back to their original starting positions resetting the board to its initial state</p>
+						<p><img src="./assets/images/postgame.png"></p>
+						<br><h5><b> - GET GAME</b></h5><br>
+						<p>If the user issues a GET to this endpoint by clicking in the "Click here to look at game status" option it will return the chessboard state according to the GameTracker module</p>
+						<p><img src="./assets/images/getgame.png"></p>
+						<br><h5><b> - GET MOVES</b></h5><br>
+						<p>If the user issues a GET to this endpoint by clicking in the "Click here to look at game moves" option it will return the current list of valid moves, given the placement of the pieces and whose turn it currently is</p>
+						<p><img src="./assets/images/getmoves.png"></p>
+						<br><h5><b> - POST MOVES</b></h5><br>
+						<p>If the user issues a POST to this endpoint by clicking in the "Click here to check on latest moves" option it will return the chessboard state according to the last move being made on the GameTracker module or it will return the chessboard state according to a specific move specified by the user on the URL</p>
+						<p><img src="./assets/images/postmoves.png"></p>
+						<br><h5><b> - PUT GAME</b></h5><br>
+						<p>If the user issues a PUT to this endpoint by clicking in the "Click here to check on latest game status" option it will return the chessboard state according to move id being set on the GameTracker module giving the chessboard status according to chess moves of each user</p>
+						<p><img src="./assets/images/putgame1.png"> <img src="./assets/images/putgame2.png"></p>
+						<br><h5><b> - GET PIECE FREQUENCY</b></h5><br>
+						<p>If the user issues a GET to this endpoint by clicking in the "Click here to look at game moves" option it will return the current list of the pieces given their placement on the board as well as their play frequency according to the game status</p>
+						<p><img src="./assets/images/piecesfreq.png"></p>
+						<br><h5><b> - GET MOVES FREQUENCY</b></h5><br>
+						<p>If the user issues a GET to this endpoint by clicking in the "Click here to check move frequency" option it will return the current list of valid moves as well as their frequency on the playlist, given the placement of the pieces and whose turn it currently is</p>
+						<p><img src="./assets/images/movesfreq.png"></p>
+	
+											
+						<br><h4><b>Dumper</b></h4><br>
+						<p>&emsp;The Chess Tourney Dumper is a JPA persistance module that store information from Broker. It saves all the information gathered by the system, including all the Chess Moves from player's games. Within a defined interval, this component will fetch data from the current streams and save it on Database.</p>
+	
+						<br><h4><b>GlassFish Servlets</b></h4><br>
+						<p>&emsp;GlassFish Servlets have the function to add the interactive web front end to the Chess Tourney, ensuring the portability and scalability of the application between broker and restAPI</p>
 	
 					</div>
-
 
 					
 
