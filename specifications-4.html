@@ -6,7 +6,7 @@
 	<meta name="description" content="Semi-Automatic Labelling for Atlascar using Adaptive Perception">
 	<meta name="author"      content="Pedro Silva">
 	
-	<title>Chess Tourney > Datasets</title>
+	<title>Semi-Automatic Labelling for Atlascar using Adaptive Perception > Datasets</title>
 
 	<link rel="shortcut icon" href="assets/images/icon.png">
 	
@@ -59,7 +59,7 @@
 
 		<ol class="breadcrumb">
 			<li><a href="index.html">Home</a></li>
-			<li class="active">Data model</li>
+			<li class="active">Datasets</li>
 		</ol>
 
 		<div class="row">
@@ -67,65 +67,52 @@
 			<!-- Article main content -->
 			<article class="col-sm-8 maincontent">
 				<header class="page-header">
-					<h1 class="page-title">Data model</h1>
+					<h1 class="page-title">ADAS Datasets - Examples of Labelled Data</h1>
 				</header>
 
 				<div class="header-inside" id="spec-4-1">
 					<hr class="half-rule"/>
-					In this section basic concepts and relations used in the platform's data model are shown.<br><br>
-					<p>&emsp;Chess Tourney keeps all the information of the player's current and past games.</p><br>
-					<p>&emsp;After a tournament is created, a player is able to sign up.</p><br>
+					This section will present some relevant work and its results in public labelled datasets used in other ADAS projects.<br><br>
+					<p>&emsp;KITTI Dataset.</p><br>
+					<p>&emsp;Berkeley DeepDrive Dataset</p><br>
+					<p>&emsp;HumanEva II Dataset</p><br>
+					<p>&emsp;ETHZ Dataset</p><br>
+					<p>&emsp;EPFL Dataset</p>
 
-					<p>&emsp;This player gets an Identification associated to him and after a while he starts playing against another player. During the game, messages with the plays are sent to the Broker to get processed by the aplication. This Messages contain every information that is needed to process the game as it will be shown.</p><br>
-
-			<table>
-			<thead>
-			<tr>
-			<th>Parameter</th>
-			<th>Type</th>
-			<th style="text-align:left">Description</th>
-			</tr>
-			</thead>
-			<tbody>
-			<tr>
-			<td>tournament_id</td>
-			<td>int</td>
-			<td style="text-align:left">Identification of the tournament</td>
-			</tr>
-			<tr>
-			<td>game_id</td>
-			<td>int</td>
-			<td style="text-align:left">Identification of the game</td>
-			</tr>
-			<tr>
-			<td>id</td>
-			<td>Integer</td>
-			<td style="text-align:left">ID of the player</td>
-			</tr>
-			<tr>
-			<td>color_pieces</td>
-			<td>string</td>
-			<td style="text-align:left">Black/White, color of player pieces</td>
-			</tr>
-			<tr>
-			<td>timestamp</td>
-			<td>timestamp</td>
-			<td style="text-align:left">Timestamp of the move</td>
-			</tr>
-			<tr>
-			<td>from</td>
-			<td>string</td>
-			<td style="text-align:left">Position of the piece that the player wants to move</td>
-			</tr>
-			<tr>
-			<td>to</td>
-			<td>string</td>
-			<td style="text-align:left">Position the player wants the selected piece to move to</td>
-			</tr>
-			<tr>
-			</tbody>
-			</table>
-					
+					<div class="header-inside" id="spec-3-3">
+						<h3>Tests</h3>
+						<p><img src="./assets/images/chess-knight-and-pawn-attack.png" width="200" height="200"></p> On this section we will give an insight into the test part of each of the compenents, explaining its main functions and their purpose.
+						<br><h4><b>WEB User Interface - REST API</b></h4><br>
+						<p>&emsp; The API provides a series of tests using MockitoJUnitRunner class to see if the api responds accordingly.</p>
+						<p> Theses tests were divided into 5 different parts</p>
+						<table style="width:100%">
+						  <tr>
+							<th>Test</th>
+							<th>Purpose</th> 
+						  </tr>
+						  <tr>
+							<td>Test Create New Game</td>
+							<td>Checks if we can create new chessboard according to the GameTracker information</td> 
+						  </tr>
+						  <tr>
+							<td>Test Get Fetches from Session</td>
+							<td>Checks if we can get chessboard game state from the GameTracker information</td> 
+						  </tr>
+						  <tr>
+							  <td>Test Put Makes with Transition</td>
+							  <td>Checks if we can get chessboard game state with the move id provided by the url</td>
+						  </tr>
+						  <tr>
+							  <td>Test Invalid Move Put</td>
+							  <td>Checks if the move is valid or not</td>
+						  </tr>
+						  <tr>
+							  <td>Test Post Game</td>
+							  <td>Checks if chessboard can be reset according to the information provided by the GameTracker</td>
+						  </tr>
+						</table>
+	
+					</div>
 
 
 					
