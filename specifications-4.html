@@ -43,10 +43,15 @@
 							<li class="active"><a href="specifications-4.html">Datasets</a></li>
 							<li class="active"><a href="deliverables.html">Deliverables</a></li>
 						</ul>
-						<li><a href="about.html">About the ATLAS</a></li> <!-- Client area -->
-						
-						<li><a href="manual.html">Integration with CARLA</a></li> <!-- Client area -->
-					</li>
+                    </li>
+                    <li class="dropdown"> <!-- Client area -->
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">About<b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="aboutAtlas.html">About the ATLAS</a></li>
+                            <li><a href="aboutCarla.html">About the CARLA</a></li>
+						</ul>
+                    </li>
+                    <li><a href="manual.html">Integration with CARLA</a></li> <!-- Client area -->
 				</ul>
 			</div><!--/.nav-collapse -->
 		</div>
@@ -165,7 +170,32 @@
 							<p>&emsp;The dataset includes, for each frame, various objects identified with a number, a label, bounding box coordinates, and flags to point out
 									if the person is occluded, lost, or if the detection was automatically interpolated from the other camera’s information (EPFL (École polytechnique fédérale de Lausanne) 2018). The
 									particularity of the structure of this dataset is that, for each object, it is tracked in the image sequences individually, and only then another object is tracked and labeled.</p>
-						</div>	
+						</div>	<!-- Fixed navbar -->
+						<div class="navbar navbar-inverse navbar-fixed-top headroom" >
+							<div class="container">
+								<div class="navbar-header">
+								</div>
+								<div class="navbar-collapse collapse">
+									<ul class="nav navbar-nav pull-right">
+										<li><a href="index.html">Home</a></li> <!-- Client area -->
+										<li class="dropdown"> <!-- Specification area -->
+											<a href="#" class="dropdown-toggle" data-toggle="dropdown">Specifications<b class="caret"></b></a>
+											<ul class="dropdown-menu">
+												<li><a href="specifications-1.html">Features, system scenarios and use cases</a></li>
+												<li><a href="specifications-2.html">Requirements and tests</a></li>
+												<li><a href="specifications-3.html">Architecture</a></li>
+												<li class="active"><a href="specifications-4.html">Datasets</a></li>
+												<li class="active"><a href="deliverables.html">Deliverables</a></li>
+											</ul>
+											<li><a href="about.html">About the ATLAS</a></li> <!-- Client area -->
+											
+											<li><a href="manual.html">Integration with CARLA</a></li> <!-- Client area -->
+										</li>
+									</ul>
+								</div><!--/.nav-collapse -->
+							</div>
+						</div> 
+						<!-- /.navbar -->
 						<br><h4><b>Resume</b></h4><br>
 						<p>&emsp;To summarize this section, after analyzing these datasets and how they are created, it is
 								important to look at what is stored in the data structures . Some datasets use well known
@@ -178,10 +208,110 @@
 								position of the targets, their classification and identification. So it is fundamental for the
 								ATLASCAR dataset to contain, for each frame, 2D and 3D coordinates of the target, a label,
 								and an identification number.
-								Regarding the labelling system, it would be interesting to implement an interface that
-								suggests the user objects of interest similar to the DeepDrive annotation tool.
-						</p>
-	
+	<!-- Fixed navbar -->
+	<div class="navbar navbar-inverse navbar-fixed-top headroom" >
+		<div class="container">
+			<div class="navbar-header">
+			</div>
+			<div class="navbar-collapse collapse">
+				<ul class="nav navbar-nav pull-right">
+					<li><a href="index.html">Home</a></li> <!-- Client area -->
+					<li class="dropdown"> <!-- Specification area -->
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Specifications<b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="specifications-1.html">Features, system scenarios and use cases</a></li>
+							<li><a href="specifications-2.html">Requirements and tests</a></li>
+							<li><a href="specifications-3.html">Architecture</a></li>
+							<li class="active"><a href="specifications-4.html">Datasets</a></li>
+							<li class="active"><a href="deliverables.html">Deliverables</a></li>
+						</ul>
+						<li><a href="about.html">About the ATLAS</a></li> <!-- Client area -->
+						
+						<li><a href="manual.html">Integration with CARLA</a></li> <!-- Client area -->
+					</li>
+				</ul>
+			</div><!--/.nav-collapse -->
+		</div>
+	</div> 
+	<!-- /.navbar -->m, it would be interesting to implement an interface that
+	<!-- Fixed navbar -->
+	<div class="navbar navbar-inverse navbar-fixed-top headroom" >
+		<div class="container">
+			<div class="navbar-header">
+			</div>
+			<div class="navbar-collapse collapse">
+				<ul class="nav navbar-nav pull-right">
+					<li><a href="index.html">Home</a></li> <!-- Client area -->
+					<li class="dropdown"> <!-- Specification area -->
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Specifications<b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="specifications-1.html">Features, system scenarios and use cases</a></li>
+							<li><a href="specifications-2.html">Requirements and tests</a></li>
+							<li><a href="specifications-3.html">Architecture</a></li>
+							<li class="active"><a href="specifications-4.html">Datasets</a></li>
+							<li class="active"><a href="deliverables.html">Deliverables</a></li>
+						</ul>
+						<li><a href="about.html">About the ATLAS</a></li> <!-- Client area -->
+						
+						<li><a href="manual.html">Integration with CARLA</a></li> <!-- Client area -->
+					</li>
+				</ul>
+			</div><!--/.nav-collapse -->
+		</div>
+	</div> 
+	<!-- /.navbar -->interest similar to the DeepDrive annotation tool.
+	<!-- Fixed navbar -->
+	<div class="navbar navbar-inverse navbar-fixed-top headroom" >
+		<div class="container">
+			<div class="navbar-header">
+			</div>
+			<div class="navbar-collapse collapse">
+				<ul class="nav navbar-nav pull-right">
+					<li><a href="index.html">Home</a></li> <!-- Client area -->
+					<li class="dropdown"> <!-- Specification area -->
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Specifications<b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="specifications-1.html">Features, system scenarios and use cases</a></li>
+							<li><a href="specifications-2.html">Requirements and tests</a></li>
+							<li><a href="specifications-3.html">Architecture</a></li>
+							<li class="active"><a href="specifications-4.html">Datasets</a></li>
+							<li class="active"><a href="deliverables.html">Deliverables</a></li>
+						</ul>
+						<li><a href="about.html">About the ATLAS</a></li> <!-- Client area -->
+						
+						<li><a href="manual.html">Integration with CARLA</a></li> <!-- Client area -->
+					</li>
+				</ul>
+			</div><!--/.nav-collapse -->
+		</div>
+	</div> 
+	<!-- /.navbar -->
+	<!-- Fixed navbar -->
+	<div class="navbar navbar-inverse navbar-fixed-top headroom" >
+		<div class="container">
+			<div class="navbar-header">
+			</div>
+			<div class="navbar-collapse collapse">
+				<ul class="nav navbar-nav pull-right">
+					<li><a href="index.html">Home</a></li> <!-- Client area -->
+					<li class="dropdown"> <!-- Specification area -->
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Specifications<b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="specifications-1.html">Features, system scenarios and use cases</a></li>
+							<li><a href="specifications-2.html">Requirements and tests</a></li>
+							<li><a href="specifications-3.html">Architecture</a></li>
+							<li class="active"><a href="specifications-4.html">Datasets</a></li>
+							<li class="active"><a href="deliverables.html">Deliverables</a></li>
+						</ul>
+						<li><a href="about.html">About the ATLAS</a></li> <!-- Client area -->
+						
+						<li><a href="manual.html">Integration with CARLA</a></li> <!-- Client area -->
+					</li>
+				</ul>
+			</div><!--/.nav-collapse -->
+		</div>
+	</div> 
+	<!-- /.navbar -->
 					</div>
 
 					
