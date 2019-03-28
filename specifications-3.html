@@ -114,10 +114,39 @@
 					<p>&emsp;RVIZ is the standard ROS tool for 3D visualization. The Rviz is one of the most important tools as it will be used to visualize data either directly in real-time
 							     by connecting a computer to the car or in rosbags. It will also serve as a debugging tool in which pointcloud values can be analyzed (ROS Wiki 2018b).</p>
 					<p><img src="./assets/images/rviz_config.png"></p>
-					<br><h4><b>Game Tracker - CLI(Chess Layout Interface)</b></h4><br>
-					<p>&emsp;The purpose of this module is to display the chessboard with the chess-moves being made by the players in Unity. Basically in this module we have two consumers that are consuming data from the Kafka Broker and playing the game on the Game Tracker module according to the received data. This module will be used by the web interface in order to determine the game status as well as other additional information </p>
-					<p><img src="./assets/images/gametracker_CLI.png"> <img src="./assets/images/gametracker_CLI02.png"></p>
+
+					<br><h4><b>Rosbag</b></h4><br>
+					<p>&emsp;A rosbag is a file in ROS which contains messages saved from past events. While connected directly to a device, or several devices, multiple topics can be subscribed at once to be recorded into a rosbag. </p>
+					<p>&emsp;The advantage of rosbags is to replicate the working environment of the ATLASCAR 2 offline. Several rosbags were recorded throughout the process of development in this project, either of calibration or for detection, tracking and labeling purposes.</p>
+					<p>&emsp;In ROS, the rosbag package contains a set of tools for recording from and playing back to ROS topics. It is intended to be high performance and avoid deserialization and reserialization
+									 of the messages. It also features command line tools for working with bags as well as code APIs to read/write and manipulate bags (ROS Wiki 2018a).</p>
 					
+					<br><h4><b>Roslaunch</b></h4><br>
+					<p>&emsp; The roslaunch files are used as a tool for easily launching multiple ROS nodes. A roslaunch
+							file sets up a roscore (os ROS master), sets parameters on the Parameter Server, and can also
+							execute other roslaunch files.</p>
+					<p>&emsp;It includes options to automatically re-spawn processes that have already died. The
+							roslaunch takes in one or more XML configuration files (with the .launch extension) that
+							specify the parameters to set and nodes to launch.</p>
+					<p>&emsp;For example, a rosbag can be given as parameter to the roslaunch which opens the Rviz
+							with a previous defined configuration to visualize the data from that rosbag.</p>
+					<p>&emsp;In this project, roslaunch files are used to set up calibration values before launching the
+							Rviz and the nodes that process the data from the LIDARs and the camera. The transforma-
+							tions between device frames are set up using roslaunch files and static transform publishers
+							implemented by ROS.</p>
+					<p>&emsp;The roslaunch files are also advantageous to set up the multiple drivers needed to bring
+							up the several devices equipped in the ATLASCAR 2. Since the sensors are connected to
+							a network switch, the parameters given in the driver’s roslaunch file are the IP addresses of
+							each of the devices. The drivers will then receive packets from the sensors and remap them
+							into the ROS format.</p>
+
+					<br><h4><b>Rqt_bag</b></h4>
+					<p>&emsp;The rqt bag is a GUI to replay and display ROS bag files. In this program it is possible to
+							show bag message contents, view image messages, plot message from selected topics, publish
+							messages from selected topics and export messages to a new bag. The rqt bag is useful for
+							the labelling process as it presents a timeline in which the user can select the time by clicking
+							on it.</p>
+							
 					<br><h4><b>WEB User Interface - REST API</b></h4><br>
 					<p>&emsp;The Chess Tourney Web Portal is the web interface between the Chess Tourney platform and any person that wants to see a game or tournament. This API uses a REST-ful engine with a set of endpoints(described below) to manage all the information, by collecting data from the GlassFish Servlets and/or Database and displaying it in the WEB API. It can show a specific game beetween two players, chess-moves, frequencies and other devolpments.</p>
 					<p><img src="./assets/images/chess-web-api.png"></p>
