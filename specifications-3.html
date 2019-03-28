@@ -146,32 +146,85 @@
 							messages from selected topics and export messages to a new bag. The rqt bag is useful for
 							the labelling process as it presents a timeline in which the user can select the time by clicking
 							on it.</p>
+					<p><img src="./assets/images/rqt_bag.png"></p>
+
 							
-					<br><h4><b>WEB User Interface - REST API</b></h4><br>
-					<p>&emsp;The Chess Tourney Web Portal is the web interface between the Chess Tourney platform and any person that wants to see a game or tournament. This API uses a REST-ful engine with a set of endpoints(described below) to manage all the information, by collecting data from the GlassFish Servlets and/or Database and displaying it in the WEB API. It can show a specific game beetween two players, chess-moves, frequencies and other devolpments.</p>
-					<p><img src="./assets/images/chess-web-api.png"></p>
-					<p>As mentioned earlier the API uses a REST-ful engine with a set endpoints that collects data of the Game Tracker module from the Glassfish Servlets and displays it on the web Interface.</p><p>This REST-ful engine uses 7 endpoints, each with a specific purpose using the HTTP methods GET, POST and PUT:</p> 
-					<br><h5><b> - POST GAME</b></h5><br>
-					<p>If the user issues a POST to this endpoint by clicking in the "Click here to start new chess game" option it will create a brand new game, resetting the pieces back to their original starting positions resetting the board to its initial state</p>
-					<p><img src="./assets/images/postgame.png"></p>
-					<br><h5><b> - GET GAME</b></h5><br>
-					<p>If the user issues a GET to this endpoint by clicking in the "Click here to look at game status" option it will return the chessboard state according to the GameTracker module</p>
-					<p><img src="./assets/images/getgame.png"></p>
-					<br><h5><b> - GET MOVES</b></h5><br>
+					<br><h4><b>LAR ToolKit</b></h4><br>
+					<p>&emsp;The LARTk is a software suite developed by members of LAR. The projects involved in the LARTk are based in the development of robotics solutions namely for the ATLAS project.</p>
+					<p>&emsp; This toolkit is constituted by a set of packages:<a target="_blank" href="http://lars.mec.ua.pt/lartk4/">LARtk4Wiki</a></p>
+					<br><h5><b>atlascar_base</b></h5><br>
+					<p>This module establishes communication with the atlascar control PLC, handling all main control communications.</p>
+					<p>GitHub:<a target="_blank" href="https://github.com/SIlvaMFPedro/atlascar_base">atlascar_base</a></p>
+					<p>RosWiki:<a target="_blank" href="http://wiki.ros.org/atlascar_base">atlascar_base</a></p>
+					<br><h5><b>augmented_perception</b></h5><br>
+					<p>This module is used to establish semi-automatic detection, tracking and labelling of active targets with the atlascar</p>
+					<p>This package was developed by Nuno Miguel Soares Silva(2018):<a target="_blank" href="https://github.com/nmssilva">GitHub</a></p>
+					<p>GitHub:<a target="_blank" href="https://github.com/SIlvaMFPedro/augmented_perception">augmented_perception</a></p>
+					<p>RosWiki:<a target="_blank" href="http://wiki.ros.org/augmented_perception">augmented_perception</a></p>
+					<br><h5><b>calibration_gui</b></h5><br>
+					<p>This multi-sensor calibration package contains a GUI used to calibrate the several sensors present in the ATLASCAR2</p>
+					<p>The package was initially developed for the ATLASCAR1, and it was further introduced into the ATLASCAR2 since the sensors were almost the same</p>
+					<p>The calibration package features a graphical user interface in which several sensors can be selected to be calibrated. The available devices are the SICK LMS151 and SICK LD-MRS mounted in the ATLASCAR 2, PointGrey cameras, Microsoft Kinects, the SwissRanger
+						 SR4000 and the Velodyne VLP16 used in the ATLASCAR1.</p>
+					<p>To calibrate, the user should roll a ball in front of the sensors in order to create a pointcloud of ball centers, and then align them. The user adds the sensors that will
+						 be calibrated and inserts the IP address of the sensor. One of the sensors will be defined as the reference sensor.</p>
+					<p><img src="./assets/images/calibration_gui.png"></p>
+					<p>Some configurations can be done in the Options menu. The ball diameter can be defined here as well as the number of calibration points and distance between points. 
+						 The calibration also has two acquisition types: automatic or user prompt.</p>
+					<p>In the automatic mode, while the ball rolls in front of the sensors the calibration programs automatically detects the ball center and publishes it. 
+						 In the user prompt mode the user chooses when the ball should be captured.</p>
+					<p>In the end a file with the transformation matrices with the relative position of the sensors relatively to the reference sensor will be written.</p>
+					<br><h5><b>colormap</b></h5><br>
 					<p>If the user issues a GET to this endpoint by clicking in the "Click here to look at game moves" option it will return the current list of valid moves, given the placement of the pieces and whose turn it currently is</p>
 					<p><img src="./assets/images/getmoves.png"></p>
-					<br><h5><b> - POST MOVES</b></h5><br>
+					<br><h5><b>free_space_detection</b></h5><br>
 					<p>If the user issues a POST to this endpoint by clicking in the "Click here to check on latest moves" option it will return the chessboard state according to the last move being made on the GameTracker module or it will return the chessboard state according to a specific move specified by the user on the URL</p>
 					<p><img src="./assets/images/postmoves.png"></p>
-					<br><h5><b> - PUT GAME</b></h5><br>
+					<br><h5><b>kfilter</b></h5><br>
 					<p>If the user issues a PUT to this endpoint by clicking in the "Click here to check on latest game status" option it will return the chessboard state according to move id being set on the GameTracker module giving the chessboard status according to chess moves of each user</p>
 					<p><img src="./assets/images/putgame1.png"> <img src="./assets/images/putgame2.png"></p>
-					<br><h5><b> - GET PIECE FREQUENCY</b></h5><br>
+					<br><h5><b>laser</b></h5><br>
 					<p>If the user issues a GET to this endpoint by clicking in the "Click here to look at game moves" option it will return the current list of the pieces given their placement on the board as well as their play frequency according to the game status</p>
 					<p><img src="./assets/images/piecesfreq.png"></p>
-					<br><h5><b> - GET MOVES FREQUENCY</b></h5><br>
+					<br><h5><b>lidar_segmentation</b></h5><br>
 					<p>If the user issues a GET to this endpoint by clicking in the "Click here to check move frequency" option it will return the current list of valid moves as well as their frequency on the playlist, given the placement of the pieces and whose turn it currently is</p>
 					<p><img src="./assets/images/movesfreq.png"></p>
+					<br><h5><b>image_labelling</b></h5><br>
+					<p>If the user issues a GET to this endpoint by clicking in the "Click here to check move frequency" option it will return the current list of valid moves as well as their frequency on the playlist, given the placement of the pieces and whose turn it currently is</p>
+					<p><img src="./assets/images/movesfreq.png"></p>
+					<br><h5><b>mtt</b></h5><br>
+					<p>If the user issues a GET to this endpoint by clicking in the "Click here to check move frequency" option it will return the current list of valid moves as well as their frequency on the playlist, given the placement of the pieces and whose turn it currently is</p>
+					<p><img src="./assets/images/movesfreq.png"></p>
+					<br><h5><b>navigation_msgs</b></h5><br>
+					<p>If the user issues a GET to this endpoint by clicking in the "Click here to check move frequency" option it will return the current list of valid moves as well as their frequency on the playlist, given the placement of the pieces and whose turn it currently is</p>
+					<p><img src="./assets/images/movesfreq.png"></p>
+					<br><h5><b>odometer</b></h5><br>
+					<p>If the user issues a GET to this endpoint by clicking in the "Click here to check move frequency" option it will return the current list of valid moves as well as their frequency on the playlist, given the placement of the pieces and whose turn it currently is</p>
+					<p><img src="./assets/images/movesfreq.png"></p>
+					<br><h5><b>python_scripts</b></h5><br>
+					<p>If the user issues a GET to this endpoint by clicking in the "Click here to check move frequency" option it will return the current list of valid moves as well as their frequency on the playlist, given the placement of the pieces and whose turn it currently is</p>
+					<p><img src="./assets/images/movesfreq.png"></p>
+					<br><h5><b>rqt_bag</b></h5><br>
+					<p>If the user issues a GET to this endpoint by clicking in the "Click here to check move frequency" option it will return the current list of valid moves as well as their frequency on the playlist, given the placement of the pieces and whose turn it currently is</p>
+					<p><img src="./assets/images/movesfreq.png"></p>
+					<br><h5><b>tcp_client</b></h5><br>
+					<p>If the user issues a GET to this endpoint by clicking in the "Click here to check move frequency" option it will return the current list of valid moves as well as their frequency on the playlist, given the placement of the pieces and whose turn it currently is</p>
+					<p><img src="./assets/images/movesfreq.png"></p>
+					<br><h5><b>topic_priority</b></h5><br>
+					<p>If the user issues a GET to this endpoint by clicking in the "Click here to check move frequency" option it will return the current list of valid moves as well as their frequency on the playlist, given the placement of the pieces and whose turn it currently is</p>
+					<p><img src="./assets/images/movesfreq.png"></p>
+					<br><h5><b>velodyne_master</b></h5><br>
+					<p>If the user issues a GET to this endpoint by clicking in the "Click here to check move frequency" option it will return the current list of valid moves as well as their frequency on the playlist, given the placement of the pieces and whose turn it currently is</p>
+					<p><img src="./assets/images/movesfreq.png"></p>
+
+
+
+
+
+
+
+
+
 
 										
 					<br><h4><b>Dumper</b></h4><br>
