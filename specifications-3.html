@@ -276,62 +276,9 @@
 					<p>RosWiki: <a target="_blank" href="http://wiki.ros.org/velodyne_master">velodyne_master</a></p>
 
 
-
-
-
-
-
-
-
-
-										
-					<br><h4><b>Dumper</b></h4><br>
-					<p>&emsp;The Chess Tourney Dumper is a JPA persistance module that store information from Broker. It saves all the information gathered by the system, including all the Chess Moves from player's games. Within a defined interval, this component will fetch data from the current streams and save it on Database.</p>
-
-					<br><h4><b>GlassFish Servlets</b></h4><br>
-					<p>&emsp;GlassFish Servlets have the function to add the interactive web front end to the Chess Tourney, ensuring the portability and scalability of the application between broker and restAPI</p>
-
 				</div>
 
-				<div class="header-inside" id="spec-3-3">
-					<h3>Tests</h3>
-					<p><img src="./assets/images/chess-knight-and-pawn-attack.png" width="200" height="200"></p> On this section we will give an insight into the test part of each of the compenents, explaining its main functions and their purpose.
-					<br><h4><b>WEB User Interface - REST API</b></h4><br>
-					<p>&emsp; The API provides a series of tests using MockitoJUnitRunner class to see if the api responds accordingly.</p>
-					<p> Theses tests were divided into 5 different parts</p>
-					<table style="width:100%">
-					  <tr>
-					    <th>Test</th>
-					    <th>Purpose</th> 
-					  </tr>
-					  <tr>
-					    <td>Test Create New Game</td>
-					    <td>Checks if we can create new chessboard according to the GameTracker information</td> 
-					  </tr>
-					  <tr>
-					    <td>Test Get Fetches from Session</td>
-					    <td>Checks if we can get chessboard game state from the GameTracker information</td> 
-					  </tr>
-					  <tr>
-					  	<td>Test Put Makes with Transition</td>
-					  	<td>Checks if we can get chessboard game state with the move id provided by the url</td>
-					  </tr>
-					  <tr>
-					  	<td>Test Invalid Move Put</td>
-					  	<td>Checks if the move is valid or not</td>
-					  </tr>
-					  <tr>
-					  	<td>Test Post Game</td>
-					  	<td>Checks if chessboard can be reset according to the information provided by the GameTracker</td>
-					  </tr>
-					</table>
-
-			    </div>
-				<div class="header-inside" id="spec-3-4">
-					<h3>Deployment</h3>
-					<hr class="half-rule"/>
-					<p>&emsp;This section is still to be delpoyed.<img src="./assets/images/Pawn-Yellow-icon.png"></p>
-				</div>
+				
 				
 			</article>
 			<!-- /Article -->
