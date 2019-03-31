@@ -6,7 +6,7 @@
 	<meta name="description" content="Semi-Automatic Labelling for Atlascar using Adaptive Perception">
 	<meta name="author"      content="Pedro Silva">
 	
-	<title>Chess Tourney > How to use it</title>
+	<title>ROS-CARLA Integration > How to use <a target="_blank" href="https://github.com/SIlvaMFPedro/ros_bridge">ROS_BRIDGE</a> package</title>
 
 	<link rel="shortcut icon" href="assets/images/icon.png">
 	
@@ -114,81 +114,66 @@
 		</ol>
 
 		<div class="row">
-			
 			<!-- Article main content -->
-            <article class="col-sm-8 maincontent">
-                <header class="page-header">
-                    <h1 class="page-title">How to use it</h1>
-                </header>
+			<article class="col-sm-8 maincontent">
+				<header class="page-header">
+					<h1 class="page-title">How to use ROS_BRIDGE</h1>
+				</header>
 
-                <div class="header-inside" id="about-1">
-                    <h3>Manual</h3>
-                    <hr class="half-rule" />
-                    <p>&emsp;On this section, we explain how the player interacts with the system and is able to play the game using VR
-                    <br><br>
-                    &emsp;When the player enters the game:
-                    <br><br>
-                    &emsp;He needs 3 objects
-                    <ul>
-	                    <li>HTC VIVE VR Glasses</li>
-	                    <li>2 Hand Controllers</li>
-                    </ul><br>
-                    &emsp;With the glasses, player will be able to see the chess board and every movements he does, while using both controllers that are shown as a Broom and a Wand
-                    <br><br>
-			
-			<div class="arch-div"><div class="h-caption" style="border-style: solid; border-color: grey;"><img src="./assets/images/1video.png" alt="1video"><br></div></div>
-			<br><br>
-<div class="arch-div"><div class="h-caption" style="border-style: solid; border-color: grey;"><img src="./assets/images/Broom.png" alt="broom"><br></div></div>
-<br><br>
-<div class="arch-div"><div class="h-caption" style="border-style: solid; border-color: grey;"><img src="./assets/images/Wand.png" alt="wand"><br></div></div>
-<br><br>
+				<div class="header-inside" id="spec-3-1">
+					<h3>Abstract</h3>
+					<hr class="half-rule"/>
+					<ul>
+						<li>ROS Bridge Driver Package for <a target="_blank" href="https://github.com/carla-simulator/carla">CARLA</a> Simulator Package</li>
+						<li>Code based on <a target="_blank" href="https://github.com/carla-simulator/ros-bridge">another</a> package used for ROS-CARLA integration used by the <a target="_blank" href="https://github.com/carla-simulator/carla">CARLA</a> repository</li>
+						<li>The goal of this ROS package is to provide a simple ROS bridge for CARLA simulator in order to be used for the ATLASCAR project of Aveiro University.</li>
+						<li>This documentation is for CARLA versions newer than 0.9.4</li>
+					</ul><br>
+					<h3>Image Results:</h3>
+					<p><img src="./assets/images/rviz_carla_session1.png"></p>
+				</div>
 
-                    &emsp;With the wand controller, that will be on the right hand of the player, player will be able to do his moves.
-                    <br><br>
-                    &emsp;To move a piece, player will to select the piece that he wants to play, by pointing to it with the Wand. He selects it by pressing the center button of the controller and moves it by pressing again the same button, to the place he want's (inside the rules of chess).
+				<div class="header-inside" id="spec-3-2">
+					<h3>Features</h3>
+					<hr class="half-rule"/>
+					<ul>
+						<li>Cameras(Depth, Segmentation, RGB) Support.</li>
+						<li>Transform Publications.</li>
+						<li>Manual Control Using Ackermann ROS Message.</li>
+						<li>Handle ROS Dependencies.</li>
+						<li>Marker/Bounding Box Messages For Cars/Pedestrians.</li>
+						<li>LIDAR Sensor Support.</li>
+						<li>ROSBAG In The Bridge(in order to avoid rosbag record -a small time errors).</li>
+						<li>Add Traffic Light Support.</li>
+						<li>ROS/OpenCV Image Convertion and Object Tracking using Template Matching.</li>
+					</ul><br>
+				</div>
 
+				
+				<div class="header-inside" id="spec-3-3">
+					<h3>Simulation Platform</h3>
+					<hr class="half-rule"/>
+					<p> This simulation platform supports flexible specification of sensor suites and enviornmental conditions used in order to study the performance of three approaches to autonomous driving: a classic modular pipeline model, an end-to-end model trained via imitation learning and an end-to-end model trained via reinforcement learning. The first approach consists in a classic modular pipeline that comprises a vision-based perception module, a rule-based planner and a maneuver controller. The second approach consists in a deep network that maps sensory input to driving commands, trained end-to-end via imitation learning. Finally, the third approach also consists in a deep network but this one was trained end-to-end via reinforcement learning. These approaches were evaluated in various controlled scenarios of increasing difficulty, and their perfomance was examined via metrics provided by CARLA, illustrating the platform's utility for autonomous driving research.</p>
+					 
+					<div class="header-inside" id="spec-3-3">
+						<br><h4><b>Simulation Engine</b></h4><br>
+						<!---<p><img src="./assets/images/ATLASCAR1.png"></p>-->
+						<p>&emsp;The simulation engine used by CARLA has been build for flexibility and realism in the rendering and physics simulation and it serves as an open-source layer over the Unreal Engine 4(UE4), enabling future extensions by the community. This engine provides state-of-the-art rendering quality, realistic physics, basic NPC logic components and an ecosystems of interoperable plugins. Also, the engine itseft is free and non-commercial for use.</p>
+						<p>&emsp;The CARLA simulates an open dynamic world and provides a simple interface between the world and the controlling agent which is the one who interacts with the world. To support this functionality, CARLA was designed based on a server-client model, where the server runs the simulation, renders the scene and provides data information to the client. The client API was implemented in Python and it's responsible for the establishing connection and future interaction betweem the autonomous agent and the server via sockets. This client sends commands, or meta-commands, to the server and receives sensor messages in return. The commands used to control the vehicle include steering accelerating and braking. Meta-properties used to control the environment include modifying the sensor suite and the environmental properties used to control the environment include weather conditions, illumination and the density of cars and pedestrians.</p>
+						<p>&emsp;When the server is reset, the agent is re-initialized at a new location specified by the client API.</p>
+						<p>&emsp;The environment used by CARLA is composed of 3D models of static objects such as buildings, vegetation, traffic signs, infrastructure, as well as dynamic objects such as vehicles and pedestrians. All models were carefully designed to reconcile visual quality and rendering speed, using low-weight geometric models and textures, maintain visual realism by carefully crafting the materials and making use of a variable level of detail. All 3D models were made in a common scale, and their sizes reflected those of real objects. At the time of writting of this paper, the asset library includes 40 different buildings, 16 animated vehicle models and 50 animated pedestrian models.</p>
+						<p>&emsp;The sensors used by CARLA allow for flexible configuration of the agent's sensor suite. At the time of writting of this paper, the sensors were limited to RGB cameras and pseudo-sensors that provide ground-truth depth and semantic segmentation. These sensors can be illustrated down below </p>
+						<p><img src="./assets/images/CARLA_Sensors.png"></p>
+						<p>&emsp;The number of cameras used, their type and their position are parameters that can be specified by the client. The camera parameters include 3D location, 3D orientation with respect to the car's coordinate system, its filed of view and its depth of field.</p>
+						<p>&emsp;The CARLA's semantic segmentation pseudo-sensor provides 12 semantic classes: roasd, lane-marking, traffic sign, sidewalk, fence, pole, wall, building, vegetation, vehicle, pedestrian and other.</p>
+						<p>&emsp;In addition to sensor and pseudo-sensor readings, the CARLA also provides a range of measurements associated with the state of the agent and compliance with traffic rules. The measurements used to translate the agent's state include vehicle location and orientation with respect to the world coordinate system(GPS/compass), speed, acceleration and accumulated impact from collisions. The measurements used to translate traffic rules include the vehicle's footprint percentage that impinges on the wrong-way lanes or the sidewalks, as well as the states of the traffic lights and the speed limit at the current location of the vehicle.</p>
+						<p>&emsp;Finally, the CARLA also provides access to the exact locations and bounding boxes of all the dynamic objects present in the environment. These signals play an important role in training and evaluating driving processes.</p>
+					</div>
 
-                    <br><br>
-
-<div class="arch-div"><div class="h-caption" style="border-style: solid; border-color: grey;"><img src="./assets/images/wand 1 move pieces.png" alt="wand1 move pieces"><br></div></div>
-<div class="arch-div"><div class="h-caption" style="border-style: solid; border-color: grey;"><img src="./assets/images/2video.png" alt="2video"><br></div></div>
-<br><br>
-
-                    <br><br>
-
-                    &emsp;If player thinks he made a wrong move, he can also cancel his movement by pressing the back button of the controller and deselect the piece he selected previously by using the side button.
-
-                    <br><br>
-
-
-<div class="arch-div"><div class="h-caption" style="border-style: solid; border-color: grey;"><img src="./assets/images/wand 2 cancel movement.png" alt="wand 2 cancel movement"><br></div></div>
-<div class="arch-div"><div class="h-caption" style="border-style: solid; border-color: grey;"><img src="./assets/images/wand 3 deselect pieces.png" alt="wand 3 deselect pieces"><br></div></div>
-
-<br><br>
-                    
-					&emsp;Until now, was explained how player could move pieces, cancel his movements, select or deselect pieces. But he is also available to move "inside" de board, so he can see the game from another position that not the center one.
-
-					<br><br>
-                    &emsp;With the broom controller, that is on player's left hand, he can check the board state by looking to it. On the board attatched to the broom, player can see all of his and opponents pieces and positions. The green dot in the middle represents the position that the player is in that moment on the board, from where he is looking to the game.
-
-                    <br><br>
-
-<div class="arch-div"><div class="h-caption" style="border-style: solid; border-color: white;"><img src="./assets/images/3video.png" alt="3video"><br></div></div>
-
-                    <br><br>
-
-
-					&emsp;By using the same point and click logic (of moving pieces), player can also move himself around the board, so he can see the game from another position/perspective.
-
-                    <br><br>
-
-
-<div class="arch-div"><div class="h-caption" style="border-style: solid; border-color: white;"><img src="./assets/images/4video.png" alt="4video"><br></div></div>
-<div class="arch-div"><div class="h-caption" style="border-style: solid; border-color: white;"><img src="./assets/images/broom 1 move player.png" alt="broom 1 move player"><br></div></div>
-
-					<br><br>
-                   
-            </article>
+					
+				</div>
+				
+			</article>
 			<!-- /Article -->
 			
 			<!-- Sidebar -->
