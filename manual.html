@@ -295,6 +295,23 @@
 					</div>
 				</div>
 
+				<div class="header-inside" id="spec-3-18">
+					<h3>ROSBAG Recording(Not Yet Tested)</h3>
+					<hr class="half-rule"/>
+					<p>&emsp;The <a target="_blank" href="https://github.com/SIlvaMFPedro/ros_bridge/tree/master/carla_ros_bridge">carla_ros_bridge</a> could also be used to record all published topics into a rosbag by using the following comand:</p>
+					<p><img src="./assets/images/carla_command_13.png"></p>
+					<p>&emsp;This command will create a rosbag /tmp/save_session.bag</p>
+					<p>&emsp;You can of course also use rosbag record to do the same, but using the ros_bridge to do the recording you have the guarentee that all the message are saved without small desynchronization that could occurs when using rosbag record in an other process.</p>
+				</div>
+
+				<div class="header-inside" id="spec-3-19">
+					<h3>ROS-OpenCV Image Convertion</h3>
+					<hr class="half-rule"/>
+					<p>&emsp;The <a target="_blank" href="https://github.com/SIlvaMFPedro/ros_bridge/tree/master/carla_ros_image_converter">carla_ros_image_converter</a> package is used to convert images from a ROS Topic to an OpenCV images by running the following command:</p>
+					<p><img src="./assets/images/carla_command_14.png"></p>
+					<p>&emsp;In the future we will be using the OpenCV Template Matching algorithm in order to track objects in the CARLA world.</p>
+				</div>
+
 
 
 				
