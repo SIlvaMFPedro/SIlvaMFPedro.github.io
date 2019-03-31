@@ -272,6 +272,25 @@
 								<p>&emsp;In certain cases, the <a target="_blank" href="https://github.com/SIlvaMFPedro/ros_bridge/blob/master/carla_ros_bridge/msg/CarlaEgoVehicleInfo.msg">carla_ros_bridge.CarlaEgoVehicleInfo</a></p>
 								<p>&emsp;Therefore a ROS-based node <a target="_blank" href="https://github.com/SIlvaMFPedro/ros_bridge/tree/master/carla_ackermann_control">carla_ackermann_control</a> is provided which reads <a target="_blank" href="http://docs.ros.org/api/ackermann_msgs/html/msg/AckermannDrive.html">AckermannDrive</a> messages.</p>
 							</div>
+							<br><h4><b>Other Topics</b></h4><br>
+							<div class="header-inside" id="spec-3-16">
+								<br><h5><b>Object Information of Other Vehicles</b></h5><br>
+								<ul>
+									<li>| Topic | Type |</li>
+									<li>|-------------------------------|------|</li>
+									<li>| /carla/objects | <a target="_blank" href="http://docs.ros.org/api/derived_object_msgs/html/msg/ObjectArray.html">derived_object_msgs.String</a> |</li>
+								</ul><br>
+								<p>&emsp;Object information of all vehicles, except the ego-vehicle(s) that have been published</p>			
+							</div>
+							<div class="header-inside" id="spec-3-17">
+								<br><h5><b>Map</b></h5><br>
+								<ul>
+									<li>| Topic | Type |</li>
+									<li>|-------------------------------|------|</li>
+									<li>| /carla/map | <a target="_blank" href="http://docs.ros.org/api/std_msgs/html/msg/String.html">std_msgs.String</a> |</li>
+								</ul><br>
+								<p>&emsp;The OPEN Drive map description is published</p>			
+							</div>
 						</div>				
 					</div>
 				</div>
