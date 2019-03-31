@@ -211,6 +211,57 @@
 								<li>|-------------------------------|------|</li>
 								<li>| /carla/<ROLE NAME>/odometry | <a target="_blank" href="http://docs.ros.org/api/nav_msgs/html/msg/Odometry.html">nav_msgs.Odometry</a> |</li>
 							</ul><br>			
+						</div>
+						<div class="header-inside" id="spec-3-10">
+							<br><h5><b>Sensors</b></h5><br>
+							<p>&emsp;The ego vehicle sensors are provided via topics with prefix /carla/ego_vehicle/<sensor_topic></p>
+							<p>&emsp;Currently the following sensors are suported:</p>
+							<div class="header-inside" id="spec-3-11">
+								<br><h6><b>Camera</b></h6><br>
+								<ul>
+									<li>| Topic | Type |</li>
+									<li>|-------------------------------|------|</li>
+									<li>| /carla/<ROLE NAME>/camera/rgb/<SENSOR ROLE NAME>/image_color | <a target="_blank" href="http://docs.ros.org/api/sensor_msgs/html/msg/Image.html">sensor_msgs.Image</a> |</li>
+									<li>| /carla/<ROLE NAME>/camera/rgb/<SENSOR ROLE NAME>/camera_info | <a target="_blank" href="http://docs.ros.org/api/sensor_msgs/html/msg/CameraInfo.html">sensor_msgs.CameraInfo</a> |</li>
+								</ul><br>			
+							</div>
+							<div class="header-inside" id="spec-3-12">
+								<br><h6><b>LIDAR</b></h6><br>
+								<ul>
+									<li>| Topic | Type |</li>
+									<li>|-------------------------------|------|</li>
+									<li>| /carla/<ROLE NAME>/lidar/<SENSOR ROLE NAME>/point_cloud | <a target="_blank" href="http://docs.ros.org/api/sensor_msgs/html/msg/PointCloud2.html">sensor_msgs.PointCloud2</a> |</li>
+								</ul><br>			
+							</div>
+							<div class="header-inside" id="spec-3-13">
+								<br><h6><b>GNSS</b></h6><br>
+								<ul>
+									<li>| Topic | Type |</li>
+									<li>|-------------------------------|------|</li>
+									<li>| /carla/<ROLE NAME>/gnss/front/gnss | <a target="_blank" href="http://docs.ros.org/api/sensor_msgs/html/msg/NavSatFix.html">sensor_msgs.NavSatFix</a> |</li>
+								</ul><br>			
+							</div>
+							<div class="header-inside" id="spec-3-14">
+								<br><h6><b>Collision</b></h6><br>
+								<ul>
+									<li>| Topic | Type |</li>
+									<li>|-------------------------------|------|</li>
+									<li>| /carla/<ROLE NAME>/collision | <a target="_blank" href="https://github.com/SIlvaMFPedro/ros_bridge/blob/master/carla_ros_bridge/msg/CarlaCollisionEvent.msg">carla_ros_bridge.CarlaCollisionEvent</a> |</li>
+								</ul><br>			
+							</div>
+							<div class="header-inside" id="spec-3-14">
+								<br><h6><b>Control</b></h6><br>
+								<ul>
+									<li>| Topic | Type |</li>
+									<li>|-------------------------------|------|</li>
+									<li>| /carla/<ROLE NAME>/vehicle_control_cmd (subscriber) | <a target="_blank" href="https://github.com/SIlvaMFPedro/ros_bridge/blob/master/carla_ros_bridge/msg/CarlaEgoVehicleControl.msg">carla_ros_bridge.CarlaEgoVehicleControl</a> |</li>
+									<li>| /carla/<ROLE NAME>/vehicle_status | <a target="_blank" href="https://github.com/SIlvaMFPedro/ros_bridge/blob/master/carla_ros_bridge/msg/CarlaEgoVehicleStatus.msg">carla_ros_bridge.CarlaEgoVehicleStatus</a> |</li>
+									<li>| /carla/<ROLE NAME>/vehicle_info | <a target="_blank" href="https://github.com/SIlvaMFPedro/ros_bridge/blob/master/carla_ros_bridge/msg/CarlaEgoVehicleInfo.msg">carla_ros_bridge.CarlaEgoVehicleInfo</a> |</li>
+								</ul><br>			
+							</div>
+
+
+
 						</div>				
 					</div>
 				</div>
