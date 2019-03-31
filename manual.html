@@ -259,6 +259,14 @@
 									<li>| /carla/<ROLE NAME>/vehicle_info | <a target="_blank" href="https://github.com/SIlvaMFPedro/ros_bridge/blob/master/carla_ros_bridge/msg/CarlaEgoVehicleInfo.msg">carla_ros_bridge.CarlaEgoVehicleInfo</a> |</li>
 								</ul><br>			
 							</div>
+							<p>&emsp;You can stear the ego vehicle from the commandline by publishing to the topic /carla/<ROLE NAME>/vehicle_control_cmd.</p>
+							<p>&emsp;Examples for a ego vehicle with role_name 'ego_vehicle':</p>
+							<ul>
+								<li>Max Forward Throttle: <img src="./assets/images/carla_command_11.png"></li>
+								<li>Max Forward Throttle with Max Steering to the right: <img src="./assets/images/carla_command_12.png"></li>
+							</ul>
+							<p>&emsp;The current status of the vehicle can be received via the topic: /carla/<ROLE NAME>/vehicle_status.</p>
+							<p>&emsp;Static information about the vehicle can be received via /carla/<ROLE NAME>/vehicle_info topic.</p>
 
 
 
