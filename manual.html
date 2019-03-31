@@ -190,7 +190,7 @@
 					<p><img src="./assets/images/carla_command_7.png"></p>
 					<p>&emsp;Start ROS bridge with rviz via this command.</p>
 					<p><img src="./assets/images/carla_command_8.png"></p>
-					<p>&emsp;You can setup the ROS Bridge configuration via the <a target="_blank" href="https://github.com/SIlvaMFPedro/ros_bridge/blob/master/carla_ros_bridge/config/settings.yaml">settings.yaml</a>file.</p>
+					<p>&emsp;You can setup the ROS Bridge configuration via the <a target="_blank" href="https://github.com/SIlvaMFPedro/ros_bridge/blob/master/carla_ros_bridge/config/settings.yaml">settings.yaml</a> file.</p>
 					<p>&emsp;As we have not spawned any vehicle and have not added any sensors in our carla world there would not be any stream of data yet.</p>
 					<p>&emsp;You can make use of the CARLA Python API script manual_control.py.</p>
 					<p><img src="./assets/images/carla_command_9.png"></p>
@@ -198,7 +198,22 @@
 					<p>&emsp;To simulate traffic, you can spawn automatically moving vehicles by using spawn_npc.py from CARLA Python API.</p>
 					<p><img src="./assets/images/carla_command_10.png"></p>
 				</div>
-
+				
+				<div class="header-inside" id="spec-3-7">
+					<h3>Available ROS Topics</h3>
+					<hr class="half-rule"/>
+					<div class="header-inside" id="spec-3-8">
+						<br><h4><b>Ego Vehicle</b></h4><br>
+						<div class="header-inside" id="spec-3-9">
+							<br><h5><b>Odometry</b></h5><br>
+							<ul>
+								<li>| Topic | Type |</li>
+								<li>|-------------------------------|------|</li>
+								<li>| /carla/<ROLE NAME>/odometry | <a target="_blank" href="http://docs.ros.org/api/nav_msgs/html/msg/Odometry.html">ROSWiki</a>nav_msgs.Odometry |</li>
+							</ul><br>			
+						</div>				
+					</div>
+				</div>
 
 
 
