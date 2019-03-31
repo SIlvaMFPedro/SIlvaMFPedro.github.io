@@ -176,8 +176,30 @@
 					<p>&emsp;Depending on the type of CARLA (pre-build, or build from source), the egg files are typically located either directly in the PythonAPI folder or in PythonAPI/dist.</p>
 					<p>&emsp;Check if the installation is successfull by trying to import carla from Python using the following command.</p>
 					<p><img src="./assets/images/carla_command_4.png"></p>
-					<p>You should see a Success message appear without any errors.</p>
+					<p>You should see a "Success" message appear without any errors.</p>
 				</div>
+
+				<div class="header-inside" id="spec-3-6">
+					<h3>Start the ROS Bridge Package</h3>
+					<hr class="half-rule"/>
+					<p>&emsp;First run the CARLA simulator (see CARLA <a target="_blank" href="https://carla.readthedocs.io/en/latest/">documentation</a>).</p>
+					<p><img src="./assets/images/carla_command_5.png"></p>
+					<p>&emsp;Wait for this message.</p>
+					<p><img src="./assets/images/carla_command_6.png"></p>
+					<p>&emsp;Start ROS bridge via this command.</p>
+					<p><img src="./assets/images/carla_command_7.png"></p>
+					<p>&emsp;Start ROS bridge with rviz via this command.</p>
+					<p><img src="./assets/images/carla_command_8.png"></p>
+					<p>&emsp;You can setup the ROS Bridge configuration via the <a target="_blank" href="https://github.com/SIlvaMFPedro/ros_bridge/blob/master/carla_ros_bridge/config/settings.yaml">settings.yaml</a>file.</p>
+					<p>&emsp;As we have not spawned any vehicle and have not added any sensors in our carla world there would not be any stream of data yet.</p>
+					<p>&emsp;You can make use of the CARLA Python API script manual_control.py.</p>
+					<p><img src="./assets/images/carla_command_9.png"></p>
+					<p>&emsp;This spawns a carla client with role_name='ego_vehicle'.If the rolename is within the list specified by ROS parameter /carla/ego_vehicle/rolename, the client is interpreted as an controllable ego vehicle and all relevant ROS topics are created.</p>
+					<p>&emsp;To simulate traffic, you can spawn automatically moving vehicles by using spawn_npc.py from CARLA Python API.</p>
+					<p><img src="./assets/images/carla_command_10.png"></p>
+				</div>
+
+
 
 
 				
