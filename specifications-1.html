@@ -79,15 +79,16 @@
 			<div class="header-inside" id="spec-1-1">
 				<h3>Features</h3>
 				<hr class="half-rule" />
-				<p>&emsp;On this section, we explore the main features of our game and Web UI</p>
+				<p>&emsp;On this section, we explore the main features of the CARLA Simulator and the ROS-Bridge package</p>
 				<br>
-				&emsp;Web UI has the following main features:
-						<li>Spectate game</li>
-						<li>Monitoring tournament</li>
+				&emsp;The Carla Simulator has the following main features:
+						<li>Start Simulator Game</li>
+						<li>Control CARLA Vehicle</li>
+						<li>Monitoring CARLA World</li>
 						
 				<br>
-				&emsp;The Unity powered game has the following main features:
-						<li>Play chess game</li>
+				&emsp;The ROS-Bridge package has the following main features:
+						<li>Display CARLA World Information via ROS Messages</li>
 					</ul>
 					<br>
 				</div>
@@ -95,32 +96,31 @@
 				<div class="header-inside" id="spec-1-2">
 					<h3>Scenarios</h3>
 					<hr class="half-rule" />
-					<p>&emsp;This section will exemplify four possible scenarios of different type of users taking advantage of the Chess Tournament game.</p><br>
+					<p>&emsp;This section will exemplify four possible scenarios of different type of users taking advantage of the Carla Simulator game.</p><br>
 
-					<h4>Join a Tournament</h4><br>
+					<h4>Start the Simulator</h4><br>
 					<p>&emsp;
-						John, an average consumer has the Chess Tournament Game on his computer. He decides to join a tournament to be able to play, so he selects the tournament in which he wants to play and is added to the pool of players in that tournament.
-						<br>&emsp; Meanwhile, on the Web UI Peter was able to see that John has joined a certain tournament, and all the other players.
+						John, an average consumer has the Carla Simulator installed on his computer. He decides to start the simulator to be able to play, so he selects the vehicle he wants to play and is now able to interact with the Carla World.
+						<br>&emsp; Meanwhile, on the another Peter was able to see John playing the simulator via the ROS-Bridge package as well as all the other players.
 					</p><br>
 
 					<br>
 
-					<h4>Playing a game</h4><br>
-					<p>&emsp; John, already enrolled in a tournament, now has the ability to play with another player, selected by the system. 
-						&emsp; If John wins he can play another game with a different opponent selected by the system. This process is repeated until John looses one game or wins the tournament. 
-						&emsp; Peter, on the Web UI is able to see the moves that John and his opponent are making, and all the other games in the tournament. 
+					<h4>Starting a Game</h4><br>
+					<p>&emsp; John, already enrolled with the simulator, now has the ability to play with another vehicle, selected by the system. 
+						&emsp; Peter, with the ROS-Bridge is able to see the moves that John and the other players are making, as well as other objects present in the simulator. 
 						&emsp;
 					</p>
 					<br><br>
 
-					<h4>Watching a game</h4><br>
-					<p>&emsp; Sarah only wishes to see a game. On the game interface she chooses "watch", and selects a tournament, and inside that tournament a specific game. Sarah is able to stop watching anytime and choose another game or tournament to watch. 
+					<h4>Watching a Game</h4><br>
+					<p>&emsp; Sarah only wishes to follow one player in the Carla World. On the ROS-Bridge interface she chooses "watch", and selects a vehicle. Sarah is able to stop watching anytime and choose another player to watch. 
 					</p>
 
 					<br><br>
 
-					<h4>Monitoring the tournaments</h4><br>
-					<p>&emsp; On the Web UI Peter can monitor all the tournaments, and their respective games, receive statistics, history of passed games and current state of present games. 
+					<h4>Monitoring the CARLA World</h4><br>
+					<p>&emsp; On the ROS-Bridge Peter can monitor all the aspects of the Carla World, adding new objects like NPCS(Pedestrians/Vehicles) to the world. 
 
 					</p>
 					<br><br>
