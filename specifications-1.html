@@ -132,7 +132,7 @@
 					<h3>Use cases</h3>
 					<hr class="half-rule" />
 					<p>&emsp;On this section, we expose the most important use cases on the system, according to the frequency of use.</p><br>
-					<h4>Unity based Game</h4>
+					<h4>Carla Simulator</h4>
 					<table class="tbwdth">
 						<tr bgcolor="#66CCFF">
 							<th width = "20%">Use case</th>
@@ -140,11 +140,11 @@
 						</tr>
 						<tr>
 							<th width = "20%">Description</th>
-							<td>The user is able to play the chess game against a system selected opponent using a very simple point and click interface. </td>
+							<td>The user is able to play the Carla simulator with a certain vehicle using their keyboard. </td>
 						</tr>
 						<tr>
 							<th width = "20%">Exceptions</th>
-							<td>If the player looses one game in the tournament, more games will not be possible within that tournament. </td>
+							<td>The player is spawned in a random location in the Carla world. </td>
 						</tr>
 						<tr>
 							<th width = "20%">Priority</th>
@@ -152,30 +152,7 @@
 						</tr>
 						<tr>
 							<th width = "20%">Other information</th>
-							<td>To be able to play any game the player needs to join a tournament</td>
-						</tr>
-					</table>
-					<br>
-					<table class="tbwdth">
-						<tr bgcolor="#66CCFF">
-							<th width = "20%">Use case</th>
-							<td><b><i>Join a tournament</i></b></td>
-						</tr>
-						<tr>
-							<th width = "20%">Description</th>
-							<td>Upon opening the Chess Tournament game the player can select one tournament to join to.</td>
-						</tr>
-						<tr>
-							<th width = "20%">Exceptions</th>
-							<td>The player cannot join a tournament that is already full (has 16 players)</td>
-						</tr>
-						<tr>
-							<th width = "20%">Priority</th>
-							<td>High</td>
-						</tr>
-						<tr>
-							<th width = "20%">Other information</th>
-							<td>A tournament does not start until 16 players have joined and the tournament tree is complete </td>
+							<td>To be able to play simulator the player needs to start the CarlaUE4.sh script and play the manual_control python script</td>
 						</tr>
 					</table>
 					<br>
@@ -186,11 +163,11 @@
 						</tr>
 						<tr>
 							<th width = "20%">Description</th>
-							<td>A user can watch a game taking place from any of the tournaments, through a interface that allows the selection of the tournament first, and then the games taking place within the selected tournament.</td>
+							<td>A user can watch a game taking place in the CARLA World, through a interface that allows the selection of the vehicle that you want to follow.</td>
 						</tr>
 						<tr>
 							<th width = "20%">Exceptions</th>
-							<td>If there are no games happening the user cannot watch a game</td>
+							<td>If there are no vehicles present in the world the user cannot watch the game</td>
 						</tr>
 						<tr>
 							<th width = "20%">Priority</th>
@@ -204,7 +181,7 @@
 					<br>	
 					<br>
 					<br>
-					<h4>Web UI</h4>
+					<h4>ROS-Bridge</h4>
 					<br>
 
 					<table class="tbwdth">
@@ -214,11 +191,11 @@
 						</tr>
 						<tr>
 							<th width = "20%">Description</th>
-							<td>A user can access the Web UI, select a tournament and a game that has happened or is happening, and access the list of moves made so far in the game.</td>
+							<td>A user can access the ROS-Bridge, select a vehicle and follow that vehicle throughout the Carla World.</td>
 						</tr>
 						<tr>
 							<th width = "20%">Exceptions</th>
-							<td>The user cannot see any games within a tournament if no games have happened in that tournament yet.</td>
+							<td>If there are no vehicles present in the world the user cannot watch the game.</td>
 						</tr>
 						<tr>
 							<th width = "20%">Priority</th>
@@ -226,18 +203,18 @@
 						</tr>
 						<tr>
 							<th width = "20%">Other information</th>
-							<td>On games happening at the moment of viewing the user can see the moves being made by the players in real time.</td>
+							<td>Depending on the simulation happening at the moment of viewing the user can see the moves being made by the players in real time.</td>
 						</tr>
 					</table>
 					<br>
 					<table class="tbwdth">
 						<tr bgcolor="#DEDEFF">
 							<th width = "20%">Use case</th>
-							<td><b><i>See game and tournament statistics</i></b></td>
+							<td><b><i>See game and vehicle and other world statistics</i></b></td>
 						</tr>
 						<tr>
 							<th width = "20%">Description</th>
-							<td>A user of the Web UI can access statistics of each tournament and game that exists in the platform</td>
+							<td>A user of the Web UI can access statistics of each simulation and each vehicle that exists in the platform</td>
 						</tr>
 						<tr>
 							<th width = "20%">Exceptions</th>
@@ -245,7 +222,7 @@
 						</tr>
 						<tr>
 							<th width = "20%">Priority</th>
-							<td>Medium</td>
+							<td>High</td>
 						</tr>
 						<tr>
 							<th width = "20%">Other information</th>
@@ -331,8 +308,8 @@
 					<div class="col-xs-12">
 						<h4>Choose the topic you want to see</h4>
 						<ul class="list-unstyled list-spaces">
-							<li><a href="#spec-1-1">Features</a><br><span class="small text-muted">On this section, we explore the main features of our<br>game and Web UI.</span></li>
-							<li><a href="#spec-1-2">Scenarios</a><br><span class="small text-muted">This section will exemplify possible scenarios of different<br>type of users using the Unity based game and Web UI</span></li>
+							<li><a href="#spec-1-1">Features</a><br><span class="small text-muted">On this section, we explore the main features of the <br>CARLA simulator and ROS-Bridge interface.</span></li>
+							<li><a href="#spec-1-2">Scenarios</a><br><span class="small text-muted">This section will exemplify possible scenarios of different<br>type of users using the CARLA simulator and the ROS-Bridge interface.</span></li>
 							<li><a href="#spec-1-3">Use cases</a><br><span class="small text-muted">On this section, we expose the most important use cases.</span></li>
 						</ul>
 					</div>
