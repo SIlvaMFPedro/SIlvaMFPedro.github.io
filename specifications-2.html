@@ -75,7 +75,7 @@
 				<header class="page-header">
 					<h1 class="page-title">Requirements</h1>
 				</header>
-				<p>&emsp;On this section we explore the technical requirements for our game and Web UI</p>
+				<p>&emsp;On this section we explore the technical requirements for CARLA Simulator and the ROS-Bridge Interface</p>
 
 				<div class="jumbotron top-space" id="spec-2-1">
 					<div class="container">
@@ -85,19 +85,19 @@
 						
 						<div class="row">
 							<div class="col-sm-12 text-center">
-								<h4><b>Multiplayer chess tournament</b></h4>
-								<h5>Each tournament starts with 2 players, that play in pairs decided by the system. The tournament has a single-elimination format.</h5>
+								<h4><b>Multiplayer Simulation</b></h4>
+								<h5>Various players can join the simulation started by the CARLA simulator. They join and then they play in vehicles decided by the system.</h5>
 							</div>
 						</div><br>
 						<div class="row">
 							<div class="col-sm-12 text-center">
 								<h4><b>Play with other people</b></h4>
-								<h5>Inside a tournament a player is paired with another player to have a realtime game of chess</h5>
+								<h5>Inside the simulation multiple players can interact with each other giving a realtime experience of a driving simulator.</h5>
 							</div>
 						</div><br><div class="row">
 							<div class="col-sm-12 text-center">
-								<h4><b>Monitor each tournament and its stats</b></h4>
-								<h5>On the Web UI the user is able to see the players on each tournament, the games that have taken place and statistics on the games played </h5>
+								<h4><b>Monitor each vehicle and its stats</b></h4>
+								<h5>On the ROS-Bridge interface the user is able to see the players on the simulation, the vehicles that they have and statistics on each one of those vehicles. </h5>
 							</div>
 						</div><br><div class="row">
 							<div class="col-sm-12 text-center">
@@ -122,27 +122,27 @@
 						
 						<div class="row">
 							<div class="col-sm-12 text-center">
-								<h4><b>Chess Tourney Server</b></h4>
-								<h5>Chess Tourney needs at least one server with public access to internet so people can play</h5>
+								<h4><b>CARLA Simulation Server</b></h4>
+								<h5>CARLA Simulation needs at least one server with public access to internet so people can play.</h5>
+							</div>
+						</div><br>
+						<div class="row">
+							<div class="col-sm-12 text-center">
+								<h4><b>CARLA Client Python API</b></h4>
+								<h5>The client needs the CARLA Client Python API in order to comunicate with the CARLA simulation using sockets and ROS commands.</h5>
 							</div>
 						</div><br>
 						<div class="row">
 							<div class="col-sm-12 text-center">
 								<h4><b>To play</b></h4>
-								<h5>People need to have executable file for specific OS on a computer with internet connection to be able to play the game.</h5>
+								<h5>People need to have shell files for specific OS on a computer with internet connection in order to be able to play the simulation.</h5>
 							</div>
 						</div><br>
 						<div class="row">
 							<div class="col-sm-12 text-center">
-								<h4><b>Monitorization of a game</b></h4>
-								<h5>On a computer with internet connection, people can see a game, play by play by using the WEB UI</h5>
+								<h4><b>Monitorization of the CARLA World</b></h4>
+								<h5>On a computer with internet connection, people can see the simulation happening and the objects moving by using the ROS-Bridge interface</h5>
 						</div>
-						<div class="row">
-							<div class="col-sm-12 text-center">
-								<h4><b>To use VR</b></h4>
-								<h5>People need a computer with VR capabilities and HTC Vibe</h5>
-							</div>
-						</div><br>
 						</div><br><div class="row">
 							<div class="col-sm-12 text-center">
 								<h4><b></b></h4>
@@ -169,24 +169,30 @@
 						
 						<div class="row">
 							<div class="col-sm-12 text-center">
-								<h4><b>Amount of plays displayed on the webapp</b></h4>
-								<h5>Checks whether the intended amount of plays is being displayed.</h5>
+								<h4><b>Amount of vehicles displayed on the simulation</b></h4>
+								<h5>Check the number of vehicles found by the player/vehicle and follow them around the CARLA world.</h5>
 							</div>
 						</div><br>
 						<div class="row">
 							<div class="col-sm-12 text-center">
-								<h4><b>Amount of play stats displayed on the webapp</b></h4>
-								<h5>Inside a tournament a player is paired with another player to have a realtime game of chess,</h5>
+								<h4><b>Amount of pedestrians displayed on the simulation</b></h4>
+								<h5>Check the number of pedestrians found by the player/vehicle and follow them around the CARLA world.</h5>
+							</div>
+						</div><br>
+						<div class="row">
+							<div class="col-sm-12 text-center">
+								<h4><b>Amount of play stats displayed on the simulation</b></h4>
+								<h5>Check the number of times a set of rules(collision, speeding, etc...), decided by the simulator, have been checked.</h5>
 							</div>
 						</div><br><div class="row">
 							<div class="col-sm-12 text-center">
-								<h4><b>Web stats test</b></h4>
-								<h5>Compares the stats presented with the plays made to check their veracity. </h5>
+								<h4><b>UI stats test</b></h4>
+								<h5>Compares the stats presented in the simulator with the players made in order to check their veracity. </h5>
 							</div>
 						</div><br><div class="row">
 							<div class="col-sm-12 text-center">
 								<h4><b>Test plays retrieval</b></h4>
-								<h5>Tests internal function that retrieves plays made. </h5>
+								<h5>Tests internal functions that retrieves moves made by the player. </h5>
 							</div>
 						</div><br><div class="row">
 							<div class="col-sm-12 text-center">
