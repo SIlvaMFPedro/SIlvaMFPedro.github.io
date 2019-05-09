@@ -140,6 +140,10 @@
 					<p><img src="./assets/images/rviz_carla_session8.png"></p>
 					<p><img src="./assets/images/rviz_carla_session9.png"></p>
 					<p><img src="./assets/images/rviz_carla_session10.png"></p>
+					<p><img src="./assets/images/rviz_carla_session11.png"></p>
+					<p><img src="./assets/images/rviz_carla_session12.png"></p>
+					<p><img src="./assets/images/rviz_carla_session13.png"></p>
+					<p><img src="./assets/images/rviz_carla_session14.png"></p>
 					<p><img src="./assets/images/depth_cloud_and_lidar.png"></p>
 					<p><img src="./assets/images/rviz_carla_default.png"></p>
 				</div>
@@ -212,38 +216,24 @@
 					<h3>Available ROS Topics</h3>
 					<hr class="half-rule"/>
 					<div class="header-inside" id="spec-3-8">
-						<br><h4><b>Ego Vehicle / ATLAS Vehicle</b></h4><br>
-						<p>&emsp;This package provides three ROS nodes:</p>
+						<br><h4><b>Carla ROS Vehicle Setup</b></h4><br>
+						<p>&emsp;This package provides two ROS nodes:</p>
 						<ul>
-							<li>Carla Example Ego Vehicle: A reference client for spawning an ego vehicle.</li>
-							<li>Carla Example ATLAS Vehicle: A reference client for spawning an ATLAS vehicle.</li>
-							<li>Carla ROS Manual Control: a ROS-only manual control.</li>
+							<li>Carla Example ROS Vehicle: A reference client used for spawning a vehicle using ROS.</li>
+							<li>Carla ROS Manual Control: a ROS-only manual control package.</li>
 						</ul>
 						<div class="header-inside" id="spec-3-9">
-							<br><h4><b>Carla Example Ego Vehicle</b></h4><br>
-							<p>&emsp; The reference Carla client carla_example_ego_vehicle can be used to spawn an ego vehicle (role-name: "ego_vehicle") with the following sensors attached to it:</p>
+							<br><h4><b>Carla Example ROS Vehicle</b></h4><br>
+							<p>&emsp; The reference Carla client carla_example_ros_vehicle can be used to spawn a vehicle (ex: role-name: "ego_vehicle") with the following sensors attached to it:</p>
 							<ul>
 								<li>GNSS</li>
-								<li>LIDAR</li>
+								<li>3 LIDAR Sensors (front + right + left)</li>
 								<li>Cameras (one front-camera + one camera for visualization in carla_ros_manual_control)</li>
 								<li>Collision Sensor</li>
 								<li>Lane Invasion Sensor</li>
 							</ul>
 							<p>&emsp;Info: To be able to use carla_ros_manual_control a camera with role-name 'view' is required.</p>
 							<p>&emsp;If no specific position is set, the ego vehicle is spawned at a random position.</p>
-						</div>
-						<div class="header-inside" id="spec-3-10">
-								<br><h4><b>Carla Example ATLAS Vehicle</b></h4><br>
-								<p>&emsp; The reference Carla client carla_example_atlas_vehicle can be used to spawn an ATLAS vehicle (role-name: "atlas_vehicle") with the following sensors attached to it:</p>
-								<ul>
-									<li>GNSS</li>
-									<li>LIDAR</li>
-									<li>Cameras (one front-camera + one camera for visualization in carla_ros_manual_control)</li>
-									<li>Collision Sensor</li>
-									<li>Lane Invasion Sensor</li>
-								</ul>
-								<p>&emsp;Info: To be able to use carla_ros_manual_control a camera with role-name 'view' is required.</p>
-								<p>&emsp;If no specific position is set, the ATLAS vehicle is spawned at a random position.</p>
 						</div>
 						<div class="header-inside" id="spec-3-11">
 							<br><h4><b>Spawning a vehicle at a specific position</b></h4><br>
@@ -254,7 +244,7 @@
 						</div>
 						<div class="header-inside" id="spec-3-12">
 							<br><h4><b>Create your own sensor setup</b></h4><br>
-							<p>&emsp;To setup your own example vehicle with sensors, follow a similar approach as in carla_example_ego_vehicle by subclassing from CarlaEgoVehicleBase or follow a similar approach as in carla_example_atlas_vehicle by subclassing from CarlaAtlasVehicleBase.</p>
+							<p>&emsp;To setup your own example vehicle with sensors, follow a similar approach as in carla_example_ros_vehicle by subclassing from CarlaRosVehicleBase.</p>
 							<p>&emsp;Define sensors with their attributes as described in the CARLA documentation about <a target="_blank" href="https://carla.readthedocs.io/en/latest/cameras_and_sensors/">Cameras and Sensors</a>.</p>
 							<p>&emsp;The format is a list of dictionaries. One dictionary has the values as follows:</p>
 							<p><img src="./assets/images/carla_sensor_setup_dictionary.png"></p>
@@ -264,7 +254,7 @@
 							<p>&emsp;The node carla_ros_manual_control is a ROS-only version of the Carla manual_control.py. All data is received via ROS topics.</p>
 							<p style="font-weight:bold;">Notes:</p>
 							<ul>
-								<li>To be able to use carla_ros_manual_control a camera with role-name 'view' needs to be spawned by a carla_ego_vehicle or a carla_atlas_vehicle.</li>
+								<li>To be able to use carla_ros_manual_control a camera with role-name 'view' needs to be spawned by a carla_ros_vehicle.</li>
 							</ul>
 						</div>
 						<div class="header-inside" id="spec-3-14">
@@ -339,8 +329,8 @@
 									<li>| /carla/<ROLE NAME>/vehicle_info | <a target="_blank" href="https://github.com/SIlvaMFPedro/ros_bridge/blob/master/carla_ros_bridge/msg/CarlaEgoVehicleInfo.msg">carla_ros_bridge.CarlaEgoVehicleInfo</a> |</li>
 								</ul><br>			
 							</div>
-							<p>&emsp;You can stear the ego vehicle from the commandline by publishing to the topic /carla/<ROLE NAME>/vehicle_control_cmd.</p>
-							<p>&emsp;Examples for a ego vehicle with role_name 'ego_vehicle':</p>
+							<p>&emsp;You can stear the ROS vehicle from the commandline by publishing to the topic /carla/<ROLE NAME>/vehicle_control_cmd.</p>
+							<p>&emsp;Examples for a ROS vehicle with role_name 'ego_vehicle':</p>
 							<ul>
 								<li>Max Forward Throttle: <img src="./assets/images/carla_command_11.png"></li>
 								<li>Max Forward Throttle with Max Steering to the right: <img src="./assets/images/carla_command_12.png"></li>
@@ -370,7 +360,7 @@
 								<p>&emsp;The role name is specified with the configuration.</p>
 								<br><h5><b>Test Control Messages</b></h5><br>
 								<p>&emsp;You can send command to the vehicle using the topic /carla/<ROLE NAME>/ackermann_cmd.</p>
-								<p>&emsp;Examples for a ego vehicle with role_name 'ego_vehicle':</p>
+								<p>&emsp;Examples for a ROS vehicle with role_name 'ego_vehicle':</p>
 								<ul>
 									<li>Forward movements, speed in meters/src: <img src="./assets/images/carla_ackermann_test_1.png"></li>
 									<li>Forward with steering: <img src="./assets/images/carla_ackermann_test_2.png"></li>
@@ -454,10 +444,25 @@
 					<hr class="half-rule"/>
 					<p>&emsp;The <a target="_blank" href="https://github.com/SIlvaMFPedro/ros_bridge/tree/master/carla_ros_image_converter">carla_ros_image_converter</a> package is used to convert images from a ROS Topic to an OpenCV images by running the following command:</p>
 					<p><img src="./assets/images/carla_command_16.png"></p>
-					<p>&emsp;In the future we will be using the OpenCV Template Matching algorithm in order to track objects in the CARLA world.</p>
+				</div>
+				
+				<div class="header-inside" id="spec-3-29">
+					<h3>Carla ROS Bounding Boxes</h3>
+					<hr class="half-rule"/>
+					<p>&emsp;The <a target="_blank" href="https://github.com/SIlvaMFPedro/ros_bridge/tree/master/carla_ros_image_converter">carla_ros_image_converter</a> package can be used to draw the bounding boxes around the objects present in the CARLA world according to ther location/rotation and convert the results into an OpenCV image.</p>
+					<p><img src="./assets/images/carla_bounding_box_01.png"></p>
+					<p><img src="./assets/images/carla_bounding_box_02.png"></p>
 				</div>
 
-				<div class="header-inside" id="spec-3-29">
+				<div class="header-inside" id="spec-3-30">
+					<h3>Carla ROS Datasets</h3>
+					<hr class="half-rule"/>
+					<p>&emsp;The position, location, orientation, rotation of these objects as well as a label for these objects can be recorded via a json file data.json.</p>
+					<p>&emsp;The json format can be defined like this:</p>
+					<p><img src="./assets/images/carla_ros_datasets_command.png"></p>
+				</div>
+
+				<div class="header-inside" id="spec-3-31">
 					<br><h3><b>Troubleshooting</b></h3><br>
 					<br><h4><b>ImportError: No module named carla.</b></h4><br>
 					<p>&emsp;You're missing Carla Python. Please execute:</p>
@@ -508,7 +513,9 @@
 						<li><a href="#spec-3-26">CARLA-ROS Bridge Messages</a><br><span class="small text-muted">On this section we give an insight into the ROS messages used in the project.<!--, explaining its<br>main function and the interface with the exterior.--></span></li>
 						<li><a href="#spec-3-27">CARLA-ROS Waypoint Publisher</a><br><span class="small text-muted">On this section we give an insight into how to use waypoint calculations.<!--, explaining its<br>main function and the interface with the exterior.--></span></li>
 						<li><a href="#spec-3-28">ROS-OpenCV Image Convertion</a><br><span class="small text-muted">On this section we give an insight into how convert ROS images into OpenCV images using the carla_ros_image_converter package.<!--, explaining its<br>main function and the interface with the exterior.--></span></li>
-						<li><a href="#spec-3-29">Troubleshooting</a><br><span class="small text-muted">On this section we give an insight into some of the problems we may run into when running the project.<!--, explaining its<br>main function and the interface with the exterior.--></span></li>
+						<li><a href="#spec-3-29">CARLA ROS Bounding Boxes</a><br><span class="small text-muted">On this section we give an insight into how to create bounding boxes on the objects of the CARLA world.<!--, explaining its<br>main function and the interface with the exterior.--></span></li>
+						<li><a href="#spec-3-30">CARLA ROS Datasets</a><br><span class="small text-muted">On this section we give an insight into how to create JSON datasets from the position, location, orientation and rotation of the objects from the CARLA world.<!--, explaining its<br>main function and the interface with the exterior.--></span></li>
+						<li><a href="#spec-3-31">Troubleshooting</a><br><span class="small text-muted">On this section we give an insight into some of the problems we may run into when running the project.<!--, explaining its<br>main function and the interface with the exterior.--></span></li>
 					</ul>
 				</div>
 
