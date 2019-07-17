@@ -76,12 +76,11 @@
 	<!-- Intro -->
 	<div class="container">
 		<br> <br>
-		<h2 class="thin", align="center">What is Semi-Automatic Labelling?</h2>
+		<h2 class="thin", align="center">What is an Autonomous Driving Simulator?</h2>
 		<br>
 		<p class="text-muted">
 		<p class="context">
-			This thesis is focused on the research of methods to register data into labels using a camera and LIDAR sensors in ATLASCAR 2, so that the vehicle can later create a model of the objects it will detect and follow.
-			The detection, tracking and labelling system will combine the image data and the laser data from the sensors to create a semi-automatic tracking system that allows the user to associate an object category to the target and create datasets with metadata from the labelling.
+			Within the scope of the ATLASCAR2 project, this dissertation is based on studying and developing an autonomous driving assistance simulator named CARLA that implements an interface based in ROS to replicate the ATLASCAR2 setup in the simulation. The idea of using an autonomous driving simulator was proposed as a way to simplify the data aquisition process for the ATLASCAR2 since this process keeps on getting more and more difficult due to factors such as the complexity in the setup and the calibration processes of the installed sensors on the ATLASCAR2, as well as other factors such as the hardware interface and the time that is required to perform a single data aquisition using the ATLASCAR2. This tool can produce realistic scenarios and can be used for testing out the algorithms that are going to be implemented in the ATLASCAR2 in controlled environments, offering a degree of ground truth for these algorithms that can be used to evaluate the performance in these environments before implementing them in the real platform. The replication of the ATLASCAR2 setup process as well as the algorithms involved in CARLA will be discussed in further detail during this dissertation which include sections talking about the replication process and the algorithms involved, showing the results of the ATLASCAR2 setup implementation in CARLA as well as some other results produced from experiments with CARLA simulated data which include the use of computer vision algorithms as well as other algorithms that are currently being used in the ATLASCAR2.
 		</p>
 	</div>
 	<!-- /Intro-->
@@ -94,14 +93,13 @@
 		<div class="jumbotron top-space">
 			<div class="container">
 				<div class="page-header">
-					<h2 class="text-center">Why Semi-Automatic Labelling?</h2>
+					<h2 class="text-center">Why use an Autonomous Driving Simulator?</h2>
 					<p class="text-muted">
 					<p class="context">
-							Autonoumous Driving(AD) and Autonoumous Driving Assistance Systems(ADAS) often make use of machine learning. Deep Learning algorithms utilize neural and convolutional networks for images and range-based sensor data.
-							In the fields of machine learning, images are often used as input templates to create object models. In an image sequence it is possible to track an object and obtain samples of the target's location.
-							This way an algorithm can automatically recognize the targets. While registering the position of the objects in an image sequence, it is important to tell what those objects are. That's why we use labelling, which is the act to classify objects in a certain category.
-							As the annotation is done, when selecting an object, the user should enter a label that identifies the target making it easier for the learning algorithm to recognize the object afterwards.
-							The objective and importance of taggin samples of images with a label is to assign metadata in the form of a keyword to later allow an application to retrieve this information and easily construct a database.
+						In the fields of ADAS and AD, there have been some technological studies that have kept on growing these past few decades in both the automobile industry and the academic environment. 
+						It is also important to note that in AD and ADAS the use of autonomous driving simulators is becoming more and more significant as they prove to be important tools for testing and evaluating the algorithms that are going to be implemented in the autonomous vehicle before implementing these algorithms in the real vehicle. These simulators can produce realistic scenarios that are often used for data acquisition in datasets that in conjunction with data labelling can be used as input for learning algorithms and work on their results. 
+						The purpose of this dissertation is focused on the adaptation of an autonomous driving simulator named CARLA in the context of the ATLASCAR2 project and test the results of the simulation. These results can later on be used for research of methods to register data using the cameras and the LIDAR sensors of the ATLASCAR2 installed in the simulated vehicle. This registered data is important for the vehicle to know its surroundings and later on create models of the objects present in CARLA and therefore computer vision algorithms used for object detection and visual perception must be tested with data registered from CARLA in order to create these models. For this reason, a tool for testing out these algorithms using frames gathered from the CARLA simulation will be developed.
+						This dissertation will also be used to evaluate algorithms that are currently being implemented in the ATLASCAR2, evaluating the performance of these algorithms in the scenarios provided by the CARLA simulator. This tool can also be used to test the developed algorithms before implementing them in the ATLASCAR2 offering then the possibility to alternate between simulated scenarios that can be controlled and real world scenarios.
 					</p>
 				</div>
 				<h3 align="center">For everyone</h3>
