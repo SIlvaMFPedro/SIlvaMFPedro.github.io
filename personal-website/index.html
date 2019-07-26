@@ -1,177 +1,237 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport"    content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="Study and Adaptation of the Autonomous Driving Simulator CARLA for ATLASCAR2">
-	<meta name="author"      content="Pedro Silva">
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
 
-	<title>Home Page</title>
+<html class="no-js"> <!--<![endif]-->
+    <head>
+        <title>Nuno Silva</title>
 
-	<!--
-	<link rel="shortcut icon" href="assets/images/icon.png">
-	-->
+        <!-- meta -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-	<link rel="stylesheet" media="screen" href="//fonts.googleapis.com/css?family=Open+Sans:300,400,700">
-	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
-	<link rel="stylesheet" href="assets/css/font-awesome.min.css">
+        <link rel="shortcut icon" type="image/x-icon" href="assets/images/icon.png">
 
-	<!-- Custom styles for our template -->
-	<link rel="stylesheet" href="assets/css/bootstrap-theme.css" media="screen" >
-	<link rel="stylesheet" href="assets/css/main.css">
+        <!-- stylesheets -->
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/font_icon/css/pe-icon-7-stroke.css">
+        <link rel="stylesheet" href="assets/font_icon/css/helper.css">
+        <link rel="stylesheet" href="assets/css/owl.carousel.css">
+        <link rel="stylesheet" href="assets/css/owl.theme.css">
+        <link rel="stylesheet" href="assets/css/animate.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-	<!-- Icons for features -->
-	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-	<!-- Icons for timeline -->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-</head>
+        <!-- google fonts -->
+        <link href='http://fonts.googleapis.com/css?family=Dosis:200,300,400,500|Lato:300,400,700,900,300italic,400italic,700italic,900italic|Raleway:400,200,300,500,100|Titillium+Web:400,200,300italic,300,200italic' rel='stylesheet' type='text/css'>
 
-<body class="home">
-	<!-- Fixed navbar -->
-	<div class="navbar navbar-inverse navbar-fixed-top headroom" >
-		<div class="container">
-			<div class="navbar-header">
-			</div>
-			<div class="navbar-collapse collapse">
-				<ul class="nav navbar-nav pull-right">
-					<li><a href="index.html">Home</a></li> <!-- Client area -->
-					<li class="dropdown"> <!-- Specification area -->
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Specifications<b class="caret"></b></a>
-						<ul class="dropdown-menu">
-							<li><a href="specifications-1.html">Features, system scenarios and use cases</a></li>
-							<li><a href="specifications-2.html">Requirements and tests</a></li>
-							<li><a href="specifications-3.html">Architecture</a></li>
-							<li class="active"><a href="specifications-4.html">Datasets</a></li>
-							<li class="active"><a href="deliverables.html">Deliverables</a></li>
-						</ul>
-										</li>
-										<li class="dropdown"> <!-- Client area -->
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown">About<b class="caret"></b></a>
-						<ul class="dropdown-menu">
-							<li><a href="aboutAtlas.html">About the ATLAS</a></li>
-							<li><a href="aboutCarla.html">About the CARLA</a></li>
-						</ul>
-					</li>
-					<li><a href="manual.html">Integration with CARLA</a></li> <!-- Client area -->
-				</ul>
-			</div><!--/.nav-collapse -->
+        <script src="assets/js/modernizr.js"></script>
+
+        <style>
+            @font-face {
+                font-family: Capitolina;
+                src: url(assets/font_icon/fonts/Capitolina.ttf);
+            }
+
+            @font-face {
+                font-family: Acrom;
+                src: url(assets/font_icon/fonts/AcromRegular.ttf);
+            }
+
+            #img-monogram:hover {
+                filter: brightness(50%) sepia(100%) hue-rotate(307deg) saturate(1000%);
+                cursor: pointer;
+            }
+            #img-monogram{
+                transition: filter .5s ease-out;
+            }
+        </style>
+
+    </head>
+    <body id="body">
+        <!--[if lt IE 7]>
+                <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <!-- Header area -->
+        <header id="header">
+            <div class="center text-center">
+                <div id="bgbig-text">
+                    <br><br><br><br><br><br><br><br><br><br><br>
+                </div>
+                <p width="100%" style="color: white; font-family: Capitolina; font-size: 25px" >Hello, my name is</p>
+
+                <img src="assets/images/nunosilva.PNG" width="50%"/>
+                <div id="bg-text">
+                    <br><br><br><br><br><br><br><br><br>
+                </div>
+                <p style="color: white; font-family: Capitolina; font-size: 25px" >MSc Computer and Telematics Engineering<br>C++ Developer</p>
+            </div>
+            <div class="bottom">
+                <a data-scroll href="#navigation" class="scrollDown animated pulse" id="scrollToContent"><i class="pe-7s-angle-down-circle pe-va"></i></a>
+            </div>
+        </header>
+
+        <!-- Navigation area -->
+          <section id="navigation">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-6">
+                        <div class="logo"><img id="img-monogram" height="75" data-scroll
+                            href="#body" class="logo-text" src="assets/images/monogram.png"></div>
+                    </div>
+                    <div class="col-xs-6">
+                        <div class="nav">
+                            <a href="#" data-placement="bottom" title="Menu" class="menu" data-toggle="dropdown"><i
+                                class="pe-7s-menu"></i></a>
+                             <div class="dropdown-menu">
+                                 <div class="arrow-up"></div>
+                                 <ul>
+                                     <li><a data-scroll href="#body">Home <i class="pe-7s-home"></i></a><span class="menu-effect"></span></li>
+                                     <li><a data-scroll href="#services">About me <i class="pe-7s-id"></i></a><span class="menu-effect"></span></li>
+                                     <li><a data-scroll href="#portfolio">Portfolio <i class="pe-7s-keypad"></i></a><span class="menu-effect"></span></li>
+                                     <li><a data-scroll href="#social">Social <i class="pe-7s-like2"></i></a><span class="menu-effect"></span></li>
+                                 </ul>
+                             </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Content Area -->
+
+        <!-- about me section -->
+
+        <section id="services" class="service-area">
+            <div class="container" style=" font-family: Acrom;">
+                <h2 class="block_title" align="center">About Me</h2>
+                <div class="row">
+                    <div class="col-md-6">
+                        <p align="center"  style="margin-left: 10%; margin-right: 10%;">
+
+                            My name is Nuno Miguel Soares Silva and I was born in Porto. I'm a student in MSc Computer
+                            and Telematics Engineering (Engenharia de Computadores e Telemática) at Universidade de Aveiro.
+                            <br>I'm currently working as a C++ Developer at Critical Techworks Porto.
+                            <br><br><br>
+                        </p>
+                    </div>
+                    <div  class="col-md-6">
+                        <img align="center" width="350" src="assets/images/small_photo.png">
+                    </div>
+                    <div>
+                        <p align="center">
+                            &zwnj;<br>&zwnj;<br>&zwnj;<br>&zwnj;<br>&zwnj;<br>&zwnj;<br>&zwnj;
+                        </p>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6">
+                        <div class="services">
+                            <div class="service-wrap">
+                                <i class="pe-7s-science pe-dj pe-va"></i>
+                                <h3>IoT</h3>
+                                <p>I've developed some IoT projects that gather data and create smart apps.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="services">
+                            <div class="service-wrap">
+                                <i class="pe-7s-config pe-dj pe-va"></i>
+                                <h3>Robotics</h3>
+                                <p>Since I've discovered robotics that I find fascinating frameworks like ROS.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="services">
+                            <div class="service-wrap">
+                                <i class="pe-7s-joy pe-dj pe-va"></i>
+                                <h3>Video Games</h3>
+                                <p>I share a great passion for gaming and game development.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="services">
+                            <div class="service-wrap">
+                                <i class="pe-7s-add-user pe-dj pe-va"></i>
+                                <h3>Adaptive Persona</h3>
+                                <p>I'm someone who learns quickly and adapts to any problem to finds solutions.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section><!-- services -->
+
+        <!-- Portfolio Area -->
+        <div id="portfolio" class="container-fluid" style="padding-right: 0px; padding-left: 0px; font-family: Acrom;">
+            <!-- About 1 -->
+            <h2 class="block_title" align="center">My Work</h2>
+            <div class="row color-bg">
+                <div class="col-md-6 nopadding features-intro-img">
+                    <div class="about-image"
+                         style="background-image:url(https://raw.githubusercontent.com/nmssilva/cv-webgl-spaceinvaders/master/webvadersgl.png); background-position: bottom;">
+
+                    </div><!-- about
+                    image 1 -->
+                </div>
+                <div class="col-md-6 about-text">
+                    <h6>WEBVADERS GL</h6><!-- headline-->
+                    <p>Space Invaders game in 3D conserving the 2D classic style.
+                      <br>This game was made interely using <b>JavaScript</b> and <b>WebGL</b>.
+                      <br>Original sprites made on 3D Builder.
+                      <br>Developed for Visual Computation university subject.</p>
+                    <a href="https://nmssilva.github.io/webvadersgl/" class="weight-outline-btn">PLAY IT</a><!-- read more button  -->
+                    <br><br>
+                    <a href="https://github.com/nmssilva/webvadersgl" class="weight-outline-btn">CHECK IT ON GITHUB</a><!-- read more button  -->
+                </div>
+            </div>
+            <!-- About 2 -->
+            <div class="row">
+                <div class="col-md-6 about-text">
+                    <h6>AO VIVO</h6><!-- Headline -->
+                    <p>An <b>Android</b> App for a design project. This is also my first <b>Android</b> App.
+                    <br>Ao Vivo is an App that guides you through venues in the city of Porto where you can go to gigs from Indie Rock to Heavy Metal.</p>
+
+                  <a href="https://github.com/nmssilva/AoVivo/releases/download/v1.0.1/AoVivo.apk" class="weight-outline-btn">DOWNLOAD APK</a><!-- read more button  -->
+                  <br><br>
+                  <a href="https://github.com/nmssilva/aovivo" class="weight-outline-btn">CHECK IT ON GITHUB</a><!-- read more button  -->
+                </div>
+                <div class="col-md-6 nopadding features-intro-img">
+                    <div class="about-image" style="background-image:url(assets/images/aovivo.jpg);
+                    background-position: center"></div><!--
+                     about image 2
+                     -->
+                </div>
+            </div>
+            <!-- About 3 -->
+            <div class="row color-bg">
+                <div class="col-md-6 nopadding features-intro-img">
+                    <div class="about-image" style="background-image:url(assets/images/thesis.png); background-position: bottom;"></div><!-- about image 3 -->
+                </div>
+                <div class="col-md-6 about-text">
+                    <h6>Labelling, Detection and Tracking of Targets for Autonomous Driving</h6><!-- Headline-->
+                    <p>
+                      This is my master's thesis.
+                      <br>AtlasCar is a researching program for ADAS (Advanced Driver Assistance Systems) at Universidade de Aveiro.
+                      Calibration algorithm for the car camera and to use the video stream to auto-detect and track cars and people on the road.
+                      A calibration algorithm was developed to be used by the car's camera. The camera and LIDAR sensors enables the detection of potetitial objects
+                        with data clustering algorithms and template matching. Samples of labelling datasets were created to produce results.
+                        <br>This project was made under <b>ROS</b> Kinetic and <b>OpenCV</b> mainly using <b>C++</b> and <b>Python</b>.
+                    </p>
+                      <a href="https://github.com/nmssilva/augmented_perception" class="weight-outline-btn">CHECK IT ON GITHUB</a><!-- read more button  -->
+                </div>
+            </div>
 		</div>
-	</div> 
-	<!-- /.navbar -->
-
-	<!-- Header -->
-	<header id="head">
-		<div class="container">
-			<div class="row">
-				<h1 class="lead">Study and Adaptation of the Autonomous Driving Simulator CARLA for ATLASCAR2</h1>
-				<h3>Master's Thesis Blog</h3>
-				<h3 class="tagline">Master’s thesis based on developing (using ROS) a driving assistance system that implements an interface to detect, track and label targets present on the road.</h3>
-				<!-- <p><a class="btn btn-action btn-lg" role="button" href="#" target="_blank">Watch the demo</a></p> -->
-			</div>
-		</div>
-	</header>
-	<!-- /Header -->
-
-	<!-- Intro -->
-	<div class="container">
-		<br> <br>
-		<h2 class="thin", align="center">What is an Autonomous Driving Simulator?</h2>
-		<br>
-		<p class="text-muted">
-		<p class="context">
-			Within the scope of the ATLASCAR2 project, this dissertation is based on studying and developing an autonomous driving assistance simulator named CARLA that implements an interface based in ROS to replicate the ATLASCAR2 setup in the simulation. The idea of using an autonomous driving simulator was proposed as a way to simplify the data aquisition process for the ATLASCAR2 since this process keeps on getting more and more difficult due to factors such as the complexity in the setup and the calibration processes of the installed sensors on the ATLASCAR2, as well as other factors such as the hardware interface and the time that is required to perform a single data aquisition using the ATLASCAR2. This tool can produce realistic scenarios and can be used for testing out the algorithms that are going to be implemented in the ATLASCAR2 in controlled environments, offering a degree of ground truth for these algorithms that can be used to evaluate the performance in these environments before implementing them in the real platform. The replication of the ATLASCAR2 setup process as well as the algorithms involved in CARLA will be discussed in further detail during this dissertation which include sections talking about the replication process and the algorithms involved, showing the results of the ATLASCAR2 setup implementation in CARLA as well as some other results produced from experiments with CARLA simulated data which include the use of computer vision algorithms as well as other algorithms that are currently being used in the ATLASCAR2.
-		</p>
-	</div>
-	<!-- /Intro-->
-
-
-	<!-- container -->
-	<div class="container">
-
-		<!-- Features -->
-		<div class="jumbotron top-space">
-			<div class="container">
-				<div class="page-header">
-					<h2 class="text-center">Why use an Autonomous Driving Simulator?</h2>
-					<p class="text-muted">
-					<p class="context">
-						In the fields of ADAS and AD, there have been some technological studies that have kept on growing these past few decades in both the automobile industry and the academic environment. 
-						It is also important to note that in AD and ADAS the use of autonomous driving simulators is becoming more and more significant as they prove to be important tools for testing and evaluating the algorithms that are going to be implemented in the autonomous vehicle before implementing these algorithms in the real vehicle. These simulators can produce realistic scenarios that are often used for data acquisition in datasets that in conjunction with data labelling can be used as input for learning algorithms and work on their results. 
-						The purpose of this dissertation is focused on the adaptation of an autonomous driving simulator named CARLA in the context of the ATLASCAR2 project and test the results of the simulation. These results can later on be used for research of methods to register data using the cameras and the LIDAR sensors of the ATLASCAR2 installed in the simulated vehicle. This registered data is important for the vehicle to know its surroundings and later on create models of the objects present in CARLA and therefore computer vision algorithms used for object detection and visual perception must be tested with data registered from CARLA in order to create these models. For this reason, a tool for testing out these algorithms using frames gathered from the CARLA simulation will be developed.
-						This dissertation will also be used to evaluate algorithms that are currently being implemented in the ATLASCAR2, evaluating the performance of these algorithms in the scenarios provided by the CARLA simulator. This tool can also be used to test the developed algorithms before implementing them in the ATLASCAR2 offering then the possibility to alternate between simulated scenarios that can be controlled and real world scenarios.
-					</p>
-				</div>
-				<h3 align="center">For everyone</h3>
-				<br>
-				<div class="row">
-					<div class="col-sm-4 text-center">
-						<!-- Feature img -->
-						<i class="material-icons md-82">phone_android</i>
-						<h4><b></b></h4>
-						<h5>Simple and intuitive way to crop and keep track objects present in the image.</h5>
-					</div>
-					<div class="col-sm-4 text-center">
-						<!-- Feature img -->
-						<i class="material-icons md-82">access_time</i>
-						<h4><b>Real-time and archived data</b></h4>
-						<h5>Display information about each object present in the road both in real-time and the past history</h5>
-					</div>
-					<div class="col-sm-4 text-center">
-						<!-- Feature img -->
-						<i class="material-icons md-82">feedback</i>
-						<h4><b>User reporting</b></h4>
-						<h5>Report results about each object result(datasets) to the learning algorithm, helping in its management</h5>
-					</div>
-				</div>
-				<br><br>
-			</div>
-		</div>
-
-		<!-- Modal for images -->
-		<div id="myModal" class="modal fade" role="dialog">
-			<div class="modal-dialog">
-				<div class="modal-content">
-					<div class="modal-body">
-						<img class="img-responsive" src="" />
-					</div>
-					<div class="modal-footer">
-						<h4 class="text-center title"></h4>
-						<h5 class="text-center desc"></h5>
-						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div id="myModal2" class="modal fade" role="dialog">
-			<div class="modal-dialog">
-				<div class="modal-content">
-					<div class="modal-body">
-						<img class="img-responsiveapp" src="" />
-					</div>
-					<div class="modal-footer">
-						<h4 class="text-center title"></h4>
-						<h5 class="text-center desc"></h5>
-						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div id="myModal3" class="modal fade" role="dialog">
-			<div class="modal-dialog">
-				<div class="modal-content">
-					<div class="modal-body">
-						<img class="img-responsiveapp2" src="" />
-					</div>
-					<div class="modal-footer">
-						<h4 class="text-center title"></h4>
-						<h5 class="text-center desc"></h5>
-						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-					</div>
-				</div>
-			</div>
-		</div>
-
+		
 		<!-- Timeline -->
 		<div class="page-header">
 			<h2 class="text-center top-space">Timeline</h2>
@@ -203,9 +263,8 @@
 					<p>Preliminar Report</p>
 	            </div>
 	          </div>
-	        </li>
-		
-
+			</li>
+			
 		<li>
 	          <div class="timeline-badge danger"><i class="fa fa-calendar-check-o"></i></div>
 	          <div class="timeline-panel">
@@ -451,74 +510,28 @@
 				</li>
 		</ul>
 
-	</div>
+        <div id="social" style="background-image:url(assets/images/bg.jpg); background-position: center;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <ul class="scoialinks">
+                            <li class="normal-txt">Find me on</li>
+                            <li class="social-icons"><a class="github" href="https://github.com/SIlvaMFPedro"></a></li>
+                            <li class="social-icons"><a class="linkedin" href="https://www.linkedin.com/in/silvamfpedro/"></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div><!-- social -->
 
+        <!-- Necessery scripts -->
+        <script src="assets/js/jquery-2.1.3.min.js"></script>
+        <script src="assets/js/bootstrap.min.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+        <script src="assets/js/jquery.actual.min.js"></script>
+        <script src="assets/js/smooth-scroll.js"></script>
+        <script src="assets/js/owl.carousel.js"></script>
+        <script src="assets/js/script.js"></script>
 
-	<footer id="footer" class="top-space">
-
-		<!-- Highlights - jumbotron -->
-		<div class="jumbotron top-space">
-			<div class="container">
-
-				<h3 class="text-center thin">About me:</h3>
-
-				<div class="row">
-					<div class="col-md-6 col-sm-6 highlight">
-						<div class="h-caption"><img class="team-image" src="./assets/images/ps.jpg"><br><h4>Pedro Silva</h4></div>
-					</div>
-					<div class="col-md-6 col-sm-6 highlight">
-						<div class="h-body text-center">
-							<p></p>
-							<p></p>
-							<p>Fullname: Pedro Marques Ferreira da Silva</p>
-							<p>NMEC:<i>72645</i></p>
-							<p>Email: pedro.mfsilva@ua.pt</p>
-							<p>Course: Computer and Telematics in Aveiro University</p>
-							<p>Github: My <a target="_blank" href="https://github.com/SIlvaMFPedro">github</a></p>
-						</div>
-					</div>
-				</div> <!-- /row  -->
-				<br>
-
-				<header class="page-header">
-					<h3 class="page-title">Timesheet</h3>
-				</header>
-				<!-- Description -->
-				<div>
-					<p>&emsp;For more information about the work, you can see our <a target="_blank" href="https://docs.google.com/spreadsheets/d/1XEhvIpzXbmcJOPbM-Gk2DuN9bVOW48gRmeyYwvlKrhw/">timesheet</a>. You can also see my <a target="_blank" href="https://code.ua.pt/">wiki</a> if you are from the University of Aveiro.</p>
-				</div>
-
-
-
-		<div class="footer2">
-			<div class="container">
-				<div class="row">
-
-					<div class="col-md-6 widget">
-						<div class="widget-body">
-							<p class="simplenav">Master's Thesis in Computer and Telematics Engineering</p>
-						</div>
-					</div>
-
-					<div class="col-md-6 widget">
-						<div class="widget-body">
-							<p class="text-right">
-								Copyright &copy; 2019, Master's Thesis(DETI/DEM). Designed by <a href="http://gettemplate.com/" rel="designer">gettemplate</a>
-							</p>
-						</div>
-					</div>
-
-				</div> <!-- /row of widgets -->
-			</div>
-		</div>
-	</footer>
-
-
-	<!-- JavaScript libs are placed at the end of the document so the pages load faster -->
-	<script src="assets/js/jquery.min.js"></script>
-	<script src="assets/js/bootstrap.min.js"></script>
-	<script src="assets/js/headroom.min.js"></script>
-	<script src="assets/js/jQuery.headroom.min.js"></script>
-	<script src="assets/js/template.js"></script>
-</body>
+    </body>
 </html>
