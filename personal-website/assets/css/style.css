@@ -115,7 +115,7 @@ a:hover,a:active,a:focus{
 /////////////////////////////////////////////////////////////////////*/
 
 header{
-	background: url(../images/profile_pic.jpg) no-repeat;
+	background: url(../images/bg.jpg) no-repeat;
 	background-size: cover;
 	background-attachment: fixed;
 	background-position: 50% 50%;
@@ -218,7 +218,7 @@ header{
 	border-left: 8px solid transparent;
 	border-right: 8px solid transparent;
 
-	border-bottom: 8px solid black;
+	border-bottom: 8px solid white;
 	float: right;
 	margin-top: -5%;
 	margin-right: 23px;
@@ -285,14 +285,14 @@ header{
 }
 
 .color-bg h6, .color-bg p {
-    color:black;
+    color: white;
 }
 .color-bg h6::after{
     border-color: #fff;
 }
 .color-bg .weight-outline-btn {
-    color: black;
-    border-color: black;
+    color: white;
+    border-color: white;
 }
 .color-bg .weight-outline-btn:hover {
     background: #FFF;
@@ -445,7 +445,7 @@ header{
 	border: 1px solid #fff;
 }
 .button:hover {
-    background: black;
+    background: white;
     color: #000;
 }
 .btn-center {
@@ -723,7 +723,7 @@ footer {
 @media all and (max-width: 991px) {
 
 	header{
-		background: url(../images/profile_pic.jpg) no-repeat;
+		background: url(../images/bg-small.jpg) no-repeat;
 		background-size: cover;
 		background-attachment: fixed;
 		background-position: 50% -50px;
