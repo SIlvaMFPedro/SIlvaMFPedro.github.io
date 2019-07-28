@@ -1,0 +1,132 @@
+<!DOCTYPE HTML>
+<!--
+	Arcana by HTML5 UP
+	html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>uInteract</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<!--[if lte IE 8]><script src="/~pei2016-2017_g8//assets/css/ie/html5shiv.js"></script><![endif]-->
+		<script src="/~pei2016-2017_g8/assets/js/jquery.min.js"></script>
+		<script src="/~pei2016-2017_g8/assets/js/jquery.dropotron.min.js"></script>
+		<script src="/~pei2016-2017_g8/assets/js/skel.min.js"></script>
+		<script src="/~pei2016-2017_g8/assets/js/skel-layers.min.js"></script>
+		<script src="/~pei2016-2017_g8/assets/js/init.js"></script>
+		<link rel="stylesheet" href="/~pei2016-2017_g8/assets/css/skel.css" />
+		<link rel="stylesheet" href="/~pei2016-2017_g8/assets/css/style.css" />
+		<link rel="stylesheet" href="/~pei2016-2017_g8/assets/css/style-wide.css" />
+		
+		<!--[if lte IE 8]><link rel="stylesheet" href="/~pei2016-2017_g8//assets/css/ie/v8.css" /><![endif]-->
+	</head>
+	<body>
+
+		<!-- Header -->
+			<div id="header">
+						
+				<!-- Logo -->
+					<h1><a href="/~pei2016-2017_g8/index.html" id="logo"><img src="/~pei2016-2017_g8/assets/images/logo.png" alt="" width="100" height="100"><em></em></a></h1>
+				
+				<!-- Nav -->
+					<nav id="nav">
+						<ul>
+							
+							<li ><a href="/~pei2016-2017_g8/index.html">Home</a></li>
+							<li ><a href="/~pei2016-2017_g8/Userspace.html">User Space</a></li>
+							<li ><a href="/~pei2016-2017_g8/Specification.html">Specification</a></li>
+							<li ><a href="/~pei2016-2017_g8/Developers.html">Developers</a></li>
+							<li ><a href="/~pei2016-2017_g8/ta">Team area</a></li>
+						</ul>
+					</nav>
+
+			</div>
+
+<!-- Main -->
+	<section class="wrapper style1">
+		<div class="container">
+
+			<!-- Blog -->
+				<section>
+					<header class="major">
+						<h2>WEEK 12</h2>
+						<p>Posted 10 May 2017</p>
+					</header>
+					<div class="row">
+						<div class="8u -2u">
+							<section class="box">
+								<a href="#" class="image left"><img src="/~pei2016-2017_g8//assets/images/week9.jpg" alt="" /></a>
+								<h4>Preparation for real testing environment</h4>
+								<p>Solving issues with calibration</p>
+								<br><br><br><br><br>
+
+								<p> Next week we will finnaly test our demos in an environment with real users at the FCCV so all work done has been to make sure they are in a ready state in order to be tested without breaking issues.More detailed information can be navigated through below.</p>
+
+								<h4>Vertigo</h4>
+
+								<p>Graphical part of Vertigo has received improvements when related to last weeks presentations and we started iteration upon some few elements that will improve the immersion of the user when playing the demo.<br><br>
+								On another note, an old enemy that we have been battling over the last few weeks has finnaly received due treatment and most efforts done this week were done to making sure he is not there to impact our tests - Oculus Rift connected to the Avatar camera calibration. While we could, and have been, tailoring the camera variables according to our needs at the time, we have never been able to automate the rotation of the camera itself to the Avatar's head when starting the application which resulted in odd rotations that had to be repaired in real time for it to be usable. In a real world testing environment, however, its obvious this is not feasible from an engineering point of view, so we devoted ourselves to solving this issue before the testing date. This resulted in astonishing results, as we were able to identify the root of the problem and solve it in a way that makes sense for the users and won't impact them in any way when playing the demo. 
+								<br><br>
+								Therefore we are ready to take the demo to the next level and hope to have good reviews of the users tryingn it out.
+								</p>
+
+								<h4>Avatar</h4>
+
+								<p>This past week we were able to finnaly identify the root of one of our main issues regarding the movement of the Avatar - Flying Ironman. While the movement itself was coded in the correct way, one of the axis exported from BLENDER into UNITY were inverted which resulted in a change in the translation of the model that was not supposed to be happening. Proper adjustments were made and further testing will be made to understand the impact this solution will have.
+								<br><br>
+								Also, we continued configuration of the texture maps to be applied into the Avatar's movements.
+								</p>
+
+								<p>Expect some more news regarding this the following weeks.</p>
+
+								<h4>Dust Under Investigation</h4>
+
+								<p>Regarding the first module we have made tests with users external to the project but on a inner group scale in order to better realize its current state and what needs to be changed for a 3rd party user.
+								<br><br>
+								Work on the second module has continued and the scripts related to the interaction of the user with the testing tree are coming together.
+								<br><br>
+								On another note, we have adapted all the code and work done on the following module in order to make it possible to make our presentation with the Leap motion sensor by using our own swipes code and show to the community how it will work in an environment not related to the demo we have been working on since it can be applied to different themes and applications without much effort.
+
+
+								</p>
+
+								<h4>Pong</h4>
+
+								<p>Following last week's presentation and the feedback we received, we came to the conclusion that we won't have time to deliver a proper demo of our Pong idea. Therefore it will be discarded and won't received further iteration. While this decision doesn't come as a surprise we decided it would be important so that we can shift the effort to the remaining demos that are nearing their final states and we want to fully and extensively test them in order to discover any possible issues that might arise.
+								</p>
+
+								<h4>That is all for this week. Thanks for reading.</h4>
+
+
+							</section>
+						</div>
+					</div>
+				</section>
+
+		</div>
+	</section>
+		<!-- Footer -->
+			<div id="footer">
+				<div class="container">
+				<!-- Icons -->
+					<ul class="icons">
+						<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+						<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+						<li><a href="#" class="icon fa-github"><span class="label">GitHub</span></a></li>
+						<li><a href="#" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
+						<li><a href="#" class="icon fa-google-plus"><span class="label">Google+</span></a></li>
+					</ul>
+
+				<!-- Copyright -->
+					<div class="copyright">
+						<ul class="menu">
+							<li>Ua*. All rights reserved</li><li>Design: Team8</li>
+						</ul>
+					</div>
+
+			</div>
+
+	</body>
+</html>

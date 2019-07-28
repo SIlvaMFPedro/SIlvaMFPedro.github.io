@@ -1,0 +1,135 @@
+<!DOCTYPE HTML>
+<!--
+	Arcana by HTML5 UP
+	html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>uInteract</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<!--[if lte IE 8]><script src="/~pei2016-2017_g8//assets/css/ie/html5shiv.js"></script><![endif]-->
+		<script src="/~pei2016-2017_g8/assets/js/jquery.min.js"></script>
+		<script src="/~pei2016-2017_g8/assets/js/jquery.dropotron.min.js"></script>
+		<script src="/~pei2016-2017_g8/assets/js/skel.min.js"></script>
+		<script src="/~pei2016-2017_g8/assets/js/skel-layers.min.js"></script>
+		<script src="/~pei2016-2017_g8/assets/js/init.js"></script>
+		<link rel="stylesheet" href="/~pei2016-2017_g8/assets/css/skel.css" />
+		<link rel="stylesheet" href="/~pei2016-2017_g8/assets/css/style.css" />
+		<link rel="stylesheet" href="/~pei2016-2017_g8/assets/css/style-wide.css" />
+		
+		<!--[if lte IE 8]><link rel="stylesheet" href="/~pei2016-2017_g8//assets/css/ie/v8.css" /><![endif]-->
+	</head>
+	<body>
+
+		<!-- Header -->
+			<div id="header">
+						
+				<!-- Logo -->
+					<h1><a href="/~pei2016-2017_g8/index.html" id="logo"><img src="/~pei2016-2017_g8/assets/images/logo.png" alt="" width="100" height="100"><em></em></a></h1>
+				
+				<!-- Nav -->
+					<nav id="nav">
+						<ul>
+							
+							<li ><a href="/~pei2016-2017_g8/index.html">Home</a></li>
+							<li ><a href="/~pei2016-2017_g8/Userspace.html">User Space</a></li>
+							<li ><a href="/~pei2016-2017_g8/Specification.html">Specification</a></li>
+							<li ><a href="/~pei2016-2017_g8/Developers.html">Developers</a></li>
+							<li ><a href="/~pei2016-2017_g8/ta">Team area</a></li>
+						</ul>
+					</nav>
+
+			</div>
+
+<!-- Main -->
+	<section class="wrapper style1">
+		<div class="container">
+
+			<!-- Blog -->
+				<section>
+					<header class="major">
+						<h2>WEEK 5</h2>
+						<p>Posted 22 Mar 2017</p>
+					</header>
+					<div class="row">
+						<div class="8u -2u">
+							<section class="box">
+								<a href="#" class="image left"><img src="/~pei2016-2017_g8//assets/images/week5.png" alt="" /></a>
+								<h4>Continuous development in each demonstration</h4>
+								<br><br><br><br><br><br><br>
+
+								<p>This week there is not much to discuss as when compared to the previous one as the main focus was to continue improving each of the demonstrations. We have some interesting pictures and new information to share with you about the "Avatar" demo will see below when you scroll through the specific sections of each demo.</p>
+
+								<h4>Vertigo</h4>
+
+								<p>This week we managed to fix some issues related to the hitbox of our avatar, mainly by tweaking settings on Unity's Mesh collider, which were causing the detection of specific body parts not to work properly when interacting with the environment, mainly in the feet, resulting in some pretty annoying interactions between the avatar and the board. <br>Also when it comes to gravity and falling, if you remember the video from last week, what you could call the "ragdoll" of the avatar will certainly look much better if the user falls from the board while travessing across platforms with the adjusted hitbox that is slimmer and adapts better to the avatar's body.</p>
+
+								<p>Meanwhile, some otimizations were made to the code related with the movement of the avatar when detected by the Kinect camera.</p>
+
+								<h4>Avatar</h4>
+
+								<p>All the work concerned with the "Avatar" demonstration had its focus on the study of how to implement joints in the models developed for our custom avatar, by using <b>BLENDER</b>. This proved to be a hard task when it comes to importing the information to UNITY and making sure that the specific hierarchy of joints is in proper order, which is necessary if the engine is to evaluate it properly. All this is necessary for the vision we have of our final view of the demonstration, since the highlight of muscles connected to the movement of the user will have to be quite robust and must be as precise as possible</p>
+								
+								<p>I will leave some pictures taken from development for you to have an idea of what i am refering to, when it comes to the custom models: </p>
+
+
+								<a href="#" class="image left"><img src="/~pei2016-2017_g8//assets/images/Avatar_blender01.png" alt="" /></a>
+								<a href="#" class="image left"><img src="/~pei2016-2017_g8//assets/images/Avatar_blender02.png" alt="" /></a>
+
+								<h4>Dust under Investigation</h4>
+
+								<p>Not much improvement was made to optimization related to the detection of gestures in the Leap sensor this week. However, we aim to have this part of the demonstration fully working in the next one so that we can finnaly shift most of our attention into the development of the interface, making sure it is easy to understand and use as is required of it at the last iteration</p>
+
+								<p>Speaking of the interface, design and implementation of prototypes of "main" menus were done this week as you can see in the video/pictures below: </p>
+
+								<!-- Leap_video02.mp4  -->
+								<video width="320" height="240" controls>
+  									<source src="/~pei2016-2017_g8//assets/images/Leap_video02.mp4" type="video/mp4">
+								</video>
+								<br>
+								<a href="#" class="image left"><img src="/~pei2016-2017_g8//assets/images/Leap_week5_01.jpg" alt=""/></a>
+								<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+								<p>During next week we will finally shift these green ugly panels into the proper pictures that we want to have in our final stage of the demo, so stay tuned for it.</p>
+
+								<h4>Pong</h4>
+
+								<p>This week we continued studying on how to implement PCL calibrations into our data retrieved from the Kinect camera and feed it into the engine (fix possible errors on the design of the gaming platform).</p>
+
+								<p>Meanwhile we also implemented some features related to the game itself, such as properly animating the ball to behave independently, by using physics, and making it possible to move the "box pieces" that will interact with the ball. As of this moment it is possible to play the game solely using the keyboard, but of course that next focus will be to use the data retrieved from the Kinect camera to move the boxes by the user body, as we want the final stage of the demo to be.</p>
+
+								<h4>We will keep working and hopefully have more constructive features and media of each of our demos next week. Thanks for reading!</h4>
+
+							</section>
+						</div>
+					</div>
+				</section>
+
+		</div>
+	</section>
+		<!-- Footer -->
+			<div id="footer">
+				<div class="container">
+				<!-- Icons -->
+					<ul class="icons">
+						<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+						<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+						<li><a href="#" class="icon fa-github"><span class="label">GitHub</span></a></li>
+						<li><a href="#" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
+						<li><a href="#" class="icon fa-google-plus"><span class="label">Google+</span></a></li>
+					</ul>
+
+				<!-- Copyright -->
+					<div class="copyright">
+						<ul class="menu">
+							<li>Ua*. All rights reserved</li><li>Design: Team8</li>
+						</ul>
+					</div>
+
+			</div>
+
+	</body>
+</html>

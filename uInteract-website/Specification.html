@@ -1,0 +1,362 @@
+<!DOCTYPE HTML>
+<!--
+	Arcana by HTML5 UP
+	html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>uInteract</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<!--[if lte IE 8]><script src="/~pei2016-2017_g8//assets/css/ie/html5shiv.js"></script><![endif]-->
+		<script src="/~pei2016-2017_g8/assets/js/jquery.min.js"></script>
+		<script src="/~pei2016-2017_g8/assets/js/jquery.dropotron.min.js"></script>
+		<script src="/~pei2016-2017_g8/assets/js/skel.min.js"></script>
+		<script src="/~pei2016-2017_g8/assets/js/skel-layers.min.js"></script>
+		<script src="/~pei2016-2017_g8/assets/js/init.js"></script>
+		<link rel="stylesheet" href="/~pei2016-2017_g8/assets/css/skel.css" />
+		<link rel="stylesheet" href="/~pei2016-2017_g8/assets/css/style.css" />
+		<link rel="stylesheet" href="/~pei2016-2017_g8/assets/css/style-wide.css" />
+		
+		<!--[if lte IE 8]><link rel="stylesheet" href="/~pei2016-2017_g8//assets/css/ie/v8.css" /><![endif]-->
+	</head>
+	<body>
+
+		<!-- Header -->
+			<div id="header">
+						
+				<!-- Logo -->
+					<h1><a href="/~pei2016-2017_g8/index.html" id="logo"><img src="assets/images/logo.png" alt="" width="100" height="100"><em></em></a></h1>
+								
+				<!-- Nav -->
+					<nav id="nav">
+						<ul>
+							
+							<li ><a href="/~pei2016-2017_g8/index.html">Home</a></li>
+							<li ><a href="/~pei2016-2017_g8/Userspace.html">User Space</a></li>
+							<li ><a href="/~pei2016-2017_g8/Specification.html">Specification</a></li>
+							<li ><a href="/~pei2016-2017_g8/Developers.html">Developers</a></li>
+							<li ><a href="/~pei2016-2017_g8/ta">Team area</a></li>
+						</ul>
+					</nav>
+
+			</div>
+
+	<!-- Main -->
+	<section class="wrapper style1">
+		<div class="container">
+			<div id="content">
+
+				<!-- Content -->
+			
+					<article>
+						<header>
+						</header>
+						
+						<!-- <span class="image featured"><img src="/~pei2016-2017_g8//assets/images/banner.jpg" alt="" /></span> -->
+						
+						<h3>In here you will find all the specific information related to our demonstrations</h3>
+
+						<p>Such information will inform you of details related to each demonstration and how broad its features are, tests and requirements related to each one</p>
+
+
+						<h3 style="background-color: #87CEFA">Vertigo</h3>
+
+						<p>Vertigo aims to explore height and the sensations with it entailed through virtual reality.</p>
+						<!-- <img src="/~pei2016-2017_g8//assets/images/Vertigo_UserCase01.jpg" alt="" /> -->
+						<p>
+						<b>Usability Requirements:</b>
+						<br>
+						<ul style="list-style-type:circle">
+  							<li>Avatar movement mimics the player's (to the extent allowed by using Kinect) without delay to prevent fatigue</li>
+  							<li>Goal intuitive to the player</li>
+						</ul>
+						<b>Technical Requirements:</b>
+						<br>
+						<ul style="list-style-type:circle">
+  							<li>1x Oculus Rift DK2</li>
+  							<li>Computer compatible with VR</li>
+  							<li>DirectX - (To run Unity Apps)</li>
+  							<li>Windows OS</li>
+  							<li>1x Kinect for Windows</li>
+  							<li>1x Real life Board (wooden or not)</li>
+						</ul>
+						<b>Current features:</b>
+						<ul style="list-style-type:circle">
+  							<li>Integration of Kinect Camera with the Oculus Rift DK2</li>
+  							<li>Default collision boxes and collision mechanics adjusted to the dificulties presented by the use of Kinect over a tradition input device for movement</li>
+  							<li>The demo makes the player have to walk on the board to reach the Goal</li>
+  							<li>Prototypish world used for testing</li>
+						</ul>
+						<b>Future features:</b>
+						<br>
+						<ul style="list-style-type:circle">
+  							<li>A more immersive virtual world</li>
+  							<li>Customizable board size</li>
+  							<li>Game over Screen</li>
+  							<li>Winning notification</li>
+						</ul>
+						<br>
+						<b>The interaction with the virtual environment can be described by the following user cases approach:</b>
+						<br><br>
+
+						<b>Test 1- Falling Well</b><br>
+
+						As a player<br>
+						I don’t want to feel indisposed<br>
+						So that i don’t feel sick<br>
+						<br>
+						Acceptance criteria:<br>
+						<br>
+						Scenario 1: Player is ok<br>
+						Given the player fell in the Demo<br>
+						As he/she was falling<br>
+						He/She didn’t feel nauseated<br>
+						<br>
+						<b>Test 2- Working hitboxes</b><br>
+						<br>
+						As a player<br>
+						I want my staying on the virtual board to match the real one<br>
+						So that it doesn’t break my suspension of disbelief<br>
+						<br>
+						Acceptance criteria:<br>	
+						<br>
+						Scenario 1: On both boards<br>
+						Given the player is on the real board<br>
+						As he/she stays there<br>
+							Then he/she stays on the virtual board as well<br>
+						<br>
+						Scenario 2: Yay i’m falling<br>
+						Given the player is on the real board<br>
+						When he/she leaves it<br>
+						Then he/she starts falling<br>
+						<br>
+						<b>Test 3- Game Over</b><br>
+
+						As a player<br>
+						I want a visual indication that the Demo is over<br>
+						So i am aware of this fact<br>
+						<br>
+						Acceptance criteria:<br>	
+						<br>
+						Scenario 1: I fell!<br>
+						Given the player fell (in the Demo)<br>
+						As he/she reaches the end of the fall<br>
+							Then he/she is notified of the end of the Demo<br>
+						<br>
+						Scenario 2: I won!<br>
+						Given the player is successful in his endeavor<br>
+						As he/she reaches the goal<br>
+						Then he/she is notified of his accomplishment
+						<br><br>
+						<b>As soon as the graphic improvements are complete we will proceed to a testing phase in a real environment at the FCCV, where we will ask the general public to try it out and give us feedback so we can make the necessary adjustments.</b>
+						<br><br>
+						(For more information and video on the current state of the project check the "Team Area"->"Week" or the "Home" page and search for "Interact with a 3D interface")
+						</p>
+
+						<h3 style="background-color: #87CEFA">Avatar</h3>
+
+						<p>Avatar's main objective is to display an avatar module that resembles the body aspect of the user as well as mimic the movements done by him and showcase the body parts that are being used in the user's movements.
+						This is done through iteration upon the Kinect Sensor data, which will detect the various points of interest of the user's body and form a cloud of points which is used to form a skeleton to be used for tracking the position and the rotation of the user as well as tracking his movements</p>
+
+						<p>
+						<b>Usability Requirements:</b>
+						<ul style="list-style-type:circle">
+  							<li>Avatar movement mimics the player's (to the extent allowed by using Kinect) without delay to prevent fatigue</li>
+  							<li>Goal intuitive to the user</li>
+  							<li>Highlight of the avatar's "muscles" must be evident</li>
+						</ul>
+						<b>Technical Requirements:</b>
+						<br>
+						<ul style="list-style-type:circle">
+  							<li>Windows, macOS or Linux Operative System</li>
+  							<li>DirectX - (To run Unity Apps)</li>
+  							<li>Blender</li>
+  							<li>Windows OS</li>
+  							<li>1x Kinect for Windows (V1)</li>
+						</ul>
+						</p>
+
+						<p><b>This demo's development is split into three phases in order to make it simpler to be approached (more information in "Team Area"):</b>
+						<br><br>
+						<b>Phase One - Creating the Avatar STATUS: COMPLETE</b>
+						<ul style="list-style-type:circle">
+  							<li>Creation of a 3D drawing of the humanoid and appliance of a texture onto the model</li>
+  							<li>Creation of the skeleton, composed of different bones and joins which will be used for the character rigging. These bones have to follow a certain hierarchy starting from a root bone in order to specify which bones are going to move in the character's movement</li>
+  							<li>Character rigging in which we connect the various bones to 3D drawing and in which we specify which regions of the body should move according to the bones those are beign referenced to</li>
+  							<li>"Pose Mode" which is a testing environment to check the differentes poses of the Avatar and if everything is in order</li>
+						</ul>
+						<br>
+						<b>Phase Two - Mimicing Player's Movements STATUS: UNDER DEVELOPMENT</b>
+						<ul style="list-style-type:circle">
+  							<li>Export of the Avatar created in Blender as an .fbx file to import into Unity</li>
+  							<li>Full verification if everything is working at it should, namely, verify if the joints of the avatar are in the right place and if everything is named right</li>
+  							<li>Appliance of an Avatar controller to the model and verification if it responds correctly according to the user's movements, be it changes in the position or rotation of the user's body</li>
+						</ul>
+						<br>
+						<b>Phase Three - Showcase Body Parts STATUS: UNDER DEVELOPMENT</b>
+						<ul style="list-style-type:circle">
+  							<li>Creation of textures referencing the body parts with a different color in Blender</li>
+  							<li>Appliance of the textures into the model using the Avatar Controller script</li>
+  							<li>Highlight of various body parts which are being used in the character's movements</li>
+						</ul>
+						<br>
+						<b>Current hardships:</b>
+						<ul style="list-style-type:circle">
+  							<li>Position of the model not working properly in accordance with the position of the player - <b>Phase Two</b></li>
+  							<li>Creation of extra textures to match the body parts aswell as configuring those textures with the controller - <b>Phase Three</b></li>
+  							<li>Creation of a pop-up Window which will showcase the name of the body part that is being highlighted as well as some of the muscles involved - <b>Phase Three</b></li>
+						</ul>
+						As soon as these hardships are dealt with we hope to implement the demo in the FCCV for them to use in the future as well as being robust enough to showcase at Teacher's Day at Universidade de Aveiro - Deti
+						</p>
+
+						<p>
+						<b>The interaction of the user with the demo can be described as in the following user cases approach:</b>
+						<br><br>
+						<b>Test 1- Humanoid Avatar Configuration</b><br>
+						As a user<br>
+						I want to create my own Humanoid Avatar<br>
+						So that i can apply it to the model of my choosing.<br>
+						Acceptance Criteria: Scenarios<br>
+							<br>
+					Scenario 1: Create Humanoid Model<br>
+
+					Given that the user is a male/female he/she wants to create an humanoid  avatar that reflects his/her image and makes movements resembling that of a human. When the user has finished creating the avatar then the avatar should look like a male/female and should be able to make the movements that the user wants it to make<br>
+					<br>
+					Scenario 2: Create Ordinary Model<br>
+
+					Given an ordinary user he wants to create a specific avatar for his model that resembles a certain object and serves for a specific purpose. When the user has finished creating the model then the model should have the same properties as the object is based on and should serve the purpose specified by the user<br>
+					<br>
+						
+					Creating the Avatar in Blender is the first step for this test. When creating your own Avatar you need make sure that the model you created is successfully rigged and that the bones and the joints of the Avatar are in the correct order and in the correct place . It’s important to know, that these bones have to be in order to specify which bones have to move with the player animation;
+					<br><br>
+					<b>Teste 2- Mimic Player Movement</b><br>
+					As a player<br>
+					I want the Humanoid Avatar to mimic the movements that i am making<br>
+					So that i can see the movements that i am making.<br>
+					<br>
+					Acceptance Criteria: Scenarios<br>
+					<br>
+					Scenario 1: Success<br>
+					Given that the player is making movements that can be detected by the Kinect, when the player is moving, the avatar should be moving according to the player position and rotation and it should be copying all the movements that the player is doing at relatively the same time as the player is doing said movements;<br>
+					<br>
+					Scenario 2: Failure<br>
+					Given that the player is making movements that cannot be detected by the Kinect, when the player is moving, the avatar should be moving according to the player position and rotation but it can’t copy all the movements that the player is doing since the movements are not being detected by the Kinect sensor<br>
+					<br>
+					Once the Humanoid Avatar has been properly configured the next test involves the avatar that the we created to mimic the movements done by the player. This is done by exporting the avatar that we made in Blender to Unity and using the Kinect libraries  to adapt the avatar movements with the movements done by the player;
+					<br><br>
+					<b>Test 3 - Showcase Body Parts</b><br>
+					As a player<br>
+					I want the avatar to mimic my movements as well showcasing which body parts are       being moved<br>
+					So that i know which body parts are being used in my movement<br>
+					<br>
+					Acceptance Criteria: Scenarios<br>
+					<br>
+					Scenario 1: Success<br>
+					Given that the player is making movements that can be detected by the Kinect, when the player is moving, the avatar should be moving according to the player position and rotation, it should be copying all the movements that the player is doing at relatively the same time as the player is doing said movements as well as showcasing the body parts that are being used in said movements by painting said body parts with a different color;
+					<br><br>
+
+					Scenario 2: Failure<br>
+					Given that the player is making movements that cannot be detected by the Kinect, when the player is moving, the avatar should be moving according to the player position and rotation but it can’t copy all the movements that the player is doing since the movements are not being detected by the Kinect sensor and since the movements are not being detected the body parts don’t change color and therefor we can’t determine/showcase the body parts that are being used;
+					<br><br>
+					(For more information and video on the current state of the project check the "Team Area"->"Week" or the "Home" page and search for "Interact with a 3D interface")
+					</p>
+
+						<!-- <img src="/~pei2016-2017_g8//assets/images/Avatar_UserCase01.jpg" alt="" /> -->
+
+
+						<h3 style="background-color: #87CEFA">Dust Under Investigation</h3>
+
+						<p>Dust Under Investigation's main objective is to allow the user to interact with a 3D gallery by using his hands and give a robust feeling of Augmented Realism. Therefore it needs to be intuitive to use, as it displays the multimedia files from this experience and will also allow the user to follow the steps of each test to perform on a certain substance.
+						<br><br>
+						<b>Usability Requirements:</b>
+						<br>
+						<ul style="list-style-type:circle">
+  							<li>Allow interaction of the user with data displayed</li>
+  							<li>Simple to understand and use</li>
+  							<li>Fast performance</li>
+						</ul>
+						<b>Technical Requirements:</b>
+						<br>
+						<ul style="list-style-type:circle">
+  							<li>Windows, MacOs or Linux Operative System</li>
+  							<li>DirectX - (To run Unity apps)</li>
+  							<li>1x Leap Motion Sensor - (Requires 1x USB3 port)</li>
+						</ul>
+						<b>This demo will use the Leap Motion sensor to detect and track the user's hand in order to interact with the interface in an Augmented Reality manner.</b></p>
+
+						<p><b>Possible Gestures:</b></p>
+						<ul style="list-style-type:circle">
+  							<li>Swipe - (Left and Right to move between menus)</li>
+  							<li>Click - (Point on a tracked spot to access a new section)</li>
+  							<li>Back Up - (Close hand to go back a menu)</li>
+  							<li>Drag - (Track hand to move zoomed images)</li>
+						</ul>
+						
+						<p><b>Reservations:</b></p>
+						<ul style="list-style-type:circle">
+  							<li>Only first hand is detected and can interact with the interface. Following hands will just be ignored.</li>
+  							<li>Multiple swipes can only be detected by stopping the hand for a moment</li>
+						</ul>
+
+						<p><b>We decided to split this demo's'development into two modules in order to make it simpler to be approached (more information in "Team Area"):</b>
+						<br><br>
+						<b>Multimedia Module - STATUS: COMPLETE</b>
+						<br><br>
+						This phase deals with the presentation part of the demonstration, where the user will be familiarized with the situation at hand and be presented with the suspects and interaction tree.
+						<br><br>
+						<b>Current features:</b>
+						<ul style="list-style-type:circle">
+  							<li>News menu</li>
+  							<li>List of Suspects</li>
+  							<li>Interaction tree</li>
+  							<li>Navigation through menus by using Swipes or clicking in specific buttons</li>
+  							<li>Sound and Light feedback according to user actions</li>
+						</ul>
+						<b>Interaction Module - STATUS: UNDER DEVELOPMENT</b>
+						<br><br>
+						This phase deals with all the interaction between the User and the chemical experience tree, aswell as the results to be displayed at the end of the tests.
+						<br><br>
+						<b>Future features:</b>
+						<br>
+						<ul style="list-style-type:circle">
+  							<li>Interaction Tree Navigation</li>
+  							<li>Display of results at the end of the experience</li>
+  							<li>Navigation through each group tree by using Swipes or clicking in specific buttons</li>
+						</ul>
+						When both this modules are complete and tested for optimization this demo will be considered complete. After this we will implement the demo in the "Fábrica Centro Ciência Viva de Aveiro" to be used in the future while performing the experience "Dust Under Investigation" with a real group of users unrelated with the project.
+						<br><br>
+						(For more information and video on the current state of the project check the "Team Area"->"Week" or the "Home" page and search for "Interact with a 3D interface")
+						</p>
+
+					</article>
+		
+			</div>
+		</div>
+	</section>			
+<!--end-->		
+		<!-- Footer -->
+			<div id="footer">
+				<div class="container">
+				<!-- Icons -->
+					<ul class="icons">
+						<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+						<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+						<li><a href="#" class="icon fa-github"><span class="label">GitHub</span></a></li>
+						<li><a href="#" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
+						<li><a href="#" class="icon fa-google-plus"><span class="label">Google+</span></a></li>
+					</ul>
+
+				<!-- Copyright -->
+					<div class="copyright">
+						<ul class="menu">
+							<li>Ua*. All rights reserved</li><li>Design: Team8</li>
+						</ul>
+					</div>
+
+			</div>
+
+	</body>
+</html>

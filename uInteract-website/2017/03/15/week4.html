@@ -1,0 +1,162 @@
+<!DOCTYPE HTML>
+<!--
+	Arcana by HTML5 UP
+	html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>uInteract</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<!--[if lte IE 8]><script src="/~pei2016-2017_g8//assets/css/ie/html5shiv.js"></script><![endif]-->
+		<script src="/~pei2016-2017_g8/assets/js/jquery.min.js"></script>
+		<script src="/~pei2016-2017_g8/assets/js/jquery.dropotron.min.js"></script>
+		<script src="/~pei2016-2017_g8/assets/js/skel.min.js"></script>
+		<script src="/~pei2016-2017_g8/assets/js/skel-layers.min.js"></script>
+		<script src="/~pei2016-2017_g8/assets/js/init.js"></script>
+		<link rel="stylesheet" href="/~pei2016-2017_g8/assets/css/skel.css" />
+		<link rel="stylesheet" href="/~pei2016-2017_g8/assets/css/style.css" />
+		<link rel="stylesheet" href="/~pei2016-2017_g8/assets/css/style-wide.css" />
+		
+		<!--[if lte IE 8]><link rel="stylesheet" href="/~pei2016-2017_g8//assets/css/ie/v8.css" /><![endif]-->
+	</head>
+	<body>
+
+		<!-- Header -->
+			<div id="header">
+						
+				<!-- Logo -->
+					<h1><a href="/~pei2016-2017_g8/index.html" id="logo"><img src="/~pei2016-2017_g8//assets/images/logo.png" alt="" width="100" height="100"><em></em></a></h1>				
+				<!-- Nav -->
+					<nav id="nav">
+						<ul>
+							
+							<li ><a href="/~pei2016-2017_g8/index.html">Home</a></li>
+							<li ><a href="/~pei2016-2017_g8/Userspace.html">User Space</a></li>
+							<li ><a href="/~pei2016-2017_g8/Specification.html">Specification</a></li>
+							<li ><a href="/~pei2016-2017_g8/Developers.html">Developers</a></li>
+							<li ><a href="/~pei2016-2017_g8/ta">Team area</a></li>
+						</ul>
+					</nav>
+
+			</div>
+
+<!-- Main -->
+	<section class="wrapper style1">
+		<div class="container">
+
+			<!-- Blog -->
+				<section>
+					<header class="major">
+						<h2>WEEK 4</h2>
+						<p>Posted 15 Mar 2017</p>
+					</header>
+					<div class="row">
+						<div class="8u -2u">
+							<section class="box">
+								<a href="#" class="image left"><img src="/~pei2016-2017_g8//assets/images/week4.jpg" alt="" /></a>
+								<h4>First Code samples</h4>
+								<br><br><br><br><br><br>
+
+
+								<h4>Vertigo</h4>
+								
+								<p>This week the bulk of our work was directed to building a functional environment where we could experiment and estimate how well the work developed until now was going in the direction we truly want for our final state of the demonstration. The result of this can be seen in the short video below: </p>
+
+								<!--Vertigo_video01.mp4 -->
+								<video width="320" height="240" controls>
+  									<source src="/~pei2016-2017_g8//assets/images/Vertigo_video01.mp4" type="video/mp4">
+								</video>
+								<br>
+
+								<p><b>Current features include: </b></p>
+								<ul style="list-style-type:circle">
+  									<li>Avatar replicates user movements (to a certain extent)</li>
+  									<li>Early version of the environment where the user will have to walk upon</li>
+								</ul>
+
+								<p>From this moment on, focus will be directed into developing the hitboxes of the avatar in order to connect better with the board and extracting correct information from Kinect to apply into the Avatar to rectify some movement related issues.</p>
+
+								<h4>Avatar</h4>
+
+								<p>When it comes to the Avatar demo, after much discussion and experimentation we decided to develop our own models for the avatar using <b>"BLENDER"</b> so that we could manipulate directly its joints, in order to serve as the pillar of support for the Mesh that will be implemented later on (highlights of the movements by the user). Pictures from a test we run earlier can be seen below: </p>
+
+								<a href="#" class="image left"><img src="/~pei2016-2017_g8//assets/images/Avatar_week4_01.jpg" alt="" /></a>
+								<a href="#" class="image left"><img src="/~pei2016-2017_g8//assets/images/Avatar_week4_02.jpg" alt="" /></a>
+
+								<br><br><br><br><br><br><br><br>
+
+								<p>The second image illustrates how we want the Avatar to behave when the user moves his limbs</p>
+
+								<br><br><br><br><br><br><br><br>
+
+								<h4>Dust Under Investigation</h4>
+
+								<p>Leap Motion's current version "Orion", saw the discontinuing of gesture based implementations, due to them being considered as not working the way they were originally designed for. Therefore, we have since coded some gesture based scripts that mainly reflect "Swipes" and "Grab" movements which we deemed necessary to implement in the prototype interface.</p>
+
+								
+								<!--Leap_video01.mp4 -->
+								<video width="320" height="240" controls>
+  									<source src="/~pei2016-2017_g8//assets/images/Leap_video01.mp4" type="video/mp4">
+								</video>
+								<br>
+								<p>As it can be seen from the previous video, some optimizations are still needed, in regards to the velocity of gestures - It has to a way too fast movement - and also at the quantity of times that same gesture is detected, which is directly related to the frames.</p>
+
+								<p>About the interface, we've got some already "functional" images to show you, from a very early stage of development, where it can be seen how we intend to give actions to a user to follow a chart and interact with it</p>
+
+								<p>The actions flowchart the users are supposed to follow during the experiment is the following:</p>
+
+								<a href="#" class="image left"><img src="/~pei2016-2017_g8//assets/images/Leap_flowchart.jpg" alt="" /></a>
+
+								<p>The first documented pictures of the initial stages of this flowchart are as you can see below:</p>
+
+								<a href="#" class="image left"><img src="/~pei2016-2017_g8//assets/images/Leap_int01.jpg" alt="" /></a>
+								<a href="#" class="image left"><img src="/~pei2016-2017_g8//assets/images/Leap_int02.jpg" alt="" /></a>
+								<a href="#" class="image left"><img src="/~pei2016-2017_g8//assets/images/Leap_int03.jpg" alt="" /></a>
+								<a href="#" class="image left"><img src="/~pei2016-2017_g8//assets/images/Leap_int04.jpg" alt="" /></a>
+								
+								<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+									
+								<h4>Pong</h4>
+							
+								<p>We don't have much to show about pong this week, as the bulk of the work done has been to study how to work with PCL in order to calibrate the information we would receive from the kinect camera, such as Depth and position of objects in the Field of View of the camera.</p>
+
+								<p>We'll leave with you an image of a very early prototype of how the table itself will look from a top side View: </p>
+								<a href="#" class="image left"><img src="/~pei2016-2017_g8//assets/images/Pong_topView_week4.jpg" alt="" /></a>
+								
+
+								<br><br><br><br><br><br><br><br><br><br>
+								<h4>We will keep working and hopefully will have more constructive pictures of each of our demos next week. Thanks for reading!</h4>
+							</section>
+						</div>
+					</div>
+				</section>
+
+		</div>
+	</section>
+		<!-- Footer -->
+			<div id="footer">
+				<div class="container">
+				<!-- Icons -->
+					<ul class="icons">
+						<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+						<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+						<li><a href="#" class="icon fa-github"><span class="label">GitHub</span></a></li>
+						<li><a href="#" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
+						<li><a href="#" class="icon fa-google-plus"><span class="label">Google+</span></a></li>
+					</ul>
+
+				<!-- Copyright -->
+					<div class="copyright">
+						<ul class="menu">
+							<li>Ua*. All rights reserved</li><li>Design: Team8</li>
+						</ul>
+					</div>
+
+			</div>
+
+	</body>
+</html>

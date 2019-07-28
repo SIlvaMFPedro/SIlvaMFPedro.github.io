@@ -1,0 +1,138 @@
+<!DOCTYPE HTML>
+<!--
+	Arcana by HTML5 UP
+	html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>uInteract</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<!--[if lte IE 8]><script src="/~pei2016-2017_g8//assets/css/ie/html5shiv.js"></script><![endif]-->
+		<script src="/~pei2016-2017_g8/assets/js/jquery.min.js"></script>
+		<script src="/~pei2016-2017_g8/assets/js/jquery.dropotron.min.js"></script>
+		<script src="/~pei2016-2017_g8/assets/js/skel.min.js"></script>
+		<script src="/~pei2016-2017_g8/assets/js/skel-layers.min.js"></script>
+		<script src="/~pei2016-2017_g8/assets/js/init.js"></script>
+		<link rel="stylesheet" href="/~pei2016-2017_g8/assets/css/skel.css" />
+		<link rel="stylesheet" href="/~pei2016-2017_g8/assets/css/style.css" />
+		<link rel="stylesheet" href="/~pei2016-2017_g8/assets/css/style-wide.css" />
+		
+		<!--[if lte IE 8]><link rel="stylesheet" href="/~pei2016-2017_g8//assets/css/ie/v8.css" /><![endif]-->
+	</head>
+	<body>
+
+		<!-- Header -->
+			<div id="header">
+						
+				<!-- Logo -->
+					<h1><a href="/~pei2016-2017_g8/index.html" id="logo">uInteract<em>by Team8</em></a></h1>
+				
+				<!-- Nav -->
+					<nav id="nav">
+						<ul>
+							
+							<li ><a href="/~pei2016-2017_g8/index.html">Home</a></li>
+							<li ><a href="/~pei2016-2017_g8/Userspace.html">User Space</a></li>
+							<li ><a href="/~pei2016-2017_g8/Specification.html">Specification</a></li>
+							<li ><a href="/~pei2016-2017_g8/Developers.html">Developers</a></li>
+							<li ><a href="/~pei2016-2017_g8/ta">Team area</a></li>
+						</ul>
+					</nav>
+
+			</div>
+
+<!-- Main -->
+	<section class="wrapper style1">
+		<div class="container">
+
+			<!-- Blog -->
+				<section>
+					<header class="major">
+						<h2>WEEK 13</h2>
+						<p>Posted 17 May 2017</p>
+					</header>
+					<div class="row">
+						<div class="8u -2u">
+							<section class="box">
+								<a href="#" class="image left"><img src="/~pei2016-2017_g8//assets/images/week13.jpg" alt="" /></a>
+								<h4>Discussion of real testing environment results</h4>
+								<p>Determination of next steps and final configurations</p>
+								<br><br><br><br><br>
+
+								<p> As referenced before, this past week was dedicated to experimenting our deployment executables in a real testing environment at the FCCV with real end-users. As it was the first time we had external users completely unrelated with the project, doing a full test of our product, we honestly had no prior expectation of what was to come or if the feedback received would be positive. Despite all this, at the end of the day we had an enormous ammount of constructive feedback that we could openly use in our work aswell as extra ideias and changes to implement on our demos in a fastly manner. There is no doubt that having your product tested in a real, unconfined environment, is an undispensable action to have during the development of your product, whatever it may be. We will try to keep it brief below, showing some graphs of the feedback we received during this experiment, as well as further information regarding our demos as work continues.</p>
+
+								<h4>Vertigo</h4>
+
+								<p>We had lots of feedback concerning both the graphical part of the demo and its performance altogether. When it comes to performance, we have made some improvements to the script related with the adjustment of key variables connected to the Kinect Sensor, mainly when it comes to automating everything. What i mean is, when before we needed to do all the resets and brief adjusments in real-time by using key input while the demo was running, the demo in its current state has been properly automated in all parts where user input is not required. 
+								<br><br>
+								One example of this would be the reset of the avatar model when the Kinect fails to detect a body skeleton - Before we needed to press three keys in an orderly manner in order to restart the demo, now everything is done by the engine in a way that user input is only needed <b>ONCE</b> to initiate the demo again (when a new user wants to try the demo).
+								<br><br>
+								Last but not least, most of the information received regarding the graphical part of the demo has been taken into account, and we have proceeded to make adjustments and additions to the world itself. The main additions we have made may be listed in a bullet point manner, which might be easier to understand, rather than me explaining it all in text:
+								<br>
+								<ul style="list-style-type:circle">
+  									<li>Cactus like plants</li>
+  									<li>Static mountain side rocks</li>
+  									<li>Movement scripted rocks</li>
+  									<li><b>Environmental Sound</b></li>
+  									<li>Moving rock impact sound</li>
+  									<li>Upgraded lava shaders</li>
+  									<li>Fixed Platform and wooden board textures</li>
+  									<li>Sucess/Fail end-game pop-ups</li>
+								</ul>
+								<br>
+
+								We will continue to work upon the demo, mainly on improving the few remaining elements of immersion connected to it, as we feel its is key to its sucess that the user feels completely enveloped by the virtual world while experimenting the demo.
+								</p>
+
+								<h4>Avatar</h4>
+
+								<p>There is not much to be said about Avatar this week. We have continued to iterate upon the issue we discovered last week and have made some key improvements to the Avatar's model movements. While i can't explain fully what was happening, apparently Blender and Unity use different axis maps in its models, and when exporting the model from BLENDER with one axis map, to UNITY, it appeared with a different axis map and due to that reason the movements couldn't be replicated in the correct manner.
+								<br><br>
+								While it is not finished yet, we feel we are in the proper path this time and will shift most of our team's effort to the demo in order to have better news next week.</p>
+
+								<h4>Dust Under Investigation</h4>
+
+								<p>As referenced in the earlier sections, this past week was reserved for tests at the FCCV where we were able to get constructive feedback regarding Leap's strategy model. After discussion with our client, we came to the conclusion that the vision the client had for the second module to be implemented was in no way what was envisioned by our team during the past weeks we have been working on. With this in mind, while the work itself won't be discarded, it will need to receive the proper adjustments to meet the requirements our client provided in order for its use to be proper in a real experiment.
+								<br><br> 
+								If i had to give you an example, it would be something in the order of: "The interaction-tree and consequent results of the experiment by each group will be replaced with a discussion form, where the user presses a buttonn and a dialog that instigates discussion with the supervisor will appear in the screen, so that the users will have to guess the answer instead of it being laid out for them".
+								<br><br>
+								If what has been described earlier was not enough to understand, we ask that you wait until next week where we will provide a video of the new features after discussion with the client.
+								</p>
+
+								<h4>Real testing Environment results</h4>
+								<p><b> You can find all the information we received during the experiment in the following hyperlink: <a href="https://docs.google.com/spreadsheets/d/1_mQg8NXhe0Oxmx4X0akqs-pstdapLKlLGo8IezY0vAE/htmlview">FCCV testing results</a> </b></p>
+
+								<h4>That is all for this week. Thanks for reading!</h4>
+							</section>
+						</div>
+					</div>
+				</section>
+
+		</div>
+	</section>
+		<!-- Footer -->
+			<div id="footer">
+				<div class="container">
+				<!-- Icons -->
+					<ul class="icons">
+						<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+						<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+						<li><a href="#" class="icon fa-github"><span class="label">GitHub</span></a></li>
+						<li><a href="#" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
+						<li><a href="#" class="icon fa-google-plus"><span class="label">Google+</span></a></li>
+					</ul>
+
+				<!-- Copyright -->
+					<div class="copyright">
+						<ul class="menu">
+							<li>Ua*. All rights reserved</li><li>Design: Team8</li>
+						</ul>
+					</div>
+
+			</div>
+
+	</body>
+</html>

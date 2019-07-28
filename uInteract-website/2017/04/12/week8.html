@@ -1,0 +1,139 @@
+<!DOCTYPE HTML>
+<!--
+	Arcana by HTML5 UP
+	html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>uInteract</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<!--[if lte IE 8]><script src="/~pei2016-2017_g8//assets/css/ie/html5shiv.js"></script><![endif]-->
+		<script src="/~pei2016-2017_g8/assets/js/jquery.min.js"></script>
+		<script src="/~pei2016-2017_g8/assets/js/jquery.dropotron.min.js"></script>
+		<script src="/~pei2016-2017_g8/assets/js/skel.min.js"></script>
+		<script src="/~pei2016-2017_g8/assets/js/skel-layers.min.js"></script>
+		<script src="/~pei2016-2017_g8/assets/js/init.js"></script>
+		<link rel="stylesheet" href="/~pei2016-2017_g8/assets/css/skel.css" />
+		<link rel="stylesheet" href="/~pei2016-2017_g8/assets/css/style.css" />
+		<link rel="stylesheet" href="/~pei2016-2017_g8/assets/css/style-wide.css" />
+		
+		<!--[if lte IE 8]><link rel="stylesheet" href="/~pei2016-2017_g8//assets/css/ie/v8.css" /><![endif]-->
+	</head>
+	<body>
+
+		<!-- Header -->
+			<div id="header">
+						
+				<!-- Logo -->
+					<h1><a href="/~pei2016-2017_g8/index.html" id="logo"><img src="/~pei2016-2017_g8/assets/images/logo.png" alt="" width="100" height="100"><em></em></a></h1>
+				
+				<!-- Nav -->
+					<nav id="nav">
+						<ul>
+							
+							<li ><a href="/~pei2016-2017_g8/index.html">Home</a></li>
+							<li ><a href="/~pei2016-2017_g8/Userspace.html">User Space</a></li>
+							<li ><a href="/~pei2016-2017_g8/Specification.html">Specification</a></li>
+							<li ><a href="/~pei2016-2017_g8/Developers.html">Developers</a></li>
+							<li ><a href="/~pei2016-2017_g8/ta">Team area</a></li>
+						</ul>
+					</nav>
+
+			</div>
+
+<!-- Main -->
+	<section class="wrapper style1">
+		<div class="container">
+
+			<!-- Blog -->
+				<section>
+					<header class="major">
+						<h2>WEEK 8</h2>
+						<p>Posted 12 Abr 2017</p>
+					</header>
+					<div class="row">
+						<div class="8u -2u">
+							<section class="box">
+								<a href="#" class="image left"><img src="/~pei2016-2017_g8//assets/images/week8.jpg" alt="" /></a>
+								<h4>Continuous development in each demonstration</h4>
+								<p>"Movement related approach"<br>
+								Change in Pong's Architecture</p>
+								<br><br><br><br><br>
+
+								<p> This week's work effort was directed mostly to adjusting movement related features concerned with each demo, making sure they are robust and integrate well with the user interface, and creating them where they are inexistent. The results are promising and will be discussed further in the sections below.</p>
+
+								<h4>Vertigo</h4>
+
+								<p>Since we shifted some of our work effort to the Avatar demo we've seen some improvements to its iteration phase so we decided to continue working in Vertigo since its close to its final development stage. With this in mind, we continued integrating the Oculos Rift DK2 and running tests with it so see how its behaviour could impact the current stage of the demo. Results were quite interesting. While the oculus itself was working nicely, we had some problems in making it work in combination with the Kinect camera due to the emitting of infrared light from both sensors. Even though it took some study and discussion we solved the issue by turning off the Oculus sensor and using the Unity display cameras as direct links to the Oculus display to see the environment in a virtual reality setting.
+								<br><br>
+								As the display phase of the demo is pratically finished all this is left to do from a development point of view is to calibrate the Kinect camera and making sure it is robust enough to behave accordingly to the real environment and we will be working upon this for the next week.
+								<br><br>
+								Final but not least, we have started construction of a graphic ambient for the demo so that the final product can be enjoyable both visually and functionally for us and the users. We hope to have some photos for you over the next week.
+								</p>
+
+								<h4>Avatar</h4>
+
+								<p>There is not much to show about Avatar this week. Most work done was split between two important features that are directly related: Movement and textures.
+								<br><br>
+								When it comes to movement, the script we've been working with had to receive some adjustments since we got paired with a breaking problem that won't allow further development until solved. Due to the textures of our avatar being imported from an environment external to <b>Unity,(Blender)</b>, There are certain issues concerning pairings between gameObjects and Joints, being directly related to the way Unity handles things. The results we have observed when porting the data from blender into Unity were so that the Avatar only seems to move his body across a XYZ axis in a static way, not replicating movement detected by Kinect sensor, without moving the body according to the joints which the Avatar's was built upon. Further study will be done concerning this issue and we hope to have better news for you next week.
+								<br><br>
+								Concerning textures, we started development of custom materials to apply into the Avatar's body so that it could appear more real and beliavable, since we couldn't find any textures that we felt would be applied to our work in a smooth way. Some images can be seen below:
+								</p>
+
+								<video width="320" height="240" controls>
+  									<source src="/~pei2016-2017_g8//assets/images/Avatar_week08.mp4" type="video/mp4">
+								</video>
+								<br><br>
+
+								<h4>Dust Under Investigation</h4>
+
+								<p>Considering the scale and organization of this demo's issue, we decided to split the development in two different modules in order to better review what still needs to be improved in each phase, in way that each module is independent to the other one. The first Module contains Multimedia components, such as interactions with the news journal, the list of suspects and the tree with information related with the experience. The Second module contains all the "back-end" workload of the demo, operating with dynamic interaction of the users with the tree and persistency of the data introduced with the gestures of the Leap Motion sensor in the interface; It is in this module that the final presentation of the results of the experience will be dealt with. 
+								<br><br>
+								It can be said that the first module deals with presentation and the second module deals with interaction.
+								<br><br>
+								With this in mind, further discussion was present and improvements were made to the current build of the demo based on these modules. 
+								</p>
+
+								<h4>Pong</h4>
+
+								<p>There is still not much to be discussed about Pong this week as most workload has beed spent in the remaining demos due to schedule constraints. 
+								<br><br>
+								Apart from this, tests were made related to the selection of calibration points based upon a depth data extracted from the Kinect sensor, as an alternative to the PCL technology described in our general architecture. Further discussion is necessary but we are considering removing PCL from our project technologies and using this different approach in order to work towards our final objective in a simpler way.
+								<br><br>
+								Apart from this, Detection of objects with the Kinect sensor and their representation in Unity engine was worked upon to replicate the playing environment in the engine itself. We hope to have some images to show you next week
+								</p>
+
+								<h4>We will keep working and if everything goes as expected, should be reaching a final developement stage for some of our demos and we can finnaly start testing them in a real environment. Hopefully we will have more news related to this next week. Thanks for reading!</h4>
+							</section>
+						</div>
+					</div>
+				</section>
+
+		</div>
+	</section>
+		<!-- Footer -->
+			<div id="footer">
+				<div class="container">
+				<!-- Icons -->
+					<ul class="icons">
+						<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+						<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+						<li><a href="#" class="icon fa-github"><span class="label">GitHub</span></a></li>
+						<li><a href="#" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
+						<li><a href="#" class="icon fa-google-plus"><span class="label">Google+</span></a></li>
+					</ul>
+
+				<!-- Copyright -->
+					<div class="copyright">
+						<ul class="menu">
+							<li>Ua*. All rights reserved</li><li>Design: Team8</li>
+						</ul>
+					</div>
+
+			</div>
+
+	</body>
+</html>
