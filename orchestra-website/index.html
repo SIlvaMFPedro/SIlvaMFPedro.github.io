@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport"    content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Study and Adaptation of the Autonomous Driving Simulator CARLA for ATLASCAR2">
+	<meta name="author"      content="Pedro Silva">
+
+	<title>Study and Adaptation of the Autonomous Driving Simulator CARLA for ATLASCAR2</title>
+
+	<!--
+	<link rel="shortcut icon" href="assets/images/icon.png">
+	-->
+
+	<link rel="stylesheet" media="screen" href="//fonts.googleapis.com/css?family=Open+Sans:300,400,700">
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="assets/css/font-awesome.min.css">
+
+	<!-- Custom styles for our template -->
+	<link rel="stylesheet" href="assets/css/bootstrap-theme.css" media="screen" >
+	<link rel="stylesheet" href="assets/css/main.css">
+
+	<!-- Icons for features -->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<!-- Icons for timeline -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body class="home">
+	<!-- Fixed navbar -->
+	<div class="navbar navbar-inverse navbar-fixed-top headroom" >
+		<div class="container">
+			<div class="navbar-header">
+			</div>
+			<div class="navbar-collapse collapse">
+				<ul class="nav navbar-nav pull-right">
+					<li><a href="index.html">Home</a></li> <!-- Client area -->
+					<li class="dropdown"> <!-- Specification area -->
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Specifications<b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="specifications-1.html">Features, system scenarios and use cases</a></li>
+							<li><a href="specifications-2.html">Requirements and tests</a></li>
+							<li><a href="specifications-3.html">Architecture</a></li>
+							<li class="active"><a href="specifications-4.html">Datasets</a></li>
+							<li class="active"><a href="deliverables.html">Deliverables</a></li>
+						</ul>
+										</li>
+										<li class="dropdown"> <!-- Client area -->
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">About<b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="aboutAtlas.html">About the ATLAS</a></li>
+							<li><a href="aboutCarla.html">About the CARLA</a></li>
+						</ul>
+					</li>
+					<li><a href="manual.html">Integration with CARLA</a></li> <!-- Client area -->
+				</ul>
+			</div><!--/.nav-collapse -->
+		</div>
+	</div> 
+	<!-- /.navbar -->
+
+	<!-- Header -->
+	<header id="head">
+		<div class="container">
+			<div class="row">
+				<h1 class="lead">Study and Adaptation of the Autonomous Driving Simulator CARLA for ATLASCAR2</h1>
+				<h3>Master's Thesis Blog</h3>
+				<h3 class="tagline">Master’s thesis based on developing (using ROS) a driving assistance system that implements an interface to detect, track and label targets present on the road.</h3>
+				<!-- <p><a class="btn btn-action btn-lg" role="button" href="#" target="_blank">Watch the demo</a></p> -->
+			</div>
+		</div>
+	</header>
+	<!-- /Header -->
+
+	<!-- Intro -->
+	<div class="container">
+		<br> <br>
+		<h2 class="thin", align="center">What is an Autonomous Driving Simulator?</h2>
+		<br>
+		<p class="text-muted">
+		<p class="context">
+			Within the scope of the ATLASCAR2 project, this dissertation is based on studying and developing an autonomous driving assistance simulator named CARLA that implements an interface based in ROS to replicate the ATLASCAR2 setup in the simulation. The idea of using an autonomous driving simulator was proposed as a way to simplify the data aquisition process for the ATLASCAR2 since this process keeps on getting more and more difficult due to factors such as the complexity in the setup and the calibration processes of the installed sensors on the ATLASCAR2, as well as other factors such as the hardware interface and the time that is required to perform a single data aquisition using the ATLASCAR2. This tool can produce realistic scenarios and can be used for testing out the algorithms that are going to be implemented in the ATLASCAR2 in controlled environments, offering a degree of ground truth for these algorithms that can be used to evaluate the performance in these environments before implementing them in the real platform. The replication of the ATLASCAR2 setup process as well as the algorithms involved in CARLA will be discussed in further detail during this dissertation which include sections talking about the replication process and the algorithms involved, showing the results of the ATLASCAR2 setup implementation in CARLA as well as some other results produced from experiments with CARLA simulated data which include the use of computer vision algorithms as well as other algorithms that are currently being used in the ATLASCAR2.
+		</p>
+	</div>
+	<!-- /Intro-->
+
+
+	<!-- container -->
+	<div class="container">
+
+		<!-- Features -->
+		<div class="jumbotron top-space">
+			<div class="container">
+				<div class="page-header">
+					<h2 class="text-center">Why use an Autonomous Driving Simulator?</h2>
+					<p class="text-muted">
+					<p class="context">
+						In the fields of ADAS and AD, there have been some technological studies that have kept on growing these past few decades in both the automobile industry and the academic environment. 
+						It is also important to note that in AD and ADAS the use of autonomous driving simulators is becoming more and more significant as they prove to be important tools for testing and evaluating the algorithms that are going to be implemented in the autonomous vehicle before implementing these algorithms in the real vehicle. These simulators can produce realistic scenarios that are often used for data acquisition in datasets that in conjunction with data labelling can be used as input for learning algorithms and work on their results. 
+						The purpose of this dissertation is focused on the adaptation of an autonomous driving simulator named CARLA in the context of the ATLASCAR2 project and test the results of the simulation. These results can later on be used for research of methods to register data using the cameras and the LIDAR sensors of the ATLASCAR2 installed in the simulated vehicle. This registered data is important for the vehicle to know its surroundings and later on create models of the objects present in CARLA and therefore computer vision algorithms used for object detection and visual perception must be tested with data registered from CARLA in order to create these models. For this reason, a tool for testing out these algorithms using frames gathered from the CARLA simulation will be developed.
+						This dissertation will also be used to evaluate algorithms that are currently being implemented in the ATLASCAR2, evaluating the performance of these algorithms in the scenarios provided by the CARLA simulator. This tool can also be used to test the developed algorithms before implementing them in the ATLASCAR2 offering then the possibility to alternate between simulated scenarios that can be controlled and real world scenarios.
+					</p>
+				</div>
+				<h3 align="center">For everyone</h3>
+				<br>
+				<div class="row">
+					<div class="col-sm-4 text-center">
+						<!-- Feature img -->
+						<i class="material-icons md-82">phone_android</i>
+						<h4><b></b></h4>
+						<h5>Simple and intuitive way to crop and keep track objects present in the image.</h5>
+					</div>
+					<div class="col-sm-4 text-center">
+						<!-- Feature img -->
+						<i class="material-icons md-82">access_time</i>
+						<h4><b>Real-time and archived data</b></h4>
+						<h5>Display information about each object present in the road both in real-time and the past history</h5>
+					</div>
+					<div class="col-sm-4 text-center">
+						<!-- Feature img -->
+						<i class="material-icons md-82">feedback</i>
+						<h4><b>User reporting</b></h4>
+						<h5>Report results about each object result(datasets) to the learning algorithm, helping in its management</h5>
+					</div>
+				</div>
+				<br><br>
+			</div>
+		</div>
+
+		<!-- Modal for images -->
+		<div id="myModal" class="modal fade" role="dialog">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-body">
+						<img class="img-responsive" src="" />
+					</div>
+					<div class="modal-footer">
+						<h4 class="text-center title"></h4>
+						<h5 class="text-center desc"></h5>
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="myModal2" class="modal fade" role="dialog">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-body">
+						<img class="img-responsiveapp" src="" />
+					</div>
+					<div class="modal-footer">
+						<h4 class="text-center title"></h4>
+						<h5 class="text-center desc"></h5>
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="myModal3" class="modal fade" role="dialog">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-body">
+						<img class="img-responsiveapp2" src="" />
+					</div>
+					<div class="modal-footer">
+						<h4 class="text-center title"></h4>
+						<h5 class="text-center desc"></h5>
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Timeline -->
+		<div class="page-header">
+			<h2 class="text-center top-space">Timeline</h2>
+		</div>
+	    <ul class="timeline">
+	    	<li>
+	          <div class="timeline-badge"><i class="fa fa-calendar-check-o"></i></div>
+	          <div class="timeline-panel">
+				<div class="timeline-heading">
+					<h4 class="timeline-title">WeeK 0</h4>
+					<p><small class="text-muted">13/02/2019 - 15/02/2019</small></p>
+	            </div>
+	            <div class="timeline-body">
+					<p>ROS Melodic Instalation and Tutorial Resolution</p>
+	            </div>
+	          </div>
+	        </li>
+
+	       <li class="timeline-inverted">
+	          <div class="timeline-badge warning"><i class="fa fa-calendar-check-o"></i></div>
+	          <div class="timeline-panel">
+	            <div class="timeline-heading">
+					<h4 class="timeline-title">Week 1-2</h4>
+					<p><small class="text-muted">18/02/2019 - 01/03/2019</small></p>
+	            </div>
+	            <div class="timeline-body">
+					<p>ROS Tutorial Resolution</p>
+					<p>ROS Workshop 2019 with Professor Miguel Oliveira</p>
+					<p>Preliminar Report</p>
+	            </div>
+	          </div>
+	        </li>
+		
+
+		<li>
+	          <div class="timeline-badge danger"><i class="fa fa-calendar-check-o"></i></div>
+	          <div class="timeline-panel">
+				<div class="timeline-heading">
+					<h4 class="timeline-title">Week 3</h4>
+					<p><small class="text-muted">04/03/2019 - 10/03/2019</small></p>
+	            </div>
+	            <div class="timeline-body">
+					<p>LAR Meeting #1 Presentation</p>
+					<p>Idea Discussion from Presentation</p>
+	            </div>
+	          </div>
+	        </li>
+
+	       <li class="timeline-inverted">
+	          <div class="timeline-badge info"><i class="fa fa-calendar-check-o"></i></div>
+	          <div class="timeline-panel">
+	            <div class="timeline-heading">
+					<h4 class="timeline-title">Week 4</h4>
+					<p><small class="text-muted">11/03/2019 - 16/03/2019</small></p>
+	            </div>
+	            <div class="timeline-body">
+					<p>Introduction to CARLA</p>
+					<p>ROS-CARLA Integration with ros-bridge package</p>
+	            </div>
+	          </div>
+	        </li>
+
+		<li>
+	          <div class="timeline-badge success"><i class="fa fa-calendar-check-o"></i></div>
+	          <div class="timeline-panel">
+				<div class="timeline-heading">
+					<h4 class="timeline-title">Week 5</h4>
+					<p><small class="text-muted">18/03/2019 - 22/03/2019</small></p>
+	            </div>
+	            <div class="timeline-body">
+					<p>ROS-CARLA Integration Continuation</p>
+					<p>Solved some issues of the MTT package</p>
+					<p>Master's Thesis Blog Creation</p>
+	            </div>
+	          </div>
+	        </li>
+
+	       <li class="timeline-inverted">
+	          <div class="timeline-badge"><i class="fa fa-calendar-check-o"></i></div>
+	          <div class="timeline-panel">
+	            <div class="timeline-heading">
+					<h4 class="timeline-title">Week 6</h4>
+					<p><small class="text-muted">25/03/2019 - 29/03/2019</small></p>
+	            </div>
+	            <div class="timeline-body">
+							<p>Fixing ROS-CARLA Integration Problems</p>
+							<p>Adding new sensor to CARLA Module</p>
+							<p>Displaying CARLA results in RVIZ</p>
+	            </div>
+	          </div>
+	        </li>
+		
+				<li>
+	          <div class="timeline-badge success"><i class="fa fa-calendar-check-o"></i></div>
+	          <div class="timeline-panel">
+				<div class="timeline-heading">
+					<h4 class="timeline-title">Week 7</h4>
+					<p><small class="text-muted">01/04/2019 - 05/04/2019</small></p>
+	            </div>
+	            <div class="timeline-body">
+							<p>Adding new sensor module to CARLA Module</p>
+							<p>Creating new sensor blueprint using Unreal UE4 Engine</p>
+							<p>Added Carla ROS Manual Control Package</p>
+							<p>Added Carla Waypoint Publisher Package</p>
+					<p></p>
+	            </div>
+	          </div>
+				</li>
+
+				<li class="timeline-inverted">
+					<div class="timeline-badge"><i class="fa fa-calendar-check-o"></i></div>
+					<div class="timeline-panel">
+						<div class="timeline-heading">
+				<h4 class="timeline-title">Week 8</h4>
+				<p><small class="text-muted">08/04/2019 - 12/04/2019</small></p>
+						</div>
+						<div class="timeline-body">
+						<p>Added sensor configuration modules</p>
+						<p>Fixed point cloud simulation issues with LIDAR sensors.</p>
+						<p>Adding MTT Package to work with LIDAR point clouds.</p>
+						</div>
+					</div>
+				</li>
+
+				<li>
+					<div class="timeline-badge success"><i class="fa fa-calendar-check-o"></i></div>
+					<div class="timeline-panel">
+					<div class="timeline-heading">
+						<h4 class="timeline-title">Week 9-10</h4>
+						<p><small class="text-muted">15/04/2019 - 26/04/2019</small></p>
+								</div>
+								<div class="timeline-body">
+								<p>Fixing problems with MTT package</p>
+								<p>Writting topics in dissertation</p>
+								<p></p>
+								</div>
+					</div>
+				</li>
+
+				<li class="timeline-inverted">
+					<div class="timeline-badge"><i class="fa fa-calendar-check-o"></i></div>
+					<div class="timeline-panel">
+						<div class="timeline-heading">
+				<h4 class="timeline-title">Week 11</h4>
+				<p><small class="text-muted">29/04/2019 - 03/05/2019</small></p>
+						</div>
+						<div class="timeline-body">
+						<p>Fixing problems with MTT package</p>
+						<p>Writting topics in dissertation</p>
+						<p>Drawing bounding boxes using image_converter package</p>
+						<p>Creating JSON datasets</p>
+						</div>
+					</div>
+				</li>
+
+				<li>
+					<div class="timeline-badge success"><i class="fa fa-calendar-check-o"></i></div>
+					<div class="timeline-panel">
+					<div class="timeline-heading">
+						<h4 class="timeline-title">Week 12</h4>
+						<p><small class="text-muted">06/05/2019 - 10/05/2019</small></p>
+								</div>
+								<div class="timeline-body">
+								<p>Completed ATLASCAR setup.</p>
+								<p>Solving point cloud distribution problems in the MTT package.</p>
+								<p>Added new JSON dataset format.</p>
+								<p>Writting topics in dissertation.</p>
+								<p></p>
+								</div>
+					</div>
+				</li>
+
+				<li class="timeline-inverted">
+						<div class="timeline-badge"><i class="fa fa-calendar-check-o"></i></div>
+						<div class="timeline-panel">
+							<div class="timeline-heading">
+					<h4 class="timeline-title">Week 13-14</h4>
+					<p><small class="text-muted">13/05/2019 - 24/05/2019</small></p>
+							</div>
+							<div class="timeline-body">
+							<p>Created PCL Point Cloud Recording and Visualizing packages.</p>
+							<p>Filtered point cloud information using spherical coordinates.</p>
+							<p>Tests with completed ATLASCAR setup.</p>
+							<p>Created ROS Template Matching package for object tracking.</p>
+							<p>Writting topics in dissertation.</p>
+							</div>
+						</div>
+				</li>
+
+				<li>
+					<div class="timeline-badge success"><i class="fa fa-calendar-check-o"></i></div>
+					<div class="timeline-panel">
+					<div class="timeline-heading">
+						<h4 class="timeline-title">Week 15</h4>
+						<p><small class="text-muted">27/05/2019 - 31/05/2019</small></p>
+								</div>
+								<div class="timeline-body">
+								<p>Tests with ROS Template Matching Package</p>
+								<p>Tests with Fusion of LIDAR and Camera data.</p>
+								<p>Writting topics in dissertation</p>
+								</div>
+					</div>
+				</li>
+
+				<li class="timeline-inverted">
+						<div class="timeline-badge"><i class="fa fa-calendar-check-o"></i></div>
+						<div class="timeline-panel">
+							<div class="timeline-heading">
+					<h4 class="timeline-title">Week 16</h4>
+					<p><small class="text-muted">03/06/2019 - 07/06/2019</small></p>
+							</div>
+							<div class="timeline-body">
+							<p>Tests with LIDAR and Camera data fusion.</p>
+							<p>First delivery of the dissertation.</p>
+							</div>
+						</div>
+				</li>
+
+				<li>
+					<div class="timeline-badge success"><i class="fa fa-calendar-check-o"></i></div>
+					<div class="timeline-panel">
+					<div class="timeline-heading">
+						<h4 class="timeline-title">Week 17</h4>
+						<p><small class="text-muted">10/06/2019 - 14/06/2019</small></p>
+								</div>
+								<div class="timeline-body">
+								<p>Creating new sensor configuration for other ATLASCAR algorithms.</p>
+								<p>Creating rosbag files for these algorithms.</p>
+								<p></p>
+								</div>
+					</div>
+				</li>
+				
+				<li class="timeline-inverted">
+					<div class="timeline-badge"><i class="fa fa-calendar-check-o"></i></div>
+					<div class="timeline-panel">
+						<div class="timeline-heading">
+					<h4 class="timeline-title">Week 18-19</h4>
+					<p><small class="text-muted">17/06/2019 - 28/06/2019</small></p>
+							</div>
+							<div class="timeline-body">
+							<p>Completed template matching algorithm.</p>
+							<p>Created rosbag files for road visual perception algorithm.</p>
+							<p>Writting topics in dissertation.</p>
+							</div>
+						</div>
+				</li>
+
+				<li>
+					<div class="timeline-badge success"><i class="fa fa-calendar-check-o"></i></div>
+					<div class="timeline-panel">
+					<div class="timeline-heading">
+						<h4 class="timeline-title">Week 20-21</h4>
+						<p><small class="text-muted">01/07/2019 - 12/07/2019</small></p>
+								</div>
+								<div class="timeline-body">
+								<p>Tested rosbag files with road visual perception and performed evaluation of the algorithm in CARLA.</p>
+								<p>Added changes in CARLA bounding boxes algorithm, implemented pedestrian labels and ground truth provided by the blueprint IDs.</p>
+								<p>Writting final topics in dissertation.</p>
+								</div>
+					</div>
+				</li>
+				
+				<li class="timeline-inverted">
+					<div class="timeline-badge"><i class="fa fa-calendar-check-o"></i></div>
+					<div class="timeline-panel">
+						<div class="timeline-heading">
+					<h4 class="timeline-title">Week 23</h4>
+					<p><small class="text-muted">15/07/2019 - 19/07/2019</small></p>
+							</div>
+							<div class="timeline-body">
+							<p>Delivery of the dissertation.</p>
+							<p>Second LAR Meeting presentation.</p>
+							<p>Master Thesis presentation.</p>
+							</div>
+						</div>
+				</li>
+		</ul>
+
+	</div>
+
+
+	<footer id="footer" class="top-space">
+
+		<!-- Highlights - jumbotron -->
+		<div class="jumbotron top-space">
+			<div class="container">
+
+				<h3 class="text-center thin">About me:</h3>
+
+				<div class="row">
+					<div class="col-md-6 col-sm-6 highlight">
+						<div class="h-caption"><img class="team-image" src="./assets/images/ps.jpg"><br><h4>Pedro Silva</h4></div>
+					</div>
+					<div class="col-md-6 col-sm-6 highlight">
+						<div class="h-body text-center">
+							<p></p>
+							<p></p>
+							<p>Fullname: Pedro Marques Ferreira da Silva</p>
+							<p>NMEC:<i>72645</i></p>
+							<p>Email: pedro.mfsilva@ua.pt</p>
+							<p>Course: Computer and Telematics in Aveiro University</p>
+							<p>Github: My <a target="_blank" href="https://github.com/SIlvaMFPedro">github</a></p>
+						</div>
+					</div>
+				</div> <!-- /row  -->
+				<br>
+
+				<header class="page-header">
+					<h3 class="page-title">Timesheet</h3>
+				</header>
+				<!-- Description -->
+				<div>
+					<p>&emsp;For more information about the work, you can see our <a target="_blank" href="https://docs.google.com/spreadsheets/d/1XEhvIpzXbmcJOPbM-Gk2DuN9bVOW48gRmeyYwvlKrhw/">timesheet</a>. You can also see my <a target="_blank" href="https://code.ua.pt/">wiki</a> if you are from the University of Aveiro.</p>
+				</div>
+
+
+
+		<div class="footer2">
+			<div class="container">
+				<div class="row">
+
+					<div class="col-md-6 widget">
+						<div class="widget-body">
+							<p class="simplenav">Master's Thesis in Computer and Telematics Engineering</p>
+						</div>
+					</div>
+
+					<div class="col-md-6 widget">
+						<div class="widget-body">
+							<p class="text-right">
+								Copyright &copy; 2019, Master's Thesis(DETI/DEM). Designed by <a href="http://gettemplate.com/" rel="designer">gettemplate</a>
+							</p>
+						</div>
+					</div>
+
+				</div> <!-- /row of widgets -->
+			</div>
+		</div>
+	</footer>
+
+
+	<!-- JavaScript libs are placed at the end of the document so the pages load faster -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/bootstrap.min.js"></script>
+	<script src="assets/js/headroom.min.js"></script>
+	<script src="assets/js/jQuery.headroom.min.js"></script>
+	<script src="assets/js/template.js"></script>
+</body>
+</html>

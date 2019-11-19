@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" 	 content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Study and Adaptation of the Autonomous Driving Simulator CARLA for ATLASCAR2">
+	<meta name="author" 	 content="Pedro Silva">
+
+	<title>Study and Adaptation of the Autonomous Driving Simulator CARLA for ATLASCAR2 > Features, system scenarios and use cases</title>
+
+	<link rel="shortcut icon" href="assets/images/icon.png">
+
+	<link rel="stylesheet" media="screen" href="//fonts.googleapis.com/css?family=Open+Sans:300,400,700">
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="assets/css/font-awesome.min.css">
+
+	<!-- Custom styles for our template -->
+	<link rel="stylesheet" href="assets/css/bootstrap-theme.css" media="screen">
+	<link rel="stylesheet" href="assets/css/main.css">
+
+	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+<![endif]-->
+</head>
+
+<body>
+	<!-- Fixed navbar -->
+	<div class="navbar navbar-inverse navbar-fixed-top headroom" >
+		<div class="container">
+			<div class="navbar-header">
+			</div>
+			<div class="navbar-collapse collapse">
+				<ul class="nav navbar-nav pull-right">
+					<li><a href="index.html">Home</a></li> <!-- Client area -->
+					<li class="dropdown"> <!-- Specification area -->
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Specifications<b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="specifications-1.html">Features, system scenarios and use cases</a></li>
+							<li><a href="specifications-2.html">Requirements and tests</a></li>
+							<li><a href="specifications-3.html">Architecture</a></li>
+							<li class="active"><a href="specifications-4.html">Datasets</a></li>
+							<li class="active"><a href="deliverables.html">Deliverables</a></li>
+						</ul>
+                    </li>
+                    <li class="dropdown"> <!-- Client area -->
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">About<b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="aboutAtlas.html">About the ATLAS</a></li>
+                            <li><a href="aboutCarla.html">About the CARLA</a></li>
+						</ul>
+                    </li>
+                    <li><a href="manual.html">Integration with CARLA</a></li> <!-- Client area -->
+				</ul>
+			</div><!--/.nav-collapse -->
+		</div>
+	</div> 
+	<!-- /.navbar -->
+
+<header id="head" class="secondary"></header>
+
+<!-- container -->
+<div class="container">
+
+	<ol class="breadcrumb">
+		<li><a href="index.html">Home</a></li>
+		<li class="active">Features, system scenarios and use cases</li>
+	</ol>
+
+	<div class="row">
+
+		<!-- Article main content -->
+		<article class="col-sm-8 maincontent">
+			<header class="page-header">
+				<h1 class="page-title">Features, system scenarios and use cases</h1>
+			</header>
+
+			<div class="header-inside" id="spec-1-1">
+				<h3>Features</h3>
+				<hr class="half-rule" />
+				<p>&emsp;On this section, we explore the main features of the CARLA Simulator and the ROS-Bridge package</p>
+				<br>
+				&emsp;The Carla Simulator has the following main features:
+						<li>Start Simulator Game</li>
+						<li>Control CARLA Vehicle</li>
+						<li>Monitoring CARLA World</li>
+						
+				<br>
+				&emsp;The ROS-Bridge package has the following main features:
+						<li>Display CARLA World Information via ROS Messages</li>
+					</ul>
+					<br>
+				</div>
+
+				<div class="header-inside" id="spec-1-2">
+					<h3>Scenarios</h3>
+					<hr class="half-rule" />
+					<p>&emsp;This section will exemplify four possible scenarios of different type of users taking advantage of the Carla Simulator game.</p><br>
+
+					<h4>Start the Simulator</h4><br>
+					<p>&emsp;
+						John, an average consumer has the Carla Simulator installed on his computer. He decides to start the simulator to be able to play, so he selects the vehicle he wants to play and is now able to interact with the Carla World.
+						<br>&emsp; Meanwhile, on the another Peter was able to see John playing the simulator via the ROS-Bridge package as well as all the other players.
+					</p><br>
+
+					<br>
+
+					<h4>Starting a Game</h4><br>
+					<p>&emsp; John, already enrolled with the simulator, now has the ability to play with another vehicle, selected by the system. 
+						&emsp; Peter, with the ROS-Bridge is able to see the moves that John and the other players are making, as well as other objects present in the simulator. 
+						&emsp;
+					</p>
+					<br><br>
+
+					<h4>Watching a Game</h4><br>
+					<p>&emsp; Sarah only wishes to follow one player in the Carla World. On the ROS-Bridge interface she chooses "watch", and selects a vehicle. Sarah is able to stop watching anytime and choose another player to watch. 
+					</p>
+
+					<br><br>
+
+					<h4>Monitoring the CARLA World</h4><br>
+					<p>&emsp; On the ROS-Bridge Peter can monitor all the aspects of the Carla World, adding new objects like NPCS(Pedestrians/Vehicles) to the world. 
+
+					</p>
+					<br><br>
+
+					<!--ver stats -->
+				</div>
+
+				<div class="header-inside" id="spec-1-3">
+					<h3>Use cases</h3>
+					<hr class="half-rule" />
+					<p>&emsp;On this section, we expose the most important use cases on the system, according to the frequency of use.</p><br>
+					<h4>Carla Simulator</h4>
+					<table class="tbwdth">
+						<tr bgcolor="#66CCFF">
+							<th width = "20%">Use case</th>
+							<td><b><i>Play a game</i></b></td>
+						</tr>
+						<tr>
+							<th width = "20%">Description</th>
+							<td>The user is able to play the Carla simulator with a certain vehicle using their keyboard. </td>
+						</tr>
+						<tr>
+							<th width = "20%">Exceptions</th>
+							<td>The player is spawned in a random location in the Carla world. </td>
+						</tr>
+						<tr>
+							<th width = "20%">Priority</th>
+							<td>High</td>
+						</tr>
+						<tr>
+							<th width = "20%">Other information</th>
+							<td>To be able to play simulator the player needs to start the CarlaUE4.sh script and play the manual_control python script</td>
+						</tr>
+					</table>
+					<br>
+					<table class="tbwdth">
+						<tr bgcolor="#66CCFF">
+							<th width = "20%">Use case</th>
+							<td><b><i>Watching a game</i></b></td>
+						</tr>
+						<tr>
+							<th width = "20%">Description</th>
+							<td>A user can watch a game taking place in the CARLA World, through a interface that allows the selection of the vehicle that you want to follow.</td>
+						</tr>
+						<tr>
+							<th width = "20%">Exceptions</th>
+							<td>If there are no vehicles present in the world the user cannot watch the game</td>
+						</tr>
+						<tr>
+							<th width = "20%">Priority</th>
+							<td>Medium</td>
+						</tr>
+						<tr>
+							<th width = "20%">Other information</th>
+							<td>--</td>
+						</tr>
+					</table>
+					<br>	
+					<br>
+					<br>
+					<h4>ROS-Bridge</h4>
+					<br>
+
+					<table class="tbwdth">
+						<tr bgcolor="#DEDEFF">
+							<th width = "20%">Use case</th>
+							<td><b><i>Watching a game</i></b></td>
+						</tr>
+						<tr>
+							<th width = "20%">Description</th>
+							<td>A user can access the ROS-Bridge, select a vehicle and follow that vehicle throughout the Carla World.</td>
+						</tr>
+						<tr>
+							<th width = "20%">Exceptions</th>
+							<td>If there are no vehicles present in the world the user cannot watch the game.</td>
+						</tr>
+						<tr>
+							<th width = "20%">Priority</th>
+							<td>High</td>
+						</tr>
+						<tr>
+							<th width = "20%">Other information</th>
+							<td>Depending on the simulation happening at the moment of viewing the user can see the moves being made by the players in real time.</td>
+						</tr>
+					</table>
+					<br>
+					<table class="tbwdth">
+						<tr bgcolor="#DEDEFF">
+							<th width = "20%">Use case</th>
+							<td><b><i>See game and vehicle and other world statistics</i></b></td>
+						</tr>
+						<tr>
+							<th width = "20%">Description</th>
+							<td>A user of the Web UI can access statistics of each simulation and each vehicle that exists in the platform</td>
+						</tr>
+						<tr>
+							<th width = "20%">Exceptions</th>
+							<td>--</td>
+						</tr>
+						<tr>
+							<th width = "20%">Priority</th>
+							<td>High</td>
+						</tr>
+						<tr>
+							<th width = "20%">Other information</th>
+							<td>--</td>
+						</tr>
+					</table>
+					<br>
+					<br>
+					<br><br>
+					<!--<div class="panel-group">
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<h4 class="panel-title">
+									<a data-toggle="collapse" href="#collapse1">Other Use Cases</a>
+								</h4>
+							</div>
+							<div id="collapse1" class="panel-collapse collapse">
+
+								<h4>Unity based Game</h4>
+								<table class="tbwdth">
+									<tr bgcolor="#66CCFF">
+										<th width = "20%">Use case</th>
+										<td><b><i>--</i></b></td>
+									</tr>
+									<tr>
+										<th width = "20%">Description</th>
+										<td>--</td>
+									</tr>
+									<tr>
+										<th width = "20%">Exceptions</th>
+										<td>--</td>
+									</tr>
+									<tr>
+										<th width = "20%">Priority</th>
+										<td>--</td>
+									</tr>
+									<tr>
+										<th width = "20%">Other information</th>
+										<td>--</td>
+									</tr>
+								</table>
+								<br>
+								<br>
+								<br>
+								<h4>Web UI</h4>
+								<br>
+
+								<table class="tbwdth">
+									<tr bgcolor="#DEDEFF">
+										<th width = "20%">Use case</th>
+										<td><b><i>--</i></b></td>
+									</tr>
+									<tr>
+										<th width = "20%">Description</th>
+										<td>--</td>
+									</tr>
+									<tr>
+										<th width = "20%">Exceptions</th>
+										<td>--</td>
+									</tr>
+									<tr>
+										<th width = "20%">Priority</th>
+										<td>--</td>
+									</tr>
+									<tr>
+										<th width = "20%">Other information</th>
+										<td>--</td>
+									</tr>
+								</table>
+								<br>
+
+							</div>
+						</div>
+					</div>-->
+				</div>
+
+			</article>
+			<!-- /Article -->
+			<!-- Sidebar -->
+			<aside class="col-sm-4 sidebar sidebar-right">
+
+				<div id="sidebar" class="row widget affix">
+					<div class="col-xs-12">
+						<h4>Choose the topic you want to see</h4>
+						<ul class="list-unstyled list-spaces">
+							<li><a href="#spec-1-1">Features</a><br><span class="small text-muted">On this section, we explore the main features of the <br>CARLA simulator and ROS-Bridge interface.</span></li>
+							<li><a href="#spec-1-2">Scenarios</a><br><span class="small text-muted">This section will exemplify possible scenarios of different<br>type of users using the CARLA simulator and the ROS-Bridge interface.</span></li>
+							<li><a href="#spec-1-3">Use cases</a><br><span class="small text-muted">On this section, we expose the most important use cases.</span></li>
+						</ul>
+					</div>
+				</div>
+                <!--
+                <div class="row widget">
+                    <div class="col-xs-12">
+                    </div>
+                </div>
+            -->
+
+        </aside>
+        <!-- /Sidebar -->
+
+    </div>
+</div>	<!-- /container -->
+
+
+<footer id="footer" class="top-space">
+
+	<div class="footer1">
+		<div class="container">
+			<div class="row">
+
+				<div class="col-md-6 widget">
+					<h3 class="widget-title">Associated with</h3>
+					<div class="widget-body">
+						<!-- UA/DETI Logo -->
+						<a href="https://www.ua.pt/deti/" target="_blank"><img src="assets/images/deti-ua.png" alt="UA/DETI Logo"></a>
+					</div>
+					<div class="widget-body">
+						<!-- UA/DEM Logo -->
+						<a href="https://www.ua.pt/dem/" target="_blank"><img src="assets/images/dem-ua.png" alt="UA/DEM Logo"></a>
+					</div>
+				</div>
+
+			</div> <!-- /row of widgets -->
+		</div>
+	</div>
+
+	
+	<div class="footer2">
+		<div class="container">
+			<div class="row">
+
+				<div class="col-md-6 widget">
+					<div class="widget-body">
+						<p class="simplenav">Master's Thesis - Computer and Telematics Engineering</p>
+					</div>
+				</div>
+
+				<div class="col-md-6 widget">
+					<div class="widget-body">
+						<p class="text-right">
+							Copyright &copy; 2019, Master's Thesis(DETI/DEM). Designed by <a href="http://gettemplate.com/" rel="designer">gettemplate</a>
+						</p>
+					</div>
+				</div>
+
+			</div> <!-- /row of widgets -->
+		</div>
+	</div>
+</footer>
+
+
+
+
+
+<!-- JavaScript libs are placed at the end of the document so the pages load faster -->
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/headroom.min.js"></script>
+<script src="assets/js/jQuery.headroom.min.js"></script>
+<script src="assets/js/template.js"></script>
+</body>
+</html>
